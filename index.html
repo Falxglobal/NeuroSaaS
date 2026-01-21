@@ -1,126 +1,389 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>NeuroSaaS — Original Concept Term | FalX</title>
-
-  <meta name="description" content="Official public authorship record and canonical definition of the original concept term 'NeuroSaaS', created and published by FalX." />
+  <title>NeuroSaaS — Registro Público Canônico (FalX)</title>
+  <meta name="description" content="Registro público canônico de autoria e definição do termo conceitual original “NeuroSaaS”, publicado por FalX." />
   <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background-color: #ffffff;
-      color: #111111;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.085);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --faint: rgba(255,255,255,.50);
+      --line: rgba(255,255,255,.12);
+      --brand: #c7b36a; /* dourado discreto */
+      --brand2:#ffffff;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --serif: ui-serif, "Iowan Old Style", "New York", "Palatino", "Georgia", serif;
     }
-    main {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 24px;
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --panel: rgba(10,14,23,.05);
+        --panel2: rgba(10,14,23,.08);
+        --text: rgba(10,14,23,.92);
+        --muted: rgba(10,14,23,.68);
+        --faint: rgba(10,14,23,.52);
+        --line: rgba(10,14,23,.14);
+        --shadow: 0 18px 45px rgba(10,14,23,.12);
+        --brand: #8b7a2a;
+        --brand2:#0b0f17;
+      }
     }
-    h1, h2, h3 {
-      font-weight: 600;
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(199,179,106,.16), transparent 60%),
+        radial-gradient(900px 500px at 110% 20%, rgba(255,255,255,.10), transparent 55%),
+        radial-gradient(900px 700px at 20% 120%, rgba(199,179,106,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg));
+      letter-spacing: .2px;
+      line-height: 1.55;
     }
-    footer {
-      margin-top: 80px;
-      font-size: 0.9em;
-      color: #555;
-      border-top: 1px solid #ddd;
-      padding-top: 24px;
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      width: min(980px, calc(100% - 40px));
+      margin: 40px auto 64px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel), transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 0;
+    }
+
+    .sigil{
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(199,179,106,.55), transparent 55%),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,.25), transparent 60%),
+        rgba(255,255,255,.03);
+      position: relative;
+      overflow: hidden;
+    }
+    .sigil:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: linear-gradient(120deg, transparent, rgba(199,179,106,.22), transparent);
+      transform: rotate(18deg);
+    }
+
+    .brand .meta{
+      min-width:0;
+    }
+    .brand .meta .org{
+      font-weight: 650;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .brand .meta .doc{
+      font-size: 13px;
+      color: var(--faint);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 56vw;
+    }
+
+    .badge{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    header.hero{
+      margin-top: 22px;
+      padding: 28px 26px;
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(900px 250px at 20% 0%, rgba(199,179,106,.22), transparent 60%);
+      pointer-events:none;
+    }
+
+    h1{
+      margin:0 0 6px;
+      font-family: var(--serif);
+      font-weight: 720;
+      letter-spacing: .2px;
+      font-size: clamp(28px, 3.2vw, 40px);
+      line-height: 1.15;
+    }
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      font-size: 14.5px;
+      max-width: 72ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.6fr .9fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 880px){
+      .grid{ grid-template-columns: 1fr; }
+      .brand .meta .doc{ max-width: 70vw; }
+    }
+
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card .inner{
+      padding: 18px 18px 16px;
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size: 14px;
+      letter-spacing: .9px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .card h3{
+      margin: 14px 0 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .card p{
+      margin:0 0 10px;
+      color: var(--text);
+      font-size: 14.5px;
+    }
+    .card p.muted{ color: var(--muted); }
+
+    .rule{
+      height:1px;
+      background: var(--line);
+      margin: 14px 0;
+    }
+
+    .kv{
+      display:grid;
+      grid-template-columns: 150px 1fr;
+      gap: 10px 12px;
+      font-size: 13px;
+    }
+    .kv .k{ color: var(--muted); }
+    .kv .v{ color: var(--text); }
+    .kv code{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.03);
+    }
+
+    .callout{
+      border-left: 3px solid var(--brand);
+      padding: 12px 12px 12px 14px;
+      background: rgba(199,179,106,.08);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    footer{
+      margin-top: 18px;
+      padding: 18px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      color: var(--muted);
+      font-size: 12.5px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-right{
+      font-family: var(--mono);
+      color: var(--faint);
+    }
+
+    /* Impressão / PDF */
+    @media print{
+      body{
+        background: #ffffff !important;
+        color: #0b0f17 !important;
+      }
+      .topbar, header.hero, .card, footer{
+        box-shadow: none !important;
+        background: #ffffff !important;
+      }
+      .sigil{ display:none !important; }
+      a{ text-decoration:none !important; }
+      .wrap{ margin: 0; width: 100%; }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <h1>NeuroSaaS — Original Concept Term</h1>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div class="meta">
+          <div class="org">FalX</div>
+          <div class="doc">Registro público canônico — termo conceitual original</div>
+        </div>
+      </div>
+      <div class="badge">v1 • Public Record</div>
+    </div>
 
-    <h2>Authorship and Public Record — FalX — 2026</h2>
+    <header class="hero">
+      <h1>NeuroSaaS</h1>
+      <p class="subtitle">
+        Termo conceitual original. Documento público para estabelecer autoria institucional, definição canônica e precedência temporal.
+      </p>
+    </header>
 
-    <section>
-      <h3>Definition</h3>
-      <p>
-        NeuroSaaS is the institutionalization of applied neuroscience as the
-        core architectural principle of continuous products and systems.
-        It is designed to evolve in synchrony with human neurocognitive
-        development, at both individual and collective levels.
-      </p>
-    </section>
+    <div class="grid">
+      <!-- COLUNA PRINCIPAL -->
+      <section class="card">
+        <div class="inner">
+          <h2>Definição canônica</h2>
+          <h3>Definição</h3>
+          <p>
+            NeuroSaaS é a institucionalização da neurociência aplicada como princípio arquitetônico fundamental de produtos e sistemas contínuos.
+            É projetado para evoluir em sincronia com o desenvolvimento neurocognitivo humano, tanto em nível individual quanto coletivo.
+          </p>
 
-    <section>
-      <h3>Ontological Nature</h3>
-      <p>
-        NeuroSaaS is not a type of software, a business model, or a market category.
-        It represents a neuroevolutionary function translated into product and
-        system architecture.
-      </p>
-      <p>
-        It is based on the structural principle that the human brain is a living,
-        plastic, and permanently unfinished system. Therefore, any product or
-        system that continuously interacts with people must evolve at a compatible
-        pace, or it becomes cognitively limiting.
-      </p>
-    </section>
+          <div class="rule"></div>
 
-    <section>
-      <h3>Authorship and Origin</h3>
-      <p>
-        The term and concept <strong>NeuroSaaS</strong> were originally conceived
-        and defined by <strong>FalX</strong> as an original intellectual framework
-        addressing a structural asymmetry of the digital era, in which technological
-        systems evolved faster than human neurocognitive adaptation.
-      </p>
-      <p>
-        This concept establishes neurocognitive development as an explicit
-        responsibility of product and system architecture.
-      </p>
-    </section>
+          <h3>Natureza ontológica</h3>
+          <p>
+            NeuroSaaS não é um tipo de software, um modelo de negócio ou uma categoria de mercado.
+            Representa uma função neuroevolutiva traduzida em arquitetura de produto e sistema.
+          </p>
+          <p class="muted">
+            Baseia-se no princípio estrutural de que o cérebro humano é um sistema vivo, plástico e permanentemente inacabado.
+            Portanto, qualquer produto ou sistema que interaja continuamente com pessoas deve evoluir a um ritmo compatível — ou torna-se cognitivamente limitante.
+          </p>
 
-    <section>
-      <h3>Copyright Notice</h3>
-      <p>
-        The term <strong>NeuroSaaS</strong> and its conceptual definition constitute
-        an original intellectual creation.
-      </p>
-      <p>
-        © FalX, 2026. All rights reserved.
-      </p>
-      <p>
-        Any reproduction, commercial use, branding, trademark use, market
-        categorization, or derivative application of this term or its definition
-        without prior written authorization from FalX is strictly prohibited.
-      </p>
-    </section>
+          <div class="rule"></div>
 
-    <section>
-      <h3>Public Record</h3>
-      <p>
-        Date of public publication: January 21, 2026.
-      </p>
-      <p>
-        This webpage serves as a public, timestamped record to establish authorship,
-        originality, and prior usage of the term <strong>NeuroSaaS</strong>.
-      </p>
-    </section>
+          <h2>Autoria e origem</h2>
+          <p class="muted">
+            O termo e o conceito NeuroSaaS foram originalmente concebidos e definidos pela FalX como uma estrutura intelectual
+            que aborda uma assimetria estrutural da era digital: sistemas tecnológicos evoluíram mais rapidamente do que a adaptação neurocognitiva humana.
+          </p>
+          <p class="muted">
+            O conceito estabelece o desenvolvimento neurocognitivo como responsabilidade explícita de arquitetura de produtos e sistemas.
+          </p>
 
-    <section>
-      <h3>Canonical Closure</h3>
-      <p>
-        NeuroSaaS represents a structural correction in the digital era, where
-        human neurocognitive development ceases to be a collateral effect of
-        technological progress and becomes an explicit responsibility of product
-        and system architecture.
-      </p>
-    </section>
+          <div class="rule"></div>
+
+          <h2>Aviso de direitos autorais</h2>
+          <p class="muted">
+            O termo <strong>NeuroSaaS</strong> e sua definição conceitual constituem uma criação intelectual original.
+            <strong>© FalX, 2026.</strong> Todos os direitos reservados.
+          </p>
+          <p class="muted">
+            É estritamente proibida qualquer reprodução, uso comercial, branding, uso de marca registrada, categorização de mercado
+            ou aplicação derivada deste termo ou de sua definição, sem autorização prévia por escrito da FalX.
+          </p>
+        </div>
+      </section>
+
+      <!-- COLUNA LATERAL -->
+      <aside class="card">
+        <div class="inner">
+          <h2>Registro público</h2>
+
+          <div class="kv" role="list">
+            <div class="k" role="listitem">Publicador</div>
+            <div class="v"><strong>FalX</strong></div>
+
+            <div class="k" role="listitem">Objeto</div>
+            <div class="v">Termo “NeuroSaaS” + definição canônica</div>
+
+            <div class="k" role="listitem">Ano</div>
+            <div class="v">2026</div>
+
+            <div class="k" role="listitem">Data de publicação</div>
+            <div class="v">21 de janeiro de 2026</div>
+
+            <div class="k" role="listitem">Repositório</div>
+            <div class="v"><code>Falxglobal/NeuroSaaS</code></div>
+
+            <div class="k" role="listitem">Finalidade</div>
+            <div class="v">Autoria • Originalidade • Precedência temporal</div>
+          </div>
+
+          <div class="rule"></div>
+
+          <div class="callout">
+            Este registro é deliberadamente objetivo e verificável: uma página pública com conteúdo canônico e marcação temporal do histórico de commits.
+          </div>
+
+          <div class="rule"></div>
+
+          <h2>Fechamento canônico</h2>
+          <p class="muted">
+            NeuroSaaS representa uma correção estrutural na era digital: o desenvolvimento neurocognitivo humano deixa de ser
+            efeito colateral do progresso tecnológico e torna-se responsabilidade explícita da arquitetura de produtos e sistemas.
+          </p>
+        </div>
+      </aside>
+    </div>
 
     <footer>
-      <p>© FalX — 2026. All rights reserved.</p>
+      <div>© FalX — 2026. Registro público canônico de autoria.</div>
+      <div class="footer-right">NeuroSaaS • FalX</div>
     </footer>
-  </main>
+  </div>
 </body>
 </html>
