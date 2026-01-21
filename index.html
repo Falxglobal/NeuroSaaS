@@ -2,538 +2,867 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeuroSaaS — Registro Público Canônico (FalX)</title>
-  <meta name="description" content="Registro público canônico de autoria e definição do termo conceitual original “NeuroSaaS”, publicado por FalX." />
-  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
+  <title>NeuroSaaS — Termo conceitual original</title>
+  <meta name="description" content="Autoria e Registro Público — FalX — 2026. Registro público canônico de autoria, precedência temporal e definição conceitual do termo NeuroSaaS." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#07070a" />
+
+  <!-- Social (sem imagens externas; descrição institucional) -->
+  <meta property="og:title" content="NeuroSaaS — Termo conceitual original" />
+  <meta property="og:description" content="Autoria e Registro Público — FalX — 2026. Registro público canônico para estabelecer autoria, originalidade e utilização anterior do termo NeuroSaaS." />
+  <meta property="og:type" content="website" />
+
+  <!-- Canonical timestamp (visível no corpo e também em meta) -->
+  <meta name="publication_date" content="2026-01-21" />
 
   <style>
     :root{
-      /* Lux palette */
-      --bg0:#06070a;
-      --bg1:#070914;
-      --panel: rgba(255,255,255,.055);
-      --panel2: rgba(255,255,255,.075);
-      --line: rgba(255,255,255,.12);
-      --line2: rgba(199,179,106,.22);
+      /* ===== Design Tokens — FalX / NeuroSaaS Canonical ===== */
 
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --faint: rgba(255,255,255,.52);
+      /* Palette */
+      --bg-0:#07070a;       /* matte */
+      --bg-1:#0b0b11;       /* depth */
+      --bg-2:#0f1018;       /* elevation */
 
-      --gold:#c7b36a;
-      --gold2:#f2e6b6;
-      --shadow: 0 30px 90px rgba(0,0,0,.62);
-      --shadow2: 0 14px 40px rgba(0,0,0,.50);
+      --ink-0:rgba(255,255,255,.92);
+      --ink-1:rgba(255,255,255,.74);
+      --ink-2:rgba(255,255,255,.55);
 
-      --radius: 22px;
-      --radius2: 28px;
+      --gold-0:rgba(210,177,112,.92); /* warm gold */
+      --gold-1:rgba(210,177,112,.30);
 
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial;
-      --serif: ui-serif, "Iowan Old Style", "New York", Palatino, Georgia, serif;
+      --hairline:rgba(255,255,255,.10);
+      --hairline-2:rgba(210,177,112,.18);
+
+      --veil:rgba(255,255,255,.05);
+      --veil-2:rgba(255,255,255,.075);
+
+      /* Typography */
+      --font-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "Garamond", Georgia, serif;
+      --font-sans: ui-sans-serif, system-ui, -apple-system, "SF Pro Display", "SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+      /* Fluid type scale */
+      --step--1: clamp(.86rem, .84rem + .20vw, .95rem);
+      --step-0:  clamp(1.00rem, .96rem + .30vw, 1.12rem);
+      --step-1:  clamp(1.20rem, 1.10rem + .55vw, 1.45rem);
+      --step-2:  clamp(1.44rem, 1.26rem + .90vw, 1.85rem);
+      --step-3:  clamp(1.72rem, 1.45rem + 1.35vw, 2.35rem);
+      --step-4:  clamp(2.06rem, 1.65rem + 2.10vw, 3.05rem);
+      --step-5:  clamp(2.48rem, 1.85rem + 3.10vw, 3.95rem);
+
+      /* Spacing */
+      --space-1:  .375rem;
+      --space-2:  .625rem;
+      --space-3:  .875rem;
+      --space-4:  1.125rem;
+      --space-5:  1.5rem;
+      --space-6:  2.0rem;
+      --space-7:  2.75rem;
+      --space-8:  3.75rem;
+      --space-9:  5.25rem;
+      --space-10: 7.25rem;
+
+      /* Layout */
+      --container: 1100px;
+      --grid-gap: clamp(1rem, 2vw, 1.75rem);
+
+      /* Radii */
+      --r-1: 12px;
+      --r-2: 16px;
+      --r-3: 22px;
+      --r-4: 28px;
+
+      /* Shadows (deep + soft) */
+      --shadow-1: 0 10px 30px rgba(0,0,0,.35);
+      --shadow-2: 0 18px 55px rgba(0,0,0,.45);
+      --shadow-3: 0 30px 90px rgba(0,0,0,.55);
+
+      /* Motion */
+      --ease: cubic-bezier(.2,.7,.2,1);
+      --dur-1: 180ms;
+      --dur-2: 520ms;
+
+      /* Hairline thickness */
+      --hl: 1px;
+
+      /* Print */
+      --print-ink: #111214;
+      --print-muted: #43454a;
+      --print-hair: rgba(0,0,0,.14);
     }
 
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg0:#f7f7fb;
-        --bg1:#ffffff;
-        --panel: rgba(10,14,23,.05);
-        --panel2: rgba(10,14,23,.08);
-        --line: rgba(10,14,23,.14);
-        --line2: rgba(139,122,42,.22);
-
-        --text: rgba(10,14,23,.92);
-        --muted: rgba(10,14,23,.70);
-        --faint: rgba(10,14,23,.54);
-
-        --gold:#8b7a2a;
-        --gold2:#8b7a2a;
-        --shadow: 0 22px 60px rgba(10,14,23,.14);
-        --shadow2: 0 12px 30px rgba(10,14,23,.12);
-      }
-    }
-
+    /* ===== Base ===== */
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
     body{
       margin:0;
-      font-family: var(--sans);
-      color: var(--text);
-      background:
-        radial-gradient(1400px 800px at 15% -10%, rgba(199,179,106,.18), transparent 60%),
-        radial-gradient(900px 600px at 105% 15%, rgba(255,255,255,.10), transparent 55%),
-        radial-gradient(900px 700px at 20% 120%, rgba(199,179,106,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
-      letter-spacing: .22px;
+      background: var(--bg-0);
+      color: var(--ink-0);
+      font-family: var(--font-sans);
+      font-size: var(--step-0);
       line-height: 1.6;
+      letter-spacing: .01em;
+      text-rendering: geometricPrecision;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x:hidden;
     }
 
-    /* Lux film grain + vignette */
-    body:before{
+    /* Subtle texture + vignette (no external assets) */
+    body::before{
       content:"";
-      position:fixed; inset:0;
+      position:fixed;
+      inset:0;
       pointer-events:none;
       background:
-        radial-gradient(1200px 700px at 50% 10%, rgba(0,0,0,0), rgba(0,0,0,.40) 75%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
-      mix-blend-mode: overlay;
-      opacity: .35;
+        radial-gradient(1200px 800px at 18% 8%, rgba(210,177,112,.10), transparent 55%),
+        radial-gradient(900px 700px at 82% 18%, rgba(255,255,255,.05), transparent 60%),
+        radial-gradient(1200px 900px at 50% 110%, rgba(0,0,0,.80), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.04), transparent 28%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.018) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 14px);
+      opacity: .95;
+      mix-blend-mode: screen;
+      filter: saturate(1.02);
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      inset:-2px;
+      pointer-events:none;
+      background: radial-gradient(1200px 900px at 50% 40%, transparent 55%, rgba(0,0,0,.70) 100%);
+      opacity:.9;
     }
 
     a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration: underline; text-decoration-color: var(--hairline-2); text-underline-offset: .18em; }
 
-    .wrap{
-      width: min(1040px, calc(100% - 44px));
-      margin: 34px auto 70px;
-      position: relative;
+    :focus-visible{
+      outline: 2px solid rgba(210,177,112,.55);
+      outline-offset: 3px;
+      border-radius: 10px;
     }
 
-    /* Top bar */
+    /* Skip link */
+    .skip{
+      position:absolute;
+      top:0; left:0;
+      transform: translateY(-140%);
+      background: rgba(210,177,112,.18);
+      border: var(--hl) solid rgba(210,177,112,.28);
+      color: var(--ink-0);
+      padding: .65rem .9rem;
+      border-radius: 12px;
+      z-index: 9999;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .skip:focus{ transform: translateY(.75rem); left:.75rem; }
+
+    /* ===== Layout ===== */
+    .wrap{
+      position:relative;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: clamp(1.25rem, 3.2vw, 2.35rem);
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,7,10,.78), rgba(7,7,10,.52));
+      border-bottom: var(--hl) solid rgba(255,255,255,.06);
+    }
+
     .topbar{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: .95rem clamp(1.25rem, 3.2vw, 2.35rem);
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:18px;
-      padding: 16px 18px;
-      border-radius: var(--radius2);
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 14px;
-      z-index: 10;
+      gap: 1rem;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
-      min-width:0;
+      gap:.85rem;
+      min-width: 240px;
     }
 
-    .sigil{
-      width: 44px; height: 44px;
-      border-radius: 14px;
-      border: 1px solid var(--line2);
-      background:
-        radial-gradient(circle at 28% 25%, rgba(242,230,182,.55), transparent 55%),
-        radial-gradient(circle at 70% 65%, rgba(255,255,255,.18), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
-      position: relative;
-      overflow: hidden;
-    }
-    .sigil:after{
-      content:"";
-      position:absolute; inset:-60%;
-      background: linear-gradient(120deg, transparent, rgba(199,179,106,.22), transparent);
-      transform: rotate(18deg);
-      animation: sheen 7.5s ease-in-out infinite;
-      opacity:.85;
-    }
-    @keyframes sheen{
-      0%, 45% { transform: translateX(-10%) rotate(18deg); opacity:.0; }
-      55% { opacity:.85; }
-      100% { transform: translateX(26%) rotate(18deg); opacity:.0; }
-    }
-
-    .meta{ min-width:0; }
-    .org{
-      font-weight: 760;
-      letter-spacing: 1.0px;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .doc{
-      font-size: 13px;
-      color: var(--faint);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 56vw;
-    }
-
-    .pill{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      white-space:nowrap;
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      padding: 9px 12px;
+    /* FalX signature seal (no logo file) */
+    .seal{
+      width: 38px;
+      height: 38px;
       border-radius: 999px;
+      border: var(--hl) solid rgba(210,177,112,.34);
+      box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(210,177,112,.30), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.06), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.22));
+      position:relative;
     }
-    .dot{
-      width:8px; height:8px; border-radius:999px;
-      background: rgba(199,179,106,.85);
-      box-shadow: 0 0 18px rgba(199,179,106,.55);
+    .seal::after{
+      content:"FalX";
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      font-family: var(--font-mono);
+      font-size: .74rem;
+      letter-spacing: .22em;
+      text-indent: .18em;
+      color: rgba(210,177,112,.78);
     }
 
-    /* Hero */
-    header.hero{
-      margin-top: 18px;
-      border-radius: 30px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(1000px 360px at 18% 0%, rgba(199,179,106,.22), transparent 60%),
-        radial-gradient(900px 420px at 100% 25%, rgba(255,255,255,.08), transparent 58%),
-        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      position: relative;
+    .brand-meta{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
     }
-    header.hero:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        linear-gradient(90deg, rgba(199,179,106,.0), rgba(199,179,106,.18), rgba(199,179,106,.0));
-      opacity:.35;
-      transform: rotate(-2deg);
-      pointer-events:none;
+    .brand-meta strong{
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: rgba(255,255,255,.78);
     }
-    .hero-inner{
-      padding: 34px 30px 28px;
+    .brand-meta span{
+      font-family: var(--font-mono);
+      font-size: .80rem;
+      color: var(--ink-2);
+    }
+
+    nav{
+      display:flex;
+      gap: .4rem;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+    .navlink{
+      position:relative;
+      font-size: .90rem;
+      color: rgba(255,255,255,.72);
+      padding: .5rem .7rem;
+      border-radius: 999px;
+      border: var(--hl) solid transparent;
+      transition: border-color var(--dur-1) var(--ease), background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+      white-space: nowrap;
+    }
+    .navlink:hover{
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.88);
+      text-decoration:none;
+    }
+    .navlink[aria-current="true"]{
+      background: rgba(210,177,112,.10);
+      border-color: rgba(210,177,112,.26);
+      color: rgba(255,255,255,.90);
+    }
+
+    .actions{
+      display:flex;
+      gap:.6rem;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding: .55rem .75rem;
+      border-radius: 999px;
+      border: var(--hl) solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.84);
+      font-size: .90rem;
+      cursor:pointer;
+      transition: transform var(--dur-1) var(--ease), background var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease);
+    }
+    .btn:hover{
+      background: rgba(255,255,255,.05);
+      border-color: rgba(210,177,112,.22);
+      transform: translateY(-1px);
+    }
+    .btn:active{ transform: translateY(0); }
+    .btn svg{ opacity:.85; }
+
+    main{ position:relative; }
+
+    /* ===== Hero ===== */
+    .hero{
+      padding: clamp(2.25rem, 6vw, 4.25rem) 0 clamp(1.25rem, 3vw, 2rem);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: var(--grid-gap);
+      align-items: end;
     }
 
     .kicker{
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: .9px;
-      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: .84rem;
+      letter-spacing: .22em;
       text-transform: uppercase;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin-bottom: 10px;
-    }
-    .kicker span{
-      display:inline-block;
-      height:1px;
-      width: 38px;
-      background: linear-gradient(90deg, rgba(199,179,106,.0), rgba(199,179,106,.7), rgba(199,179,106,.0));
-      opacity:.9;
+      color: rgba(210,177,112,.70);
+      margin:0 0 .9rem;
     }
 
     h1{
-      margin: 0 0 8px;
-      font-family: var(--serif);
-      font-weight: 780;
-      letter-spacing: .18px;
-      font-size: clamp(34px, 3.8vw, 52px);
-      line-height: 1.05;
+      margin:0 0 .85rem;
+      font-family: var(--font-serif);
+      font-weight: 560;
+      font-size: var(--step-5);
+      line-height: 1.06;
+      letter-spacing: -.01em;
     }
     .subtitle{
       margin:0;
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 80ch;
+      font-size: var(--step-1);
+      color: rgba(255,255,255,.76);
+      max-width: 60ch;
     }
 
-    .hero-meta{
-      margin-top: 18px;
+    .hero-panel{
+      border-radius: var(--r-4);
+      border: var(--hl) solid rgba(255,255,255,.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
+        radial-gradient(900px 420px at 20% 0%, rgba(210,177,112,.10), transparent 60%);
+      box-shadow: var(--shadow-2);
+      padding: 1.1rem;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-panel::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg, rgba(210,177,112,.16), transparent 35%),
+        radial-gradient(500px 180px at 70% 20%, rgba(255,255,255,.06), transparent 60%);
+      opacity:.55;
+      mix-blend-mode: screen;
+    }
+
+    .meta{
+      position:relative;
       display:flex;
       flex-wrap:wrap;
-      gap:10px;
+      gap:.55rem;
+      padding: .25rem;
     }
-    .tag{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding: .62rem .85rem;
       border-radius: 999px;
-      padding: 8px 10px;
-      font-size: 12px;
-      color: var(--muted);
+      border: var(--hl) solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-family: var(--font-mono);
+      font-size: .86rem;
+      color: rgba(255,255,255,.78);
+      box-shadow: 0 0 0 1px rgba(0,0,0,.30) inset;
     }
-    .tag strong{ color: var(--text); font-weight: 700; }
+    .pill b{
+      font-weight: 600;
+      color: rgba(255,255,255,.92);
+    }
+    .gold-dot{
+      width: 7px; height: 7px;
+      border-radius: 999px;
+      background: rgba(210,177,112,.85);
+      box-shadow: 0 0 0 3px rgba(210,177,112,.12);
+    }
 
-    /* Layout grid */
+    .rule{
+      margin: 1.5rem 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(210,177,112,.35), rgba(255,255,255,.08), transparent);
+      opacity:.9;
+    }
+
+    /* ===== Sections ===== */
+    .section{
+      padding: clamp(1.5rem, 3.4vw, 2.35rem) 0;
+    }
+
     .grid{
       display:grid;
-      grid-template-columns: 1.55fr .95fr;
-      gap: 18px;
-      margin-top: 18px;
-      align-items: start;
-    }
-    @media (max-width: 920px){
-      .grid{ grid-template-columns: 1fr; }
-      .doc{ max-width: 72vw; }
-      .topbar{ position: relative; top:0; }
+      grid-template-columns: 1fr;
+      gap: var(--grid-gap);
     }
 
     .card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius2);
-      background: linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
-      box-shadow: var(--shadow2);
-      overflow: hidden;
-      position: relative;
+      border-radius: var(--r-4);
+      border: var(--hl) solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
+      box-shadow: var(--shadow-1);
+      overflow:hidden;
+      position:relative;
     }
-    .card:before{
+    .card::before{
       content:"";
-      position:absolute; inset:0;
-      background: radial-gradient(700px 220px at 20% 0%, rgba(199,179,106,.16), transparent 65%);
-      opacity:.75;
+      position:absolute;
+      inset:0;
       pointer-events:none;
-    }
-    .inner{ padding: 20px 20px 18px; position: relative; }
-
-    .section-title{
-      margin:0 0 12px;
-      font-size: 12px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 780;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .section-title:after{
-      content:"";
-      height:1px;
-      flex:1;
-      background: linear-gradient(90deg, rgba(199,179,106,.65), rgba(255,255,255,.0));
-      opacity:.55;
-    }
-
-    h2{
-      margin: 18px 0 8px;
-      font-size: 18px;
-      font-weight: 780;
-      letter-spacing: .2px;
-      color: var(--text);
-    }
-    p{
-      margin: 0 0 10px;
-      font-size: 14.8px;
-      color: var(--text);
-    }
-    p.muted{ color: var(--muted); }
-
-    .rule{
-      height:1px;
-      background: linear-gradient(90deg, rgba(199,179,106,.0), rgba(199,179,106,.25), rgba(255,255,255,.0));
-      margin: 16px 0;
+      background:
+        radial-gradient(900px 320px at 18% 0%, rgba(210,177,112,.08), transparent 62%),
+        linear-gradient(180deg, rgba(0,0,0,.20), transparent 40%);
       opacity:.8;
     }
 
-    /* Fancy quote block */
-    .quote{
-      margin: 12px 0 2px;
-      padding: 14px 14px 12px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      position: relative;
+    .card-inner{
+      position:relative;
+      padding: clamp(1.25rem, 2.8vw, 2.0rem);
     }
-    .quote:before{
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      margin-bottom: 1.1rem;
+    }
+    .eyebrow .label{
+      font-family: var(--font-mono);
+      font-size: .82rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(210,177,112,.74);
+    }
+    .eyebrow .mark{
+      font-family: var(--font-mono);
+      font-size: .82rem;
+      color: rgba(255,255,255,.52);
+    }
+
+    h2{
+      margin:0 0 .8rem;
+      font-family: var(--font-serif);
+      font-size: var(--step-3);
+      line-height: 1.12;
+      font-weight: 560;
+      letter-spacing: -.01em;
+    }
+    h3{
+      margin: 1.35rem 0 .55rem;
+      font-family: var(--font-sans);
+      font-size: var(--step-1);
+      font-weight: 650;
+      letter-spacing: -.01em;
+      color: rgba(255,255,255,.88);
+    }
+    p{
+      margin: .55rem 0;
+      color: rgba(255,255,255,.74);
+      max-width: 80ch;
+    }
+
+    .quote{
+      margin: 1.25rem 0 0;
+      padding: 1.1rem 1.1rem 1.05rem;
+      border-radius: var(--r-3);
+      border: var(--hl) solid rgba(210,177,112,.18);
+      background:
+        radial-gradient(700px 220px at 18% 0%, rgba(210,177,112,.10), transparent 60%),
+        rgba(0,0,0,.22);
+      box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
+      position:relative;
+    }
+    .quote::before{
       content:"“";
       position:absolute;
-      top:-12px; left:12px;
-      font-family: var(--serif);
-      font-size: 46px;
-      color: rgba(199,179,106,.55);
+      top:.2rem; left:.85rem;
+      font-family: var(--font-serif);
+      font-size: 2.35rem;
+      color: rgba(210,177,112,.45);
+      line-height:1;
+    }
+    .quote p{
+      margin:.2rem 0;
+      color: rgba(255,255,255,.78);
+      padding-left: .35rem;
     }
 
-    /* Sidebar kv */
-    .kv{
+    .dl{
+      margin: 1.1rem 0 0;
       display:grid;
-      grid-template-columns: 150px 1fr;
-      gap: 10px 12px;
-      font-size: 13px;
+      grid-template-columns: 1fr;
+      gap: .55rem;
     }
-    .kv .k{ color: var(--muted); }
-    .kv .v{ color: var(--text); }
-    .kv code{
-      font-family: var(--mono);
-      font-size: 12px;
-      padding: 2px 7px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
+    .row{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      padding: .85rem .95rem;
+      border-radius: 14px;
+      border: var(--hl) solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.18);
+      font-family: var(--font-mono);
+      font-size: .92rem;
+    }
+    .row span{
+      color: rgba(255,255,255,.60);
+    }
+    .row b{
+      color: rgba(255,255,255,.88);
+      font-weight: 650;
+      letter-spacing: .01em;
     }
 
-    .callout{
-      border: 1px solid var(--line2);
-      border-left: 3px solid var(--gold);
-      padding: 12px 12px 12px 14px;
-      border-radius: 16px;
-      background: rgba(199,179,106,.08);
-      color: var(--muted);
-      font-size: 13.5px;
+    .legal{
+      border-radius: var(--r-4);
+      border: var(--hl) solid rgba(255,255,255,.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02)),
+        radial-gradient(900px 420px at 16% 0%, rgba(210,177,112,.08), transparent 60%);
+      box-shadow: var(--shadow-1);
+    }
+    .legal .card-inner p{
+      color: rgba(255,255,255,.72);
+    }
+    .legal .strong{
+      color: rgba(255,255,255,.88);
+      font-weight: 650;
     }
 
     /* Footer */
     footer{
-      margin-top: 18px;
-      border-radius: var(--radius2);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
-      box-shadow: var(--shadow2);
-      padding: 18px 18px;
-      color: var(--muted);
-      font-size: 12.5px;
+      padding: var(--space-8) 0 var(--space-7);
+      border-top: var(--hl) solid rgba(255,255,255,.06);
+      color: rgba(255,255,255,.55);
+    }
+    .foot{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 3.2vw, 2.35rem);
       display:flex;
       justify-content:space-between;
-      align-items:center;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 1rem;
+      align-items:flex-start;
+      flex-wrap:wrap;
     }
-    .foot-right{ font-family: var(--mono); color: var(--faint); }
+    .foot small{
+      font-family: var(--font-mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
 
-    /* Print mode (PDF institutional) */
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width:auto; }
+      nav{ display:none; } /* mantém premium + foco no conteúdo em telas menores */
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior:auto !important; transition:none !important; animation:none !important; }
+    }
+
+    /* ===== Print (A4 impecável) ===== */
     @media print{
-      body{ background:#fff !important; color:#0b0f17 !important; }
-      body:before{ display:none !important; }
-      .topbar, header.hero, .card, footer{
-        box-shadow: none !important;
-        background:#fff !important;
-        border-color: rgba(10,14,23,.18) !important;
+      @page{ size: A4; margin: 14mm 14mm 16mm 14mm; }
+
+      body{
+        background: #fff !important;
+        color: var(--print-ink) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
-      .section-title:after{ background: rgba(10,14,23,.18) !important; }
-      .rule{ background: rgba(10,14,23,.18) !important; }
-      .wrap{ width: 100%; margin: 0; }
+      body::before, body::after{ display:none !important; }
+
+      header, .actions, .btn{ display:none !important; }
+      .wrap{ max-width: none; padding: 0 !important; }
+      .hero{ padding: 0 0 8mm !important; }
+      .rule{ background: linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.12), transparent) !important; }
+
+      h1, h2{
+        color: var(--print-ink) !important;
+      }
+      .kicker{ color: #6a5430 !important; }
+      .subtitle, p{ color: var(--print-muted) !important; }
+
+      .card, .legal, .hero-panel{
+        background: #fff !important;
+        border: 1px solid var(--print-hair) !important;
+        box-shadow: none !important;
+      }
+      .card::before, .hero-panel::before{ display:none !important; }
+
+      .pill, .row, .quote{
+        background: #fff !important;
+        border: 1px solid var(--print-hair) !important;
+        box-shadow:none !important;
+      }
+      .quote::before{ color: rgba(0,0,0,.25) !important; }
+
+      a{ text-decoration:none !important; color: var(--print-ink) !important; }
+      .section{ padding: 6mm 0 !important; }
+      footer{
+        border-top: 1px solid var(--print-hair) !important;
+        padding: 8mm 0 0 !important;
+        color: var(--print-muted) !important;
+      }
+
+      /* Evita quebras ruins */
+      .card, .legal{ break-inside: avoid; page-break-inside: avoid; }
+      h2, h3{ break-after: avoid; page-break-after: avoid; }
     }
   </style>
+
+  <!-- Structured data (canônico / autoria institucional) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CreativeWork",
+    "name":"NeuroSaaS — Termo conceitual original",
+    "datePublished":"2026-01-21",
+    "publisher":{"@type":"Organization","name":"FalX"},
+    "inLanguage":"pt-BR",
+    "description":"Autoria e Registro Público — FalX — 2026. Registro público canônico para estabelecer autoria, originalidade e utilização anterior do termo NeuroSaaS."
+  }
+  </script>
 </head>
 
 <body>
-  <div class="wrap">
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header aria-label="Cabeçalho">
     <div class="topbar">
-      <div class="brand">
-        <div class="sigil" aria-hidden="true"></div>
-        <div class="meta">
-          <div class="org">FalX</div>
-          <div class="doc">Registro público canônico — termo conceitual original</div>
+      <div class="brand" aria-label="Identidade FalX">
+        <div class="seal" aria-hidden="true"></div>
+        <div class="brand-meta">
+          <strong>Registro público canônico</strong>
+          <span>FalX • 2026</span>
         </div>
       </div>
-      <div class="pill"><span class="dot" aria-hidden="true"></span> Public Record • v2 Signature</div>
-    </div>
 
-    <header class="hero">
-      <div class="hero-inner">
-        <div class="kicker"><span></span>Autoria institucional e precedência temporal</div>
-        <h1>NeuroSaaS</h1>
-        <p class="subtitle">
-          Termo conceitual original. Documento público para estabelecer autoria institucional, definição canônica e precedência temporal
-          com base no histórico verificável de publicação.
-        </p>
+      <nav aria-label="Navegação">
+        <a class="navlink" href="#definicao">Definição</a>
+        <a class="navlink" href="#ontologia">Natureza ontológica</a>
+        <a class="navlink" href="#autoria">Autoria e origem</a>
+        <a class="navlink" href="#direitos">Direitos autorais</a>
+        <a class="navlink" href="#registro">Registro público</a>
+        <a class="navlink" href="#fechamento">Fechamento</a>
+      </nav>
 
-        <div class="hero-meta">
-          <div class="tag"><strong>Publicador:</strong> FalX</div>
-          <div class="tag"><strong>Ano:</strong> 2026</div>
-          <div class="tag"><strong>Objeto:</strong> Termo + definição canônica</div>
-          <div class="tag"><strong>Status:</strong> Registro público</div>
-        </div>
+      <div class="actions" aria-label="Ações">
+        <button class="btn" id="copyLink" type="button" aria-label="Copiar link desta página">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 9h10v10H9V9Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          Copiar link
+        </button>
+        <button class="btn" type="button" onclick="window.print()" aria-label="Imprimir em A4 (PDF)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 7V3h10v4" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M7 17h10v4H7v-4Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M6 17H4a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          Print (A4)
+        </button>
       </div>
-    </header>
-
-    <div class="grid">
-      <!-- MAIN -->
-      <section class="card">
-        <div class="inner">
-          <div class="section-title">Definição canônica</div>
-
-          <h2>Definição</h2>
-          <p>
-            NeuroSaaS é a institucionalização da neurociência aplicada como princípio arquitetônico fundamental de produtos e sistemas contínuos.
-            É projetado para evoluir em sincronia com o desenvolvimento neurocognitivo humano, tanto em nível individual quanto coletivo.
-          </p>
-
-          <div class="rule"></div>
-
-          <h2>Natureza ontológica</h2>
-          <p>
-            NeuroSaaS não é um tipo de software, um modelo de negócio ou uma categoria de mercado.
-            Representa uma função neuroevolutiva traduzida em arquitetura de produto e sistema.
-          </p>
-
-          <div class="quote">
-            <p class="muted" style="margin:0;">
-              Baseia-se no princípio estrutural de que o cérebro humano é um sistema vivo, plástico e permanentemente inacabado.
-              Portanto, qualquer produto ou sistema que interaja continuamente com pessoas deve evoluir a um ritmo compatível — ou torna-se cognitivamente limitante.
-            </p>
-          </div>
-
-          <div class="rule"></div>
-
-          <div class="section-title">Autoria e origem</div>
-
-          <p class="muted">
-            O termo e o conceito NeuroSaaS foram originalmente concebidos e definidos pela FalX como uma estrutura intelectual
-            que aborda uma assimetria estrutural da era digital: sistemas tecnológicos evoluíram mais rapidamente do que a adaptação neurocognitiva humana.
-          </p>
-          <p class="muted">
-            O conceito estabelece o desenvolvimento neurocognitivo como responsabilidade explícita da arquitetura de produtos e sistemas.
-          </p>
-
-          <div class="rule"></div>
-
-          <div class="section-title">Direitos autorais</div>
-
-          <p class="muted">
-            O termo <strong>NeuroSaaS</strong> e sua definição conceitual constituem uma criação intelectual original.
-            <strong>© FalX, 2026.</strong> Todos os direitos reservados.
-          </p>
-          <p class="muted">
-            É estritamente proibida qualquer reprodução, uso comercial, branding, uso de marca registrada, categorização de mercado
-            ou aplicação derivada deste termo ou de sua definição, sem autorização prévia por escrito da FalX.
-          </p>
-        </div>
-      </section>
-
-      <!-- SIDEBAR -->
-      <aside class="card">
-        <div class="inner">
-          <div class="section-title">Registro público</div>
-
-          <div class="kv" role="list">
-            <div class="k" role="listitem">Publicador</div>
-            <div class="v"><strong>FalX</strong></div>
-
-            <div class="k" role="listitem">Data de publicação</div>
-            <div class="v">21 de janeiro de 2026</div>
-
-            <div class="k" role="listitem">Repositório</div>
-            <div class="v"><code>Falxglobal/NeuroSaaS</code></div>
-
-            <div class="k" role="listitem">Finalidade</div>
-            <div class="v">Autoria • Originalidade • Precedência</div>
-
-            <div class="k" role="listitem">Versão visual</div>
-            <div class="v"><code>v2-signature</code></div>
-          </div>
-
-          <div class="rule"></div>
-
-          <div class="callout">
-            Este registro é propositalmente verificável: a página é pública e o histórico de commits funciona como trilha temporal adicional de precedência.
-          </div>
-
-          <div class="rule"></div>
-
-          <div class="section-title">Fechamento canônico</div>
-          <p class="muted">
-            NeuroSaaS representa uma correção estrutural na era digital: o desenvolvimento neurocognitivo humano deixa de ser
-            efeito colateral do progresso tecnológico e torna-se responsabilidade explícita da arquitetura de produtos e sistemas.
-          </p>
-        </div>
-      </aside>
     </div>
+  </header>
 
-    <footer>
-      <div>© FalX — 2026. Registro público canônico de autoria.</div>
-      <div class="foot-right">NeuroSaaS • FalX • Signature Edition</div>
-    </footer>
-  </div>
+  <main id="conteudo" class="wrap">
+    <section class="hero" aria-label="Abertura canônica">
+      <p class="kicker">Documento canônico • precedência temporal • institucionalidade</p>
+
+      <div class="hero-grid">
+        <div>
+          <h1>NeuroSaaS — Termo conceitual original</h1>
+          <p class="subtitle">Autoria e Registro Público — FalX — 2026</p>
+        </div>
+
+        <aside class="hero-panel" aria-label="Metadados do registro">
+          <div class="meta">
+            <span class="pill"><span class="gold-dot" aria-hidden="true"></span><b>Publicador:</b> FalX</span>
+            <span class="pill"><span class="gold-dot" aria-hidden="true"></span><b>Ano:</b> 2026</span>
+            <span class="pill"><span class="gold-dot" aria-hidden="true"></span><b>Data:</b> <time datetime="2026-01-21">21 de janeiro de 2026</time></span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="rule" role="separator" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="definicao" aria-label="Definição">
+      <div class="grid">
+        <article class="card">
+          <div class="card-inner">
+            <div class="eyebrow">
+              <div class="label">Definição canônica</div>
+              <div class="mark">FalX • Registro público</div>
+            </div>
+            <h2>Definição</h2>
+            <p>“NeuroSaaS é a institucionalização da neurociência aplicada como princípio arquitetônico fundamental de produtos e sistemas contínuos. É projetado para evoluir em sincronia com o desenvolvimento neurocognitivo humano, tanto em nível individual quanto coletivo.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="ontologia" aria-label="Natureza ontológica">
+      <div class="grid">
+        <article class="card">
+          <div class="card-inner">
+            <div class="eyebrow">
+              <div class="label">Natureza ontológica</div>
+              <div class="mark">Estrutura conceitual</div>
+            </div>
+            <h2>Natureza Ontológica</h2>
+            <p>“NeuroSaaS não é um tipo de software, um modelo de negócio ou uma categoria de mercado. Representa uma função neuroevolutiva traduzida em arquitetura de produto e sistema.”</p>
+
+            <div class="quote" role="note" aria-label="Nota canônica">
+              <p>“Baseia-se no princípio estrutural de que o cérebro humano é um sistema vivo, plástico e permanentemente inacabado. Portanto, qualquer produto ou sistema que interaja continuamente com as pessoas deve evoluir a um ritmo compatível, ou torna-se cognitivamente limitante.”</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="autoria" aria-label="Autoria e origem">
+      <div class="grid">
+        <article class="card">
+          <div class="card-inner">
+            <div class="eyebrow">
+              <div class="label">Autoria e origem</div>
+              <div class="mark">FalX • precedência</div>
+            </div>
+            <h2>Autoria e origem</h2>
+            <p>“O termo e o conceito NeuroSaaS foram originalmente concebidos e definidos pela FalX como uma estrutura intelectual original que aborda uma assimetria estrutural da era digital, na qual os sistemas tecnológicos evoluíram mais rapidamente do que a adaptação neurocognitiva humana.”</p>
+            <p>“Este conceito estabelece o desenvolvimento neurocognitivo como uma responsabilidade explícita da arquitetura de produtos e sistemas.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="direitos" aria-label="Aviso de direitos autorais">
+      <div class="grid">
+        <article class="legal">
+          <div class="card-inner">
+            <div class="eyebrow">
+              <div class="label">Aviso de direitos autorais</div>
+              <div class="mark">Uso restrito</div>
+            </div>
+            <h2>Aviso de direitos autorais</h2>
+            <p>“O termo NeuroSaaS e sua definição conceitual constituem uma criação intelectual original.”</p>
+            <p class="strong">“© FalX, 2026. Todos os direitos reservados.”</p>
+            <p>“É estritamente proibida qualquer reprodução, uso comercial, branding, uso de marca registrada, categorização de mercado ou aplicação derivada deste termo ou de sua definição sem autorização prévia por escrito da FalX.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="registro" aria-label="Registro público">
+      <div class="grid">
+        <article class="card">
+          <div class="card-inner">
+            <div class="eyebrow">
+              <div class="label">Registro público</div>
+              <div class="mark">Marcação de tempo</div>
+            </div>
+            <h2>Registro público</h2>
+
+            <p>“Data de publicação: 21 de janeiro de 2026.”</p>
+            <p>“Esta página web serve como um registro público, com marcação de tempo, para estabelecer a autoria, a originalidade e a utilização anterior do termo NeuroSaaS.”</p>
+
+            <div class="dl" aria-label="Metadados formais">
+              <div class="row"><span>Data de publicação</span><b><time datetime="2026-01-21">21 de janeiro de 2026</time></b></div>
+              <div class="row"><span>Repositório</span><b><span id="repoHint">GitHub Pages (este repositório)</span></b></div>
+              <div class="row"><span>Finalidade</span><b>Autoria • originalidade • precedência</b></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="fechamento" aria-label="Fechamento canônico">
+      <div class="grid">
+        <article class="card">
+          <div class="card-inner">
+            <div class="eyebrow">
+              <div class="label">Fechamento canônico</div>
+              <div class="mark">Declaração final</div>
+            </div>
+            <h2>Fechamento canônico</h2>
+            <p>“NeuroSaaS representa uma correção estrutural na era digital, onde o desenvolvimento neurocognitivo humano deixa de ser um efeito colateral do progresso tecnológico e se torna uma responsabilidade explícita da arquitetura de produtos e sistemas.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Rodapé">
+    <div class="foot">
+      <small>© FalX, 2026. Todos os direitos reservados.</small>
+      <small>Registro público canônico • NeuroSaaS</small>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced) document.documentElement.style.scrollBehavior = 'smooth';
+
+      // Copy link (microinteração discreta)
+      const btn = document.getElementById('copyLink');
+      if (btn && navigator.clipboard) {
+        btn.addEventListener('click', async () => {
+          try{
+            await navigator.clipboard.writeText(window.location.href);
+            const original = btn.textContent.trim();
+            btn.textContent = 'Link copiado';
+            btn.setAttribute('aria-label','Link copiado para a área de transferência');
+            setTimeout(() => {
+              btn.textContent = original;
+              btn.setAttribute('aria-label','Copiar link desta página');
+            }, 1200);
+          } catch(e){
+            // Silencioso: mantém UX premium, sem alertas intrusivos
+          }
+        });
+      } else if (btn) {
+        btn.style.display = 'none';
+      }
+
+      // Scroll spy (refino editorial)
+      const links = Array.from(document.querySelectorAll('nav .navlink'));
+      const ids = links.map(a => a.getAttribute('href')).filter(Boolean).map(h => h.slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const setCurrent = (id) => {
+        links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === ('#' + id) ? 'true' : 'false'));
+      };
+
+      if ('IntersectionObserver' in window && sections.length){
+        const io = new IntersectionObserver((entries) => {
+          const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible && visible.target && visible.target.id) setCurrent(visible.target.id);
+        }, { rootMargin: '-40% 0px -55% 0px', threshold: [0.08, 0.14, 0.22] });
+
+        sections.forEach(s => io.observe(s));
+      }
+    })();
+  </script>
 </body>
 </html>
