@@ -2,90 +2,79 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeuroSaaS — Registro Público Canônico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
   <meta name="color-scheme" content="dark light" />
-  <title>NeuroSaaS — Definição fundacional</title>
-  <meta name="description" content="Registro público canônico — autoria e precedência temporal. NeuroSaaS — definição fundacional." />
-  <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#07070a" />
+  <meta name="description" content="Registro público canônico e definição fundacional do termo NeuroSaaS." />
 
   <style>
     :root{
-      /* Fundo: matte, profundo, sem “tech glow” */
+      /* Palette — contida, editorial, sem “glow” */
       --bg0:#07070a;
-      --bg1:#0b0c12;
-      --bg2:#0f1119;
+      --bg1:#0b0c10;
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.025);
+      --hair:rgba(255,255,255,.10);
+      --hair2:rgba(255,255,255,.06);
 
-      /* Texto */
       --ink0:rgba(255,255,255,.92);
       --ink1:rgba(255,255,255,.74);
       --ink2:rgba(255,255,255,.56);
 
-      /* Dourado institucional (contido) */
       --gold0:rgba(210,177,112,.92);
       --gold1:rgba(210,177,112,.22);
       --gold2:rgba(210,177,112,.12);
 
-      /* Linhas e superfícies */
-      --hair:rgba(255,255,255,.10);
-      --hair2:rgba(255,255,255,.06);
-      --panel:rgba(255,255,255,.045);
-      --panel2:rgba(255,255,255,.03);
-
-      /* Tipos (sem dependências externas) */
+      /* Typography — serif editorial + sans neutra (system) */
       --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Garamond, Georgia, serif;
       --sans: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-      /* Escala fluida */
-      --s-0: clamp(1.00rem, .95rem + .25vw, 1.10rem);
-      --s-1: clamp(1.15rem, 1.05rem + .55vw, 1.45rem);
-      --s-2: clamp(1.35rem, 1.15rem + 1.00vw, 1.85rem);
-      --s-3: clamp(1.65rem, 1.30rem + 1.60vw, 2.45rem);
-      --s-4: clamp(2.10rem, 1.55rem + 2.65vw, 3.30rem);
-      --s-5: clamp(2.65rem, 1.85rem + 3.60vw, 4.20rem);
+      /* Scale */
+      --s0: clamp(1.00rem, .96rem + .20vw, 1.10rem);
+      --s1: clamp(1.10rem, 1.02rem + .55vw, 1.40rem);
+      --s2: clamp(1.35rem, 1.12rem + 1.15vw, 1.95rem);
+      --s3: clamp(1.70rem, 1.30rem + 1.90vw, 2.55rem);
+      --s4: clamp(2.20rem, 1.55rem + 3.10vw, 3.55rem);
 
-      /* Layout */
-      --container: 1120px;
-      --gutter: clamp(1.0rem, 3.0vw, 2.25rem);
-      --gap: clamp(1.0rem, 2.2vw, 1.6rem);
+      --container: 980px;
+      --gutter: clamp(1.15rem, 3.2vw, 2.25rem);
 
-      /* Raios e sombras */
       --r1: 14px;
       --r2: 18px;
-      --r3: 24px;
-      --shadow1: 0 14px 40px rgba(0,0,0,.35);
-      --shadow2: 0 24px 70px rgba(0,0,0,.48);
+      --r3: 22px;
+
+      --shadow1: 0 18px 55px rgba(0,0,0,.42);
+      --shadow2: 0 10px 28px rgba(0,0,0,.32);
     }
 
-    *{ box-sizing:border-box; }
+    *{ margin:0; padding:0; box-sizing:border-box; }
     html,body{ height:100%; }
     body{
-      margin:0;
       background: var(--bg0);
       color: var(--ink0);
       font-family: var(--sans);
-      font-size: var(--s-0);
-      line-height: 1.65;
+      font-size: var(--s0);
+      line-height: 1.7;
       letter-spacing: .01em;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x:hidden;
     }
 
-    /* Textura editorial discreta (sem estética SaaS) */
+    /* Editorial atmosphere (silenciosa) */
     body::before{
       content:"";
       position:fixed;
       inset:0;
       pointer-events:none;
       background:
-        radial-gradient(1000px 720px at 15% 10%, rgba(210,177,112,.08), transparent 55%),
-        radial-gradient(900px 680px at 85% 20%, rgba(255,255,255,.045), transparent 60%),
-        radial-gradient(1100px 900px at 50% 120%, rgba(0,0,0,.85), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.03), transparent 26%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 1px, transparent 1px 18px),
-        repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0 1px, transparent 1px 14px);
+        radial-gradient(1100px 820px at 18% 10%, rgba(210,177,112,.07), transparent 58%),
+        radial-gradient(900px 700px at 80% 20%, rgba(255,255,255,.04), transparent 62%),
+        linear-gradient(180deg, rgba(255,255,255,.03), transparent 28%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.012) 0 1px, transparent 1px 20px),
+        repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0 1px, transparent 1px 16px);
       opacity:.95;
       mix-blend-mode: screen;
     }
@@ -94,134 +83,130 @@
       position:fixed;
       inset:-2px;
       pointer-events:none;
-      background: radial-gradient(1200px 900px at 50% 35%, transparent 55%, rgba(0,0,0,.70) 100%);
-      opacity:.9;
+      background: radial-gradient(1200px 900px at 50% 35%, transparent 55%, rgba(0,0,0,.72) 100%);
+      opacity:.95;
     }
 
     a{ color:inherit; text-decoration:none; }
     :focus-visible{
       outline:2px solid rgba(210,177,112,.55);
       outline-offset:3px;
-      border-radius:10px;
+      border-radius:12px;
     }
 
     .wrap{
       position:relative;
       max-width: var(--container);
       margin:0 auto;
-      padding: var(--gutter);
+      padding: 0 var(--gutter);
     }
 
-    /* ===== Header (marca com presença institucional) ===== */
+    /* ===== Header ===== */
     header{
       position:sticky;
       top:0;
-      z-index:60;
+      z-index:50;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(7,7,10,.82), rgba(7,7,10,.58));
+      background: linear-gradient(180deg, rgba(7,7,10,.86), rgba(7,7,10,.56));
       border-bottom:1px solid rgba(255,255,255,.06);
     }
 
     .topbar{
       max-width: var(--container);
       margin:0 auto;
-      padding: 1rem var(--gutter);
+      padding: 1.05rem var(--gutter);
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap: 1rem;
     }
 
+    /* Logo: maior, ancorada em um cartucho institucional */
     .brand{
       display:flex;
       align-items:center;
-      gap: .9rem;
-      min-width: 280px;
+      gap: .95rem;
     }
 
-    /* Cartucho institucional (não “navbar”) */
     .brand-badge{
       display:flex;
       align-items:center;
       gap:.9rem;
       padding: .75rem .95rem;
       border-radius: 999px;
-      border:1px solid rgba(210,177,112,.22);
+      border:1px solid rgba(210,177,112,.20);
       background:
-        radial-gradient(520px 140px at 18% 0%, rgba(210,177,112,.12), transparent 60%),
+        radial-gradient(520px 160px at 18% 0%, rgba(210,177,112,.11), transparent 60%),
         rgba(0,0,0,.22);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.035) inset;
     }
 
-    .brand-logo{
-      width: 56px;          /* PRESENÇA: maior e deliberada */
+    .brand-mark{
+      width: 56px;               /* presença */
       height: 56px;
-      border-radius: 16px;  /* “selo” contemporâneo, mas institucional */
+      border-radius: 16px;
       border:1px solid rgba(255,255,255,.08);
       background:
-        radial-gradient(circle at 30% 25%, rgba(210,177,112,.20), transparent 55%),
+        radial-gradient(circle at 30% 25%, rgba(210,177,112,.18), transparent 55%),
         linear-gradient(180deg, rgba(255,255,255,.035), rgba(0,0,0,.26));
       display:grid;
       place-items:center;
       overflow:hidden;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.35) inset;
     }
-    .brand-logo img{
-      width: 76%;
+
+    .brand-mark img{
+      width: 78%;
       height: auto;
       display:block;
-      opacity:.92;
-      filter: saturate(1.02) contrast(1.03);
+      opacity:.93;
+      filter: contrast(1.03) saturate(1.02);
     }
 
     .brand-text{
       display:flex;
       flex-direction:column;
-      line-height:1.05;
       gap:.22rem;
+      line-height:1.05;
     }
-    .brand-text strong{
+    .brand-name{
       font-family: var(--mono);
-      font-size: .80rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
+      font-size:.80rem;
+      letter-spacing:.22em;
+      text-transform:uppercase;
       color: rgba(255,255,255,.86);
     }
-    .brand-text span{
+    .brand-sub{
       font-family: var(--mono);
-      font-size: .78rem;
-      letter-spacing: .10em;
+      font-size:.78rem;
+      letter-spacing:.10em;
       color: var(--ink2);
     }
 
-    .top-actions{
-      display:flex;
-      align-items:center;
-      gap:.6rem;
-    }
-    .btn{
+    .action{
       display:inline-flex;
       align-items:center;
       gap:.55rem;
-      padding:.55rem .8rem;
-      border-radius: 999px;
+      padding:.55rem .85rem;
+      border-radius:999px;
       border:1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.03);
-      color: rgba(255,255,255,.82);
+      color: rgba(255,255,255,.78);
       font-size:.92rem;
       cursor:pointer;
-      transition: transform 180ms cubic-bezier(.2,.7,.2,1), border-color 180ms cubic-bezier(.2,.7,.2,1), background 180ms cubic-bezier(.2,.7,.2,1);
+      transition: transform 180ms cubic-bezier(.2,.7,.2,1), background 180ms cubic-bezier(.2,.7,.2,1), border-color 180ms cubic-bezier(.2,.7,.2,1);
     }
-    .btn:hover{
+    .action:hover{
       transform: translateY(-1px);
       background: rgba(255,255,255,.045);
-      border-color: rgba(210,177,112,.18);
+      border-color: rgba(210,177,112,.16);
     }
-    .btn svg{ opacity:.85; }
+    .action svg{ opacity:.85; }
 
-    /* ===== Hero / Placa canônica ===== */
+    /* ===== Hero ===== */
     .hero{
-      padding: clamp(2.3rem, 6vw, 4.2rem) 0 clamp(1.2rem, 3vw, 2rem);
+      padding: clamp(2.2rem, 6vw, 4.2rem) 0 1.2rem;
     }
 
     .kicker{
@@ -230,44 +215,38 @@
       letter-spacing:.26em;
       text-transform:uppercase;
       color: rgba(210,177,112,.70);
-      margin:0 0 1rem;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: var(--gap);
-      align-items: end;
+      margin:0 0 1.1rem;
     }
 
     h1{
-      margin:0 0 .85rem;
       font-family: var(--serif);
+      font-size: var(--s4);
       font-weight: 560;
-      font-size: var(--s-5);
-      line-height:1.03;
-      letter-spacing:-.01em;
+      line-height: 1.03;
+      letter-spacing: -.01em;
+      margin:0 0 .9rem;
     }
 
     .subtitle{
       margin:0;
-      font-size: var(--s-1);
-      color: rgba(255,255,255,.76);
-      max-width: 62ch;
+      font-size: var(--s1);
+      color: rgba(255,255,255,.74);
+      max-width: 68ch;
     }
 
-    .plate{
+    .meta-plate{
+      margin-top: 1.5rem;
       border-radius: var(--r3);
       border:1px solid rgba(255,255,255,.08);
       background:
         linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
         radial-gradient(900px 380px at 22% 0%, rgba(210,177,112,.10), transparent 60%);
-      box-shadow: var(--shadow2);
+      box-shadow: var(--shadow1);
       padding: 1.05rem;
       position:relative;
       overflow:hidden;
     }
-    .plate::before{
+    .meta-plate::before{
       content:"";
       position:absolute;
       inset:0;
@@ -309,22 +288,27 @@
     }
 
     .rule{
-      margin: 1.6rem 0 0;
+      margin: 2.0rem 0 0;
       height:1px;
       background: linear-gradient(90deg, rgba(210,177,112,.35), rgba(255,255,255,.08), transparent);
       opacity:.95;
     }
 
-    /* ===== Seções ===== */
-    .section{
-      padding: clamp(1.4rem, 3.4vw, 2.35rem) 0;
+    /* ===== Sections ===== */
+    main{
+      position:relative;
+      padding: 0 0 5.0rem;
+    }
+
+    section{
+      padding: 1.9rem 0;
     }
 
     .card{
       border-radius: var(--r3);
       border:1px solid rgba(255,255,255,.08);
       background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
-      box-shadow: var(--shadow1);
+      box-shadow: var(--shadow2);
       position:relative;
       overflow:hidden;
     }
@@ -345,11 +329,12 @@
 
     .eyebrow{
       display:flex;
-      align-items:center;
+      align-items:flex-end;
       justify-content:space-between;
       gap: 1rem;
       margin-bottom: 1.0rem;
     }
+
     .label{
       font-family: var(--mono);
       font-size:.80rem;
@@ -364,12 +349,12 @@
     }
 
     h2{
-      margin:0 0 .9rem;
       font-family: var(--serif);
+      font-size: var(--s3);
       font-weight: 560;
-      font-size: var(--s-3);
-      line-height:1.10;
+      line-height:1.12;
       letter-spacing:-.01em;
+      margin: .25rem 0 .85rem;
     }
 
     p{
@@ -378,10 +363,9 @@
       max-width: 82ch;
     }
 
-    /* blocos com quebras preservadas (para seu texto canônico) */
     .block{
       margin-top: 1.1rem;
-      padding: 1.05rem 1.05rem;
+      padding: 1.05rem 1.15rem;
       border-radius: var(--r2);
       border:1px solid rgba(210,177,112,.16);
       background:
@@ -389,7 +373,6 @@
         rgba(0,0,0,.22);
       box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
       white-space: pre-wrap;
-      font-family: var(--sans);
       color: rgba(255,255,255,.78);
     }
 
@@ -400,9 +383,10 @@
     }
     li{ margin: .35rem 0; }
 
+    /* Footer */
     footer{
-      padding: 3.5rem 0 3rem;
       border-top:1px solid rgba(255,255,255,.06);
+      padding: 2.8rem 0 2.4rem;
       color: rgba(255,255,255,.55);
     }
     .foot{
@@ -422,28 +406,21 @@
       text-transform: uppercase;
     }
 
-    @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .top-actions{ display:none; }
-      .brand{ min-width:auto; }
-      .brand-logo{ width:52px; height:52px; }
+    @media (max-width: 860px){
+      .action{ display:none; }
+      .brand-mark{ width:52px; height:52px; }
     }
 
-    @media (prefers-reduced-motion: reduce){
-      *{ scroll-behavior:auto !important; transition:none !important; animation:none !important; }
-    }
-
-    /* Impressão limpa (registro em PDF) */
+    /* Print (registro em PDF) */
     @media print{
       @page{ size:A4; margin: 14mm 14mm 16mm 14mm; }
       body{ background:#fff !important; color:#111214 !important; }
-      body::before, body::after, header .top-actions{ display:none !important; }
+      body::before, body::after{ display:none !important; }
       header{ position:static; background:#fff !important; border-bottom:1px solid rgba(0,0,0,.12) !important; }
       .brand-badge{ border:1px solid rgba(0,0,0,.14) !important; background:#fff !important; box-shadow:none !important; }
-      .brand-text span{ color: rgba(0,0,0,.55) !important; }
-      .wrap{ max-width:none; padding:0 !important; }
-      .plate, .card{ background:#fff !important; box-shadow:none !important; border:1px solid rgba(0,0,0,.14) !important; }
-      .card::before, .plate::before{ display:none !important; }
+      .brand-sub{ color: rgba(0,0,0,.55) !important; }
+      .meta-plate, .card{ background:#fff !important; box-shadow:none !important; border:1px solid rgba(0,0,0,.14) !important; }
+      .card::before, .meta-plate::before{ display:none !important; }
       .pill{ background:#fff !important; border:1px solid rgba(0,0,0,.14) !important; }
       .rule{ background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.12), transparent) !important; }
       h1,h2{ color:#111214 !important; }
@@ -454,59 +431,57 @@
 </head>
 
 <body>
-  <header aria-label="Cabeçalho institucional">
+
+  <!-- HEADER -->
+  <header class="site-header" aria-label="Cabeçalho institucional">
     <div class="topbar">
-      <div class="brand" aria-label="FalX — Registro público canônico">
+      <div class="brand">
         <div class="brand-badge">
-          <div class="brand-logo" aria-hidden="true">
+          <div class="brand-mark" aria-hidden="true">
             <img src="assets/svg/logo.svg" alt="" />
           </div>
           <div class="brand-text">
-            <strong>FalX</strong>
-            <span>Registro público canônico</span>
+            <span class="brand-name">FalX</span>
+            <span class="brand-sub">Registro público canônico</span>
           </div>
         </div>
       </div>
 
-      <div class="top-actions" aria-label="Ações">
-        <button class="btn" type="button" onclick="window.print()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 7V3h10v4" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M7 17h10v4H7v-4Z" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M6 17H4a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="1.6"/>
-          </svg>
-          Print (A4)
-        </button>
-      </div>
+      <button class="action" type="button" onclick="window.print()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 7V3h10v4" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M7 17h10v4H7v-4Z" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M6 17H4a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        Print (A4)
+      </button>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="hero" aria-label="Hero institucional">
+
+    <!-- HERO -->
+    <section class="hero">
       <p class="kicker">Documento fundador • registro público • precedência temporal</p>
 
-      <div class="hero-grid">
-        <div>
-          <h1>NeuroSaaS — definição fundacional</h1>
-          <p class="subtitle">
-            Artefato institucional digital. Declaração ontológica formal. Texto canônico preservado integralmente.
-          </p>
-        </div>
+      <h1>NeuroSaaS — definição fundacional</h1>
+      <p class="subtitle">
+        Termo conceitual original. Documento público para estabelecer definição canônica e precedência temporal com base no histórico verificável de publicação.
+      </p>
 
-        <aside class="plate" aria-label="Placa de metadados">
-          <div class="meta">
-            <span class="pill"><span class="dot" aria-hidden="true"></span>Publicador: <b>FalX</b></span>
-            <span class="pill"><span class="dot" aria-hidden="true"></span>Ano: <b>2026</b></span>
-            <span class="pill"><span class="dot" aria-hidden="true"></span>Objeto: <b>Termo + definição canônica</b></span>
-          </div>
-        </aside>
+      <div class="meta-plate" aria-label="Placa de metadados">
+        <div class="meta">
+          <span class="pill"><span class="dot" aria-hidden="true"></span>Publicador: <b>FalX</b></span>
+          <span class="pill"><span class="dot" aria-hidden="true"></span>Ano: <b>2026</b></span>
+          <span class="pill"><span class="dot" aria-hidden="true"></span>Objeto: <b>Termo + definição canônica</b></span>
+        </div>
       </div>
 
       <div class="rule" aria-hidden="true"></div>
     </section>
 
-    <!-- 1) Definição fundacional -->
-    <section class="section" id="definicao">
+    <!-- Definição fundacional -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
@@ -526,12 +501,12 @@ NeuroSaaS existe para resolver essa assimetria.</div>
       </article>
     </section>
 
-    <!-- 2) Natureza ontológica -->
-    <section class="section" id="ontologia">
+    <!-- Natureza ontológica do termo -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
-            <div class="label">Natureza ontológica</div>
+            <div class="label">Natureza ontológica do termo</div>
             <div class="mark">Fechamento semântico</div>
           </div>
 
@@ -549,12 +524,12 @@ A evolução cognitiva contínua é a função.</div>
       </article>
     </section>
 
-    <!-- 3) Papel da neurociência aplicada -->
-    <section class="section" id="neuro">
+    <!-- O papel da neurociência aplicada -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
-            <div class="label">Papel da neurociência aplicada</div>
+            <div class="label">O papel da neurociência aplicada</div>
             <div class="mark">Arquitetura operacional</div>
           </div>
 
@@ -578,8 +553,8 @@ Ele se reorganiza continuamente em resposta ao avanço cognitivo humano.</div>
       </article>
     </section>
 
-    <!-- 4) Produto em avanço com o neuro em avanço -->
-    <section class="section" id="produto">
+    <!-- Produto em avanço com o neuro em avanço -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
@@ -605,8 +580,8 @@ Ele expande capacidade de abstração, decisão e pensamento ao longo do tempo.<
       </article>
     </section>
 
-    <!-- 5) Definição canônica -->
-    <section class="section" id="canon">
+    <!-- Definição canônica -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
@@ -628,8 +603,8 @@ Ela descreve uma necessidade estrutural da era digital, não uma solução circu
       </article>
     </section>
 
-    <!-- 6) Posição histórica -->
-    <section class="section" id="historia">
+    <!-- Posição histórica -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
@@ -650,8 +625,8 @@ Nesse sentido, NeuroSaaS não é tendência, inovação incremental ou categoria
       </article>
     </section>
 
-    <!-- 7) Síntese -->
-    <section class="section" id="sintese">
+    <!-- Síntese -->
+    <section>
       <article class="card">
         <div class="card-inner">
           <div class="eyebrow">
@@ -672,6 +647,7 @@ Aqui o conceito está:
         </div>
       </article>
     </section>
+
   </main>
 
   <footer aria-label="Rodapé institucional">
@@ -680,5 +656,6 @@ Aqui o conceito está:
       <small>Registro público canônico • NeuroSaaS</small>
     </div>
   </footer>
+
 </body>
 </html>
