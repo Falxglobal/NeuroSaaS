@@ -6,38 +6,52 @@
   <title>NeuroSaaS — Registro Público Canônico (FalX)</title>
   <meta name="description" content="Registro público canônico de autoria e definição do termo conceitual original “NeuroSaaS”, publicado por FalX." />
   <meta name="robots" content="index, follow" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="dark light" />
 
   <style>
     :root{
-      --bg: #0b0f17;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.085);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.68);
-      --faint: rgba(255,255,255,.50);
+      /* Lux palette */
+      --bg0:#06070a;
+      --bg1:#070914;
+      --panel: rgba(255,255,255,.055);
+      --panel2: rgba(255,255,255,.075);
       --line: rgba(255,255,255,.12);
-      --brand: #c7b36a; /* dourado discreto */
-      --brand2:#ffffff;
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 18px;
+      --line2: rgba(199,179,106,.22);
+
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --faint: rgba(255,255,255,.52);
+
+      --gold:#c7b36a;
+      --gold2:#f2e6b6;
+      --shadow: 0 30px 90px rgba(0,0,0,.62);
+      --shadow2: 0 14px 40px rgba(0,0,0,.50);
+
+      --radius: 22px;
+      --radius2: 28px;
+
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      --serif: ui-serif, "Iowan Old Style", "New York", "Palatino", "Georgia", serif;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial;
+      --serif: ui-serif, "Iowan Old Style", "New York", Palatino, Georgia, serif;
     }
 
     @media (prefers-color-scheme: light){
       :root{
-        --bg: #f6f7fb;
+        --bg0:#f7f7fb;
+        --bg1:#ffffff;
         --panel: rgba(10,14,23,.05);
         --panel2: rgba(10,14,23,.08);
-        --text: rgba(10,14,23,.92);
-        --muted: rgba(10,14,23,.68);
-        --faint: rgba(10,14,23,.52);
         --line: rgba(10,14,23,.14);
-        --shadow: 0 18px 45px rgba(10,14,23,.12);
-        --brand: #8b7a2a;
-        --brand2:#0b0f17;
+        --line2: rgba(139,122,42,.22);
+
+        --text: rgba(10,14,23,.92);
+        --muted: rgba(10,14,23,.70);
+        --faint: rgba(10,14,23,.54);
+
+        --gold:#8b7a2a;
+        --gold2:#8b7a2a;
+        --shadow: 0 22px 60px rgba(10,14,23,.14);
+        --shadow2: 0 12px 30px rgba(10,14,23,.12);
       }
     }
 
@@ -48,67 +62,95 @@
       font-family: var(--sans);
       color: var(--text);
       background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(199,179,106,.16), transparent 60%),
-        radial-gradient(900px 500px at 110% 20%, rgba(255,255,255,.10), transparent 55%),
-        radial-gradient(900px 700px at 20% 120%, rgba(199,179,106,.10), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg));
-      letter-spacing: .2px;
-      line-height: 1.55;
+        radial-gradient(1400px 800px at 15% -10%, rgba(199,179,106,.18), transparent 60%),
+        radial-gradient(900px 600px at 105% 15%, rgba(255,255,255,.10), transparent 55%),
+        radial-gradient(900px 700px at 20% 120%, rgba(199,179,106,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      letter-spacing: .22px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Lux film grain + vignette */
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(1200px 700px at 50% 10%, rgba(0,0,0,0), rgba(0,0,0,.40) 75%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+      opacity: .35;
     }
 
     a{ color:inherit; text-decoration:none; }
+
     .wrap{
-      width: min(980px, calc(100% - 40px));
-      margin: 40px auto 64px;
+      width: min(1040px, calc(100% - 44px));
+      margin: 34px auto 70px;
+      position: relative;
     }
 
+    /* Top bar */
     .topbar{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
-      padding: 14px 16px;
+      gap:18px;
+      padding: 16px 18px;
+      border-radius: var(--radius2);
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--panel), transparent);
-      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
       box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 14px;
+      z-index: 10;
     }
 
     .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 0;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
     }
 
     .sigil{
-      width: 38px; height: 38px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--line2);
       background:
-        radial-gradient(circle at 30% 30%, rgba(199,179,106,.55), transparent 55%),
-        radial-gradient(circle at 70% 60%, rgba(255,255,255,.25), transparent 60%),
-        rgba(255,255,255,.03);
+        radial-gradient(circle at 28% 25%, rgba(242,230,182,.55), transparent 55%),
+        radial-gradient(circle at 70% 65%, rgba(255,255,255,.18), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
       position: relative;
       overflow: hidden;
     }
     .sigil:after{
       content:"";
-      position:absolute; inset:-40%;
+      position:absolute; inset:-60%;
       background: linear-gradient(120deg, transparent, rgba(199,179,106,.22), transparent);
       transform: rotate(18deg);
+      animation: sheen 7.5s ease-in-out infinite;
+      opacity:.85;
+    }
+    @keyframes sheen{
+      0%, 45% { transform: translateX(-10%) rotate(18deg); opacity:.0; }
+      55% { opacity:.85; }
+      100% { transform: translateX(26%) rotate(18deg); opacity:.0; }
     }
 
-    .brand .meta{
-      min-width:0;
-    }
-    .brand .meta .org{
-      font-weight: 650;
-      letter-spacing: .6px;
+    .meta{ min-width:0; }
+    .org{
+      font-weight: 760;
+      letter-spacing: 1.0px;
       text-transform: uppercase;
       font-size: 12px;
       color: var(--muted);
     }
-    .brand .meta .doc{
+    .doc{
       font-size: 13px;
       color: var(--faint);
       white-space: nowrap;
@@ -117,97 +159,191 @@
       max-width: 56vw;
     }
 
-    .badge{
+    .pill{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      white-space:nowrap;
       font-family: var(--mono);
       font-size: 12px;
-      padding: 8px 10px;
-      border-radius: 999px;
+      color: var(--muted);
       border: 1px solid var(--line);
       background: rgba(255,255,255,.03);
-      color: var(--muted);
-      white-space: nowrap;
+      padding: 9px 12px;
+      border-radius: 999px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: rgba(199,179,106,.85);
+      box-shadow: 0 0 18px rgba(199,179,106,.55);
     }
 
+    /* Hero */
     header.hero{
-      margin-top: 22px;
-      padding: 28px 26px;
-      border-radius: calc(var(--radius) + 6px);
+      margin-top: 18px;
+      border-radius: 30px;
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
+      background:
+        radial-gradient(1000px 360px at 18% 0%, rgba(199,179,106,.22), transparent 60%),
+        radial-gradient(900px 420px at 100% 25%, rgba(255,255,255,.08), transparent 58%),
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02));
       box-shadow: var(--shadow);
-      position: relative;
       overflow: hidden;
+      position: relative;
     }
     header.hero:before{
       content:"";
       position:absolute; inset:-2px;
-      background: radial-gradient(900px 250px at 20% 0%, rgba(199,179,106,.22), transparent 60%);
+      background:
+        linear-gradient(90deg, rgba(199,179,106,.0), rgba(199,179,106,.18), rgba(199,179,106,.0));
+      opacity:.35;
+      transform: rotate(-2deg);
       pointer-events:none;
+    }
+    .hero-inner{
+      padding: 34px 30px 28px;
+    }
+
+    .kicker{
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .9px;
+      color: var(--muted);
+      text-transform: uppercase;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom: 10px;
+    }
+    .kicker span{
+      display:inline-block;
+      height:1px;
+      width: 38px;
+      background: linear-gradient(90deg, rgba(199,179,106,.0), rgba(199,179,106,.7), rgba(199,179,106,.0));
+      opacity:.9;
     }
 
     h1{
-      margin:0 0 6px;
+      margin: 0 0 8px;
       font-family: var(--serif);
-      font-weight: 720;
-      letter-spacing: .2px;
-      font-size: clamp(28px, 3.2vw, 40px);
-      line-height: 1.15;
+      font-weight: 780;
+      letter-spacing: .18px;
+      font-size: clamp(34px, 3.8vw, 52px);
+      line-height: 1.05;
     }
     .subtitle{
       margin:0;
       color: var(--muted);
-      font-size: 14.5px;
-      max-width: 72ch;
+      font-size: 15px;
+      max-width: 80ch;
     }
 
+    .hero-meta{
+      margin-top: 18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .tag{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .tag strong{ color: var(--text); font-weight: 700; }
+
+    /* Layout grid */
     .grid{
       display:grid;
-      grid-template-columns: 1.6fr .9fr;
+      grid-template-columns: 1.55fr .95fr;
       gap: 18px;
       margin-top: 18px;
+      align-items: start;
     }
-    @media (max-width: 880px){
+    @media (max-width: 920px){
       .grid{ grid-template-columns: 1fr; }
-      .brand .meta .doc{ max-width: 70vw; }
+      .doc{ max-width: 72vw; }
+      .topbar{ position: relative; top:0; }
     }
 
     .card{
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, var(--panel2), rgba(255,255,255,.02));
+      box-shadow: var(--shadow2);
       overflow: hidden;
+      position: relative;
     }
-    .card .inner{
-      padding: 18px 18px 16px;
+    .card:before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(700px 220px at 20% 0%, rgba(199,179,106,.16), transparent 65%);
+      opacity:.75;
+      pointer-events:none;
     }
-    .card h2{
-      margin:0 0 10px;
-      font-size: 14px;
-      letter-spacing: .9px;
+    .inner{ padding: 20px 20px 18px; position: relative; }
+
+    .section-title{
+      margin:0 0 12px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 780;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
-    .card h3{
-      margin: 14px 0 8px;
-      font-size: 16px;
-      font-weight: 700;
+    .section-title:after{
+      content:"";
+      height:1px;
+      flex:1;
+      background: linear-gradient(90deg, rgba(199,179,106,.65), rgba(255,255,255,.0));
+      opacity:.55;
+    }
+
+    h2{
+      margin: 18px 0 8px;
+      font-size: 18px;
+      font-weight: 780;
+      letter-spacing: .2px;
       color: var(--text);
     }
-    .card p{
-      margin:0 0 10px;
+    p{
+      margin: 0 0 10px;
+      font-size: 14.8px;
       color: var(--text);
-      font-size: 14.5px;
     }
-    .card p.muted{ color: var(--muted); }
+    p.muted{ color: var(--muted); }
 
     .rule{
       height:1px;
-      background: var(--line);
-      margin: 14px 0;
+      background: linear-gradient(90deg, rgba(199,179,106,.0), rgba(199,179,106,.25), rgba(255,255,255,.0));
+      margin: 16px 0;
+      opacity:.8;
     }
 
+    /* Fancy quote block */
+    .quote{
+      margin: 12px 0 2px;
+      padding: 14px 14px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      position: relative;
+    }
+    .quote:before{
+      content:"“";
+      position:absolute;
+      top:-12px; left:12px;
+      font-family: var(--serif);
+      font-size: 46px;
+      color: rgba(199,179,106,.55);
+    }
+
+    /* Sidebar kv */
     .kv{
       display:grid;
       grid-template-columns: 150px 1fr;
@@ -219,53 +355,53 @@
     .kv code{
       font-family: var(--mono);
       font-size: 12px;
-      padding: 2px 6px;
+      padding: 2px 7px;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: rgba(255,255,255,.03);
+      color: var(--muted);
     }
 
     .callout{
-      border-left: 3px solid var(--brand);
+      border: 1px solid var(--line2);
+      border-left: 3px solid var(--gold);
       padding: 12px 12px 12px 14px;
+      border-radius: 16px;
       background: rgba(199,179,106,.08);
-      border-radius: 12px;
       color: var(--muted);
       font-size: 13.5px;
     }
 
+    /* Footer */
     footer{
       margin-top: 18px;
-      padding: 18px 18px;
-      border-radius: var(--radius);
+      border-radius: var(--radius2);
       border: 1px solid var(--line);
       background: rgba(255,255,255,.02);
+      box-shadow: var(--shadow2);
+      padding: 18px 18px;
       color: var(--muted);
       font-size: 12.5px;
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       gap: 12px;
       flex-wrap: wrap;
     }
-    .footer-right{
-      font-family: var(--mono);
-      color: var(--faint);
-    }
+    .foot-right{ font-family: var(--mono); color: var(--faint); }
 
-    /* Impressão / PDF */
+    /* Print mode (PDF institutional) */
     @media print{
-      body{
-        background: #ffffff !important;
-        color: #0b0f17 !important;
-      }
+      body{ background:#fff !important; color:#0b0f17 !important; }
+      body:before{ display:none !important; }
       .topbar, header.hero, .card, footer{
         box-shadow: none !important;
-        background: #ffffff !important;
+        background:#fff !important;
+        border-color: rgba(10,14,23,.18) !important;
       }
-      .sigil{ display:none !important; }
-      a{ text-decoration:none !important; }
-      .wrap{ margin: 0; width: 100%; }
+      .section-title:after{ background: rgba(10,14,23,.18) !important; }
+      .rule{ background: rgba(10,14,23,.18) !important; }
+      .wrap{ width: 100%; margin: 0; }
     }
   </style>
 </head>
@@ -280,22 +416,34 @@
           <div class="doc">Registro público canônico — termo conceitual original</div>
         </div>
       </div>
-      <div class="badge">v1 • Public Record</div>
+      <div class="pill"><span class="dot" aria-hidden="true"></span> Public Record • v2 Signature</div>
     </div>
 
     <header class="hero">
-      <h1>NeuroSaaS</h1>
-      <p class="subtitle">
-        Termo conceitual original. Documento público para estabelecer autoria institucional, definição canônica e precedência temporal.
-      </p>
+      <div class="hero-inner">
+        <div class="kicker"><span></span>Autoria institucional e precedência temporal</div>
+        <h1>NeuroSaaS</h1>
+        <p class="subtitle">
+          Termo conceitual original. Documento público para estabelecer autoria institucional, definição canônica e precedência temporal
+          com base no histórico verificável de publicação.
+        </p>
+
+        <div class="hero-meta">
+          <div class="tag"><strong>Publicador:</strong> FalX</div>
+          <div class="tag"><strong>Ano:</strong> 2026</div>
+          <div class="tag"><strong>Objeto:</strong> Termo + definição canônica</div>
+          <div class="tag"><strong>Status:</strong> Registro público</div>
+        </div>
+      </div>
     </header>
 
     <div class="grid">
-      <!-- COLUNA PRINCIPAL -->
+      <!-- MAIN -->
       <section class="card">
         <div class="inner">
-          <h2>Definição canônica</h2>
-          <h3>Definição</h3>
+          <div class="section-title">Definição canônica</div>
+
+          <h2>Definição</h2>
           <p>
             NeuroSaaS é a institucionalização da neurociência aplicada como princípio arquitetônico fundamental de produtos e sistemas contínuos.
             É projetado para evoluir em sincronia com o desenvolvimento neurocognitivo humano, tanto em nível individual quanto coletivo.
@@ -303,30 +451,35 @@
 
           <div class="rule"></div>
 
-          <h3>Natureza ontológica</h3>
+          <h2>Natureza ontológica</h2>
           <p>
             NeuroSaaS não é um tipo de software, um modelo de negócio ou uma categoria de mercado.
             Representa uma função neuroevolutiva traduzida em arquitetura de produto e sistema.
           </p>
-          <p class="muted">
-            Baseia-se no princípio estrutural de que o cérebro humano é um sistema vivo, plástico e permanentemente inacabado.
-            Portanto, qualquer produto ou sistema que interaja continuamente com pessoas deve evoluir a um ritmo compatível — ou torna-se cognitivamente limitante.
-          </p>
+
+          <div class="quote">
+            <p class="muted" style="margin:0;">
+              Baseia-se no princípio estrutural de que o cérebro humano é um sistema vivo, plástico e permanentemente inacabado.
+              Portanto, qualquer produto ou sistema que interaja continuamente com pessoas deve evoluir a um ritmo compatível — ou torna-se cognitivamente limitante.
+            </p>
+          </div>
 
           <div class="rule"></div>
 
-          <h2>Autoria e origem</h2>
+          <div class="section-title">Autoria e origem</div>
+
           <p class="muted">
             O termo e o conceito NeuroSaaS foram originalmente concebidos e definidos pela FalX como uma estrutura intelectual
             que aborda uma assimetria estrutural da era digital: sistemas tecnológicos evoluíram mais rapidamente do que a adaptação neurocognitiva humana.
           </p>
           <p class="muted">
-            O conceito estabelece o desenvolvimento neurocognitivo como responsabilidade explícita de arquitetura de produtos e sistemas.
+            O conceito estabelece o desenvolvimento neurocognitivo como responsabilidade explícita da arquitetura de produtos e sistemas.
           </p>
 
           <div class="rule"></div>
 
-          <h2>Aviso de direitos autorais</h2>
+          <div class="section-title">Direitos autorais</div>
+
           <p class="muted">
             O termo <strong>NeuroSaaS</strong> e sua definição conceitual constituem uma criação intelectual original.
             <strong>© FalX, 2026.</strong> Todos os direitos reservados.
@@ -338,20 +491,14 @@
         </div>
       </section>
 
-      <!-- COLUNA LATERAL -->
+      <!-- SIDEBAR -->
       <aside class="card">
         <div class="inner">
-          <h2>Registro público</h2>
+          <div class="section-title">Registro público</div>
 
           <div class="kv" role="list">
             <div class="k" role="listitem">Publicador</div>
             <div class="v"><strong>FalX</strong></div>
-
-            <div class="k" role="listitem">Objeto</div>
-            <div class="v">Termo “NeuroSaaS” + definição canônica</div>
-
-            <div class="k" role="listitem">Ano</div>
-            <div class="v">2026</div>
 
             <div class="k" role="listitem">Data de publicação</div>
             <div class="v">21 de janeiro de 2026</div>
@@ -360,18 +507,21 @@
             <div class="v"><code>Falxglobal/NeuroSaaS</code></div>
 
             <div class="k" role="listitem">Finalidade</div>
-            <div class="v">Autoria • Originalidade • Precedência temporal</div>
+            <div class="v">Autoria • Originalidade • Precedência</div>
+
+            <div class="k" role="listitem">Versão visual</div>
+            <div class="v"><code>v2-signature</code></div>
           </div>
 
           <div class="rule"></div>
 
           <div class="callout">
-            Este registro é deliberadamente objetivo e verificável: uma página pública com conteúdo canônico e marcação temporal do histórico de commits.
+            Este registro é propositalmente verificável: a página é pública e o histórico de commits funciona como trilha temporal adicional de precedência.
           </div>
 
           <div class="rule"></div>
 
-          <h2>Fechamento canônico</h2>
+          <div class="section-title">Fechamento canônico</div>
           <p class="muted">
             NeuroSaaS representa uma correção estrutural na era digital: o desenvolvimento neurocognitivo humano deixa de ser
             efeito colateral do progresso tecnológico e torna-se responsabilidade explícita da arquitetura de produtos e sistemas.
@@ -382,7 +532,7 @@
 
     <footer>
       <div>© FalX — 2026. Registro público canônico de autoria.</div>
-      <div class="footer-right">NeuroSaaS • FalX</div>
+      <div class="foot-right">NeuroSaaS • FalX • Signature Edition</div>
     </footer>
   </div>
 </body>
