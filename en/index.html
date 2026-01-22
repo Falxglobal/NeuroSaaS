@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NeuroSaaS — Registro Público Canônico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="Registro público canônico e definição fundacional do termo NeuroSaaS.">
+  <meta charset="UTF-8" />
+  <title>NeuroSaaS — Foundational Definition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Canonical public record and foundational definition of the term NeuroSaaS." />
 
   <style>
     :root{
-      --bg-main:#0a0b0d;
-      --text-main:#f4f5f6;
-      --text-muted:#b8bcc2;
-      --text-soft:#8e939b;
+      --bg-main:#0b0b0d;
+      --bg-panel:#111114;
+      --text-main:#f2f2f2;
+      --text-muted:#b5b5b5;
       --line-soft:rgba(255,255,255,0.08);
-      --accent:rgba(255,255,255,0.14);
     }
 
     *{
@@ -24,21 +23,22 @@
     }
 
     body{
-      background:#0a0b0d;
+      background:var(--bg-main);
       color:var(--text-main);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.75;
-      -webkit-font-smoothing:antialiased;
+      line-height:1.65;
     }
 
-    header{
+    .site-header{
+      width:100%;
       border-bottom:1px solid var(--line-soft);
+      background:rgba(0,0,0,0.35);
     }
 
     .header-inner{
-      max-width:1280px;
+      max-width:1200px;
       margin:0 auto;
-      padding:56px 56px 48px;
+      padding:28px 32px;
       display:flex;
       align-items:center;
     }
@@ -46,309 +46,303 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:28px;
+      gap:16px;
     }
 
     .brand-logo{
-      width:96px;
+      width:42px;
       height:auto;
+      display:block;
+      opacity:0.9;
     }
 
-    .brand-meta{
+    .brand-text{
       display:flex;
       flex-direction:column;
-      gap:6px;
+      line-height:1.15;
     }
 
     .brand-name{
-      font-size:13px;
-      letter-spacing:0.34em;
+      font-size:12px;
+      letter-spacing:0.32em;
       text-transform:uppercase;
+      color:var(--text-main);
     }
 
     .brand-sub{
-      font-size:12px;
-      letter-spacing:0.1em;
-      color:var(--text-soft);
-    }
-
-    .hero{
-      max-width:900px;
-      margin:0 auto;
-      padding:96px 32px 72px;
-    }
-
-    .hero-label{
       font-size:11px;
-      letter-spacing:0.28em;
-      text-transform:uppercase;
-      color:var(--text-soft);
-      margin-bottom:22px;
-    }
-
-    h1{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:50px;
-      font-weight:500;
-      margin-bottom:24px;
-    }
-
-    .hero-desc{
-      font-size:18px;
+      letter-spacing:0.06em;
       color:var(--text-muted);
-      max-width:760px;
-    }
-
-    .meta-strip{
-      margin-top:40px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-
-    .meta-pill{
-      border:1px solid var(--accent);
-      padding:10px 16px;
-      border-radius:999px;
-      font-size:13px;
-      color:var(--text-soft);
     }
 
     main{
       max-width:900px;
       margin:0 auto;
-      padding:24px 32px 120px;
+      padding:72px 32px 120px;
     }
 
     section{
-      margin-bottom:96px;
+      margin-bottom:72px;
+    }
+
+    h1{
+      font-size:42px;
+      font-weight:500;
+      margin-bottom:16px;
     }
 
     h2{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:28px;
+      font-size:22px;
       font-weight:500;
-      margin-bottom:28px;
+      margin-bottom:24px;
     }
 
     p{
-      font-size:17px;
+      margin-bottom:18px;
       color:var(--text-muted);
-      margin-bottom:20px;
-    }
-
-    ul{
-      margin:20px 0 28px 20px;
-    }
-
-    li{
-      margin-bottom:10px;
       font-size:16px;
-      color:var(--text-muted);
     }
 
     .divider{
-      height:1px;
-      background:var(--line-soft);
-      margin:88px 0;
+      margin:56px 0;
+      border-bottom:1px solid var(--line-soft);
+    }
+
+    ul{
+      margin:16px 0 24px 18px;
+    }
+
+    li{
+      margin-bottom:8px;
+      color:var(--text-muted);
     }
 
     footer{
       border-top:1px solid var(--line-soft);
-      padding:40px 24px;
+      padding:32px;
       text-align:center;
+      color:var(--text-muted);
       font-size:12px;
-      letter-spacing:0.14em;
-      text-transform:uppercase;
-      color:var(--text-soft);
+      letter-spacing:0.04em;
     }
 
-    @media(max-width:768px){
-      .brand-logo{width:72px;}
-      h1{font-size:38px;}
+    @media(max-width:720px){
+      h1{font-size:32px;}
+      main{padding:56px 24px 96px;}
+      .header-inner{padding:24px;}
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="brand">
-      <img src="assets/svg/logo.svg" alt="FalX" class="brand-logo">
-      <div class="brand-meta">
-        <span class="brand-name">FalX</span>
-        <span class="brand-sub">Registro público canônico</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="../assets/svg/logo.svg" alt="FalX" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">FalX</span>
+          <span class="brand-sub">Canonical public record</span>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-label">Documento fundador · Registro público · Precedência temporal</div>
-  <h1>NeuroSaaS — definição fundacional</h1>
-  <p class="hero-desc">
-    Termo conceitual original. Documento público para estabelecer definição canônica e precedência temporal com base no histórico verificável de publicação.
-  </p>
+  <main>
 
-  <div class="meta-strip">
-    <div class="meta-pill">Publicador: FalX</div>
-    <div class="meta-pill">Ano: 2026</div>
-    <div class="meta-pill">Objeto: Termo + definição canônica</div>
-  </div>
-</section>
+    <section>
+      <h1>NeuroSaaS — foundational definition</h1>
 
-<main>
+      <p>
+        Original conceptual term. Public document established to define the canonical meaning and temporal precedence of NeuroSaaS, based on verifiable publication history.
+      </p>
 
-<section>
-  <p>
-    NeuroSaaS é a institucionalização da neurociência aplicada como arquitetura central de produtos e sistemas contínuos, concebidos para evoluir em sincronia com o desenvolvimento neurocognitivo humano — individual e coletivo.
-  </p>
+      <p>
+        NeuroSaaS is the institutionalization of applied neuroscience as the central architecture of continuous products and systems, designed to evolve in synchrony with human neurocognitive development — both individual and collective.
+      </p>
 
-  <p>Ele parte de um princípio estrutural incontornável:</p>
+      <p>
+        It is grounded in a non-negotiable structural principle:
+      </p>
 
-  <p>
-    o cérebro humano é um sistema vivo, plástico e permanentemente inacabado;<br>
-    portanto, qualquer produto que interaja de forma contínua com pessoas precisa ser, por definição, evolutivo no mesmo ritmo — ou se tornará cognitivamente limitante.
-  </p>
+      <p>
+        the human brain is a living, plastic, and permanently unfinished system; therefore, any product that interacts continuously with people must, by definition, evolve at the same pace — or it will become cognitively limiting.
+      </p>
 
-  <p>NeuroSaaS existe para resolver essa assimetria.</p>
-</section>
+      <p>
+        NeuroSaaS exists to resolve this asymmetry.
+      </p>
+    </section>
 
-<div class="divider"></div>
+    <div class="divider"></div>
 
-<section>
-  <h2>Natureza ontológica do termo</h2>
+    <section>
+      <h2>Ontological nature of the term</h2>
 
-  <p>NeuroSaaS não é um tipo de software, nem um modelo de negócio, nem uma vertical de mercado.</p>
-  <p>Ele é uma função neuroevolutiva traduzida em produto.</p>
-  <p>
-    Utiliza software, SaaS, sistemas digitais, infraestrutura tecnológica e qualquer outro meio técnico necessário — mas não se define por eles.
-  </p>
+      <p>
+        NeuroSaaS is not a type of software, not a business model, and not a market vertical.
+      </p>
 
-  <p>
-    O software é o meio.<br>
-    A neurociência aplicada é a lógica.<br>
-    A evolução cognitiva contínua é a função.
-  </p>
-</section>
+      <p>
+        It is a neuro-evolutionary function translated into product form.
+      </p>
 
-<div class="divider"></div>
+      <p>
+        It uses software, SaaS, digital systems, technological infrastructure, and any other required technical means — but it is not defined by them.
+      </p>
 
-<section>
-  <h2>O papel da neurociência aplicada</h2>
+      <p>
+        Software is the medium.<br/>
+        Applied neuroscience is the logic.<br/>
+        Continuous cognitive evolution is the function.
+      </p>
+    </section>
 
-  <p>No NeuroSaaS, a neurociência aplicada não é referência teórica, feature ou argumento de autoridade.</p>
-  <p>Ela é arquitetura operacional.</p>
+    <div class="divider"></div>
 
-  <ul>
-    <li>plasticidade neural,</li>
-    <li>adaptação progressiva,</li>
-    <li>aumento graduado de complexidade,</li>
-    <li>reorganização contínua de padrões mentais,</li>
-    <li>desenvolvimento por exposição a desafios reais.</li>
-  </ul>
+    <section>
+      <h2>The role of applied neuroscience</h2>
 
-  <p>
-    O sistema não se estabiliza.<br>
-    Não se fecha.<br>
-    Não se completa.
-  </p>
+      <p>
+        In NeuroSaaS, applied neuroscience is not a theoretical reference, a feature, or an authority argument.
+      </p>
 
-  <p>Ele se reorganiza continuamente em resposta ao avanço cognitivo humano.</p>
-</section>
+      <p>
+        It is operational architecture.
+      </p>
 
-<div class="divider"></div>
+      <p>
+        This means products are designed based on neurocognitive principles such as:
+      </p>
 
-<section>
-  <h2>Produto em avanço com o neuro em avanço</h2>
+      <ul>
+        <li>neural plasticity,</li>
+        <li>progressive adaptation,</li>
+        <li>gradual increase in complexity,</li>
+        <li>continuous reorganization of mental patterns,</li>
+        <li>development through exposure to real challenges.</li>
+      </ul>
 
-  <ul>
-    <li>entregam valor pontual,</li>
-    <li>resolvem um passo isolado,</li>
-    <li>e permanecem estagnados enquanto o cérebro humano segue demandando evolução.</li>
-  </ul>
+      <p>
+        The system does not stabilize.<br/>
+        It does not close.<br/>
+        It does not complete.
+      </p>
 
-  <p>
-    NeuroSaaS é um produto que cresce cognitivamente junto com seus usuários, nunca abaixo deles.
-  </p>
+      <p>
+        It continuously reorganizes in response to human cognitive advancement.
+      </p>
+    </section>
 
-  <p>
-    Não otimiza apenas eficiência.<br>
-    Não atende apenas comportamento existente.<br>
-    Não estabiliza padrões atuais.
-  </p>
+    <div class="divider"></div>
 
-  <p>
-    Ele expande capacidade de abstração, decisão e pensamento ao longo do tempo.
-  </p>
-</section>
+    <section>
+      <h2>Product evolving with the human brain</h2>
 
-<div class="divider"></div>
+      <p>
+        NeuroSaaS breaks with the historical model of fragmented digital products that:
+      </p>
 
-<section>
-  <h2>Definição canônica</h2>
+      <ul>
+        <li>deliver isolated value,</li>
+        <li>solve singular steps,</li>
+        <li>and remain static while human cognition continues to evolve.</li>
+      </ul>
 
-  <p>
-    NeuroSaaS é a tradução da neurociência aplicada em infraestrutura evolutiva contínua, projetada para sustentar e ampliar o desenvolvimento neurocognitivo humano por meio de sistemas e produtos que evoluem em sincronia com o cérebro — utilizando tecnologia como meio, nunca como limite.
-  </p>
+      <p>
+        NeuroSaaS is a product that grows cognitively alongside its users — never below them.
+      </p>
 
-  <ul>
-    <li>não depende de aplicação específica,</li>
-    <li>não depende de tecnologia particular,</li>
-    <li>não depende de mercado atual,</li>
-    <li>não depende de indivíduo,</li>
-    <li>não depende de narrativa.</li>
-  </ul>
-</section>
+      <p>
+        It does not merely optimize efficiency.<br/>
+        It does not merely respond to existing behavior.<br/>
+        It does not stabilize current patterns.
+      </p>
 
-<div class="divider"></div>
+      <p>
+        It expands abstraction, decision-making, and thinking capacity over time.
+      </p>
+    </section>
 
-<section>
-  <h2>Posição histórica</h2>
+    <div class="divider"></div>
 
-  <p>
-    NeuroSaaS marca a transição de uma era em que a tecnologia avançava independentemente do impacto cognitivo que produzia,
-  </p>
+    <section>
+      <h2>Canonical definition</h2>
 
-  <p>
-    para uma era em que o desenvolvimento do neuro humano passa a ser responsabilidade explícita da arquitetura dos produtos digitais.
-  </p>
+      <p>
+        NeuroSaaS is the translation of applied neuroscience into continuous evolutionary infrastructure, designed to sustain and expand human neurocognitive development through systems and products that evolve in synchrony with the brain — using technology as a medium, never as a constraint.
+      </p>
 
-  <p>
-    Nesse sentido, NeuroSaaS não é tendência, inovação incremental ou categoria emergente.
-  </p>
+      <p>
+        This definition is foundational because:
+      </p>
 
-  <p>É uma correção de rota histórica.</p>
-</section>
+      <ul>
+        <li>it does not depend on a specific application,</li>
+        <li>it does not depend on a specific technology,</li>
+        <li>it does not depend on a current market,</li>
+        <li>it does not depend on individuals,</li>
+        <li>it does not depend on narrative.</li>
+      </ul>
 
-<div class="divider"></div>
+      <p>
+        It describes a structural necessity of the digital era, not a circumstantial solution.
+      </p>
+    </section>
 
-<section>
-  <h2>Síntese</h2>
+    <div class="divider"></div>
 
-  <p>
-    NeuroSaaS é o momento em que a evolução neurocognitiva humana deixa de ser um efeito colateral do progresso tecnológico e passa a ser sua arquitetura central, sustentada por neurociência aplicada e materializada em sistemas evolutivos contínuos.
-  </p>
+    <section>
+      <h2>Historical position</h2>
 
-  <p>
-    Nada além disso é necessário.<br>
-    Nada abaixo disso é suficiente.
-  </p>
+      <p>
+        NeuroSaaS marks the transition from an era in which technology advanced independently of its cognitive impact,
+      </p>
 
-  <ul>
-    <li>ontologicamente fechado,</li>
-    <li>semanticamente estável,</li>
-    <li>impossível de confundir,</li>
-    <li>impossível de reduzir sem perder essência.</li>
-  </ul>
-</section>
+      <p>
+        to an era in which human neurocognitive development becomes an explicit responsibility of digital product architecture.
+      </p>
 
-</main>
+      <p>
+        In this sense, NeuroSaaS is not a trend, an incremental innovation, or an emerging category.
+      </p>
 
-<footer>
-  © FalX · Registro público canônico · 2026
-</footer>
+      <p>
+        It is a historical course correction.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Synthesis</h2>
+
+      <p>
+        NeuroSaaS represents the moment when human neurocognitive evolution ceases to be a side effect of technological progress and becomes its central architecture, sustained by applied neuroscience and materialized in continuous evolutionary systems.
+      </p>
+
+      <p>
+        Nothing beyond this is necessary.<br/>
+        Nothing below this is sufficient.
+      </p>
+
+      <p>
+        Here the concept stands:
+      </p>
+
+      <ul>
+        <li>ontologically closed,</li>
+        <li>semantically stable,</li>
+        <li>impossible to confuse,</li>
+        <li>impossible to reduce without losing essence.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    © FalX — Canonical public record — 2026
+  </footer>
 
 </body>
 </html>
