@@ -1,431 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <title>NeuroSaaS — Registro Público Canônico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
-  <meta name="color-scheme" content="dark light" />
   <meta name="description" content="Registro público canônico e definição fundacional do termo NeuroSaaS." />
+  <meta name="color-scheme" content="dark light" />
 
   <style>
     :root{
-      /* Palette — contida, editorial, sem “glow” */
-      --bg0:#07070a;
-      --bg1:#0b0c10;
-      --panel:rgba(255,255,255,.04);
-      --panel2:rgba(255,255,255,.025);
-      --hair:rgba(255,255,255,.10);
-      --hair2:rgba(255,255,255,.06);
+      --bg:#0a0b0e;
+      --panel:#111318;
+      --line:rgba(255,255,255,.08);
 
-      --ink0:rgba(255,255,255,.92);
-      --ink1:rgba(255,255,255,.74);
-      --ink2:rgba(255,255,255,.56);
+      --text:#f2f3f5;
+      --muted:rgba(255,255,255,.62);
+      --soft:rgba(255,255,255,.45);
 
-      --gold0:rgba(210,177,112,.92);
-      --gold1:rgba(210,177,112,.22);
-      --gold2:rgba(210,177,112,.12);
+      --accent:#d2b170;
 
-      /* Typography — serif editorial + sans neutra (system) */
-      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Garamond, Georgia, serif;
-      --sans: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-      /* Scale */
-      --s0: clamp(1.00rem, .96rem + .20vw, 1.10rem);
-      --s1: clamp(1.10rem, 1.02rem + .55vw, 1.40rem);
-      --s2: clamp(1.35rem, 1.12rem + 1.15vw, 1.95rem);
-      --s3: clamp(1.70rem, 1.30rem + 1.90vw, 2.55rem);
-      --s4: clamp(2.20rem, 1.55rem + 3.10vw, 3.55rem);
-
-      --container: 980px;
-      --gutter: clamp(1.15rem, 3.2vw, 2.25rem);
-
-      --r1: 14px;
-      --r2: 18px;
-      --r3: 22px;
-
-      --shadow1: 0 18px 55px rgba(0,0,0,.42);
-      --shadow2: 0 10px 28px rgba(0,0,0,.32);
+      --serif: "Iowan Old Style", Palatino, Garamond, Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
 
-    *{ margin:0; padding:0; box-sizing:border-box; }
-    html,body{ height:100%; }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body{
-      background: var(--bg0);
-      color: var(--ink0);
-      font-family: var(--sans);
-      font-size: var(--s0);
-      line-height: 1.7;
-      letter-spacing: .01em;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x:hidden;
-    }
-
-    /* Editorial atmosphere (silenciosa) */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background:
-        radial-gradient(1100px 820px at 18% 10%, rgba(210,177,112,.07), transparent 58%),
-        radial-gradient(900px 700px at 80% 20%, rgba(255,255,255,.04), transparent 62%),
-        linear-gradient(180deg, rgba(255,255,255,.03), transparent 28%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.012) 0 1px, transparent 1px 20px),
-        repeating-linear-gradient(0deg, rgba(0,0,0,.14) 0 1px, transparent 1px 16px);
-      opacity:.95;
-      mix-blend-mode: screen;
-    }
-    body::after{
-      content:"";
-      position:fixed;
-      inset:-2px;
-      pointer-events:none;
-      background: radial-gradient(1200px 900px at 50% 35%, transparent 55%, rgba(0,0,0,.72) 100%);
-      opacity:.95;
-    }
-
-    a{ color:inherit; text-decoration:none; }
-    :focus-visible{
-      outline:2px solid rgba(210,177,112,.55);
-      outline-offset:3px;
-      border-radius:12px;
-    }
-
-    .wrap{
-      position:relative;
-      max-width: var(--container);
-      margin:0 auto;
-      padding: 0 var(--gutter);
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
     }
 
     /* ===== Header ===== */
+
     header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(7,7,10,.86), rgba(7,7,10,.56));
-      border-bottom:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid var(--line);
     }
 
-    .topbar{
-      max-width: var(--container);
+    .header-inner{
+      max-width:1100px;
       margin:0 auto;
-      padding: 1.05rem var(--gutter);
+      padding:48px 32px 40px;
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap: 1rem;
+      gap:28px;
     }
 
-    /* Logo: maior, ancorada em um cartucho institucional */
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: .95rem;
-    }
-
-    .brand-badge{
-      display:flex;
-      align-items:center;
-      gap:.9rem;
-      padding: .75rem .95rem;
-      border-radius: 999px;
-      border:1px solid rgba(210,177,112,.20);
-      background:
-        radial-gradient(520px 160px at 18% 0%, rgba(210,177,112,.11), transparent 60%),
-        rgba(0,0,0,.22);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.035) inset;
-    }
-
-    .brand-mark{
-      width: 56px;               /* presença */
-      height: 56px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.08);
-      background:
-        radial-gradient(circle at 30% 25%, rgba(210,177,112,.18), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.035), rgba(0,0,0,.26));
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-      box-shadow: 0 0 0 1px rgba(0,0,0,.35) inset;
-    }
-
-    .brand-mark img{
-      width: 78%;
-      height: auto;
+    .logo{
+      width:84px;
+      height:auto;
       display:block;
-      opacity:.93;
-      filter: contrast(1.03) saturate(1.02);
-    }
-
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      gap:.22rem;
-      line-height:1.05;
-    }
-    .brand-name{
-      font-family: var(--mono);
-      font-size:.80rem;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      color: rgba(255,255,255,.86);
-    }
-    .brand-sub{
-      font-family: var(--mono);
-      font-size:.78rem;
-      letter-spacing:.10em;
-      color: var(--ink2);
-    }
-
-    .action{
-      display:inline-flex;
-      align-items:center;
-      gap:.55rem;
-      padding:.55rem .85rem;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      color: rgba(255,255,255,.78);
-      font-size:.92rem;
-      cursor:pointer;
-      transition: transform 180ms cubic-bezier(.2,.7,.2,1), background 180ms cubic-bezier(.2,.7,.2,1), border-color 180ms cubic-bezier(.2,.7,.2,1);
-    }
-    .action:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.045);
-      border-color: rgba(210,177,112,.16);
-    }
-    .action svg{ opacity:.85; }
-
-    /* ===== Hero ===== */
-    .hero{
-      padding: clamp(2.2rem, 6vw, 4.2rem) 0 1.2rem;
-    }
-
-    .kicker{
-      font-family: var(--mono);
-      font-size:.82rem;
-      letter-spacing:.26em;
-      text-transform:uppercase;
-      color: rgba(210,177,112,.70);
-      margin:0 0 1.1rem;
-    }
-
-    h1{
-      font-family: var(--serif);
-      font-size: var(--s4);
-      font-weight: 560;
-      line-height: 1.03;
-      letter-spacing: -.01em;
-      margin:0 0 .9rem;
-    }
-
-    .subtitle{
-      margin:0;
-      font-size: var(--s1);
-      color: rgba(255,255,255,.74);
-      max-width: 68ch;
-    }
-
-    .meta-plate{
-      margin-top: 1.5rem;
-      border-radius: var(--r3);
-      border:1px solid rgba(255,255,255,.08);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
-        radial-gradient(900px 380px at 22% 0%, rgba(210,177,112,.10), transparent 60%);
-      box-shadow: var(--shadow1);
-      padding: 1.05rem;
-      position:relative;
-      overflow:hidden;
-    }
-    .meta-plate::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      background:
-        linear-gradient(90deg, rgba(210,177,112,.14), transparent 36%),
-        radial-gradient(540px 180px at 75% 20%, rgba(255,255,255,.06), transparent 60%);
-      opacity:.6;
-      mix-blend-mode: screen;
-    }
-
-    .meta{
-      position:relative;
-      display:flex;
-      flex-wrap:wrap;
-      gap:.55rem;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:.55rem;
-      padding:.62rem .85rem;
-      border-radius: 999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      font-family: var(--mono);
-      font-size:.85rem;
-      color: rgba(255,255,255,.78);
-      box-shadow: 0 0 0 1px rgba(0,0,0,.30) inset;
-      white-space: nowrap;
-    }
-    .dot{
-      width:7px; height:7px;
-      border-radius:999px;
-      background: rgba(210,177,112,.85);
-      box-shadow: 0 0 0 3px rgba(210,177,112,.12);
-    }
-
-    .rule{
-      margin: 2.0rem 0 0;
-      height:1px;
-      background: linear-gradient(90deg, rgba(210,177,112,.35), rgba(255,255,255,.08), transparent);
       opacity:.95;
     }
 
-    /* ===== Sections ===== */
+    .header-text{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+
+    .header-text .name{
+      font-family:var(--mono);
+      font-size:13px;
+      letter-spacing:.34em;
+      text-transform:uppercase;
+    }
+
+    .header-text .role{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* ===== Main ===== */
+
     main{
-      position:relative;
-      padding: 0 0 5.0rem;
+      max-width:900px;
+      margin:0 auto;
+      padding:96px 32px 140px;
+    }
+
+    .kicker{
+      font-family:var(--mono);
+      font-size:11px;
+      letter-spacing:.36em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:28px;
+    }
+
+    h1{
+      font-family:var(--serif);
+      font-size:54px;
+      font-weight:500;
+      line-height:1.05;
+      margin-bottom:24px;
+    }
+
+    .subtitle{
+      font-size:20px;
+      color:var(--muted);
+      max-width:720px;
+      margin-bottom:48px;
+    }
+
+    .meta{
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+      font-size:13px;
+      color:var(--soft);
+      margin-bottom:72px;
     }
 
     section{
-      padding: 1.9rem 0;
-    }
-
-    .card{
-      border-radius: var(--r3);
-      border:1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
-      box-shadow: var(--shadow2);
-      position:relative;
-      overflow:hidden;
-    }
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      background:
-        radial-gradient(980px 320px at 18% 0%, rgba(210,177,112,.08), transparent 62%),
-        linear-gradient(180deg, rgba(0,0,0,.20), transparent 40%);
-      opacity:.85;
-    }
-    .card-inner{
-      position:relative;
-      padding: clamp(1.25rem, 2.8vw, 2.0rem);
-    }
-
-    .eyebrow{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 1rem;
-      margin-bottom: 1.0rem;
-    }
-
-    .label{
-      font-family: var(--mono);
-      font-size:.80rem;
-      letter-spacing:.24em;
-      text-transform: uppercase;
-      color: rgba(210,177,112,.72);
-    }
-    .mark{
-      font-family: var(--mono);
-      font-size:.80rem;
-      color: rgba(255,255,255,.50);
+      margin-bottom:80px;
     }
 
     h2{
-      font-family: var(--serif);
-      font-size: var(--s3);
-      font-weight: 560;
-      line-height:1.12;
-      letter-spacing:-.01em;
-      margin: .25rem 0 .85rem;
+      font-family:var(--serif);
+      font-size:28px;
+      font-weight:500;
+      margin-bottom:28px;
     }
 
     p{
-      margin: .6rem 0;
-      color: rgba(255,255,255,.74);
-      max-width: 82ch;
-    }
-
-    .block{
-      margin-top: 1.1rem;
-      padding: 1.05rem 1.15rem;
-      border-radius: var(--r2);
-      border:1px solid rgba(210,177,112,.16);
-      background:
-        radial-gradient(700px 220px at 18% 0%, rgba(210,177,112,.10), transparent 60%),
-        rgba(0,0,0,.22);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
-      white-space: pre-wrap;
-      color: rgba(255,255,255,.78);
+      margin-bottom:18px;
+      color:var(--muted);
+      font-size:16px;
     }
 
     ul{
-      margin: .85rem 0 0 1.05rem;
-      padding:0;
-      color: rgba(255,255,255,.74);
+      margin:18px 0 28px 20px;
+      color:var(--muted);
     }
-    li{ margin: .35rem 0; }
 
-    /* Footer */
+    li{
+      margin-bottom:10px;
+    }
+
+    .divider{
+      height:1px;
+      background:var(--line);
+      margin:72px 0;
+    }
+
     footer{
-      border-top:1px solid rgba(255,255,255,.06);
-      padding: 2.8rem 0 2.4rem;
-      color: rgba(255,255,255,.55);
-    }
-    .foot{
-      max-width: var(--container);
-      margin:0 auto;
-      padding: 0 var(--gutter);
-      display:flex;
-      justify-content:space-between;
-      gap: 1rem;
-      flex-wrap:wrap;
-      align-items:flex-start;
-    }
-    .foot small{
-      font-family: var(--mono);
-      font-size:.78rem;
-      letter-spacing:.12em;
-      text-transform: uppercase;
+      border-top:1px solid var(--line);
+      padding:48px 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--soft);
+      letter-spacing:.08em;
     }
 
-    @media (max-width: 860px){
-      .action{ display:none; }
-      .brand-mark{ width:52px; height:52px; }
-    }
-
-    /* Print (registro em PDF) */
-    @media print{
-      @page{ size:A4; margin: 14mm 14mm 16mm 14mm; }
-      body{ background:#fff !important; color:#111214 !important; }
-      body::before, body::after{ display:none !important; }
-      header{ position:static; background:#fff !important; border-bottom:1px solid rgba(0,0,0,.12) !important; }
-      .brand-badge{ border:1px solid rgba(0,0,0,.14) !important; background:#fff !important; box-shadow:none !important; }
-      .brand-sub{ color: rgba(0,0,0,.55) !important; }
-      .meta-plate, .card{ background:#fff !important; box-shadow:none !important; border:1px solid rgba(0,0,0,.14) !important; }
-      .card::before, .meta-plate::before{ display:none !important; }
-      .pill{ background:#fff !important; border:1px solid rgba(0,0,0,.14) !important; }
-      .rule{ background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.12), transparent) !important; }
-      h1,h2{ color:#111214 !important; }
-      p,li{ color: rgba(0,0,0,.70) !important; }
-      footer{ color: rgba(0,0,0,.55) !important; border-top:1px solid rgba(0,0,0,.12) !important; }
+    @media(max-width:720px){
+      h1{font-size:38px;}
+      main{padding:72px 24px 120px;}
+      .header-inner{padding:40px 24px;}
+      .logo{width:72px;}
     }
   </style>
 </head>
@@ -433,228 +173,222 @@
 <body>
 
   <!-- HEADER -->
-  <header class="site-header" aria-label="Cabeçalho institucional">
-    <div class="topbar">
-      <div class="brand">
-        <div class="brand-badge">
-          <div class="brand-mark" aria-hidden="true">
-            <img src="assets/svg/logo.svg" alt="" />
-          </div>
-          <div class="brand-text">
-            <span class="brand-name">FalX</span>
-            <span class="brand-sub">Registro público canônico</span>
-          </div>
-        </div>
+  <header>
+    <div class="header-inner">
+      <img src="assets/svg/logo.svg" alt="FalX" class="logo" />
+      <div class="header-text">
+        <span class="name">FalX</span>
+        <span class="role">Registro público canônico</span>
       </div>
-
-      <button class="action" type="button" onclick="window.print()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M7 7V3h10v4" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M7 17h10v4H7v-4Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M6 17H4a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="1.6"/>
-        </svg>
-        Print (A4)
-      </button>
     </div>
   </header>
 
-  <main class="wrap">
+  <!-- CONTEÚDO -->
+  <main>
 
-    <!-- HERO -->
-    <section class="hero">
-      <p class="kicker">Documento fundador • registro público • precedência temporal</p>
+    <p class="kicker">Documento fundador · Registro público · Precedência temporal</p>
 
-      <h1>NeuroSaaS — definição fundacional</h1>
-      <p class="subtitle">
-        Termo conceitual original. Documento público para estabelecer definição canônica e precedência temporal com base no histórico verificável de publicação.
+    <h1>NeuroSaaS — definição fundacional</h1>
+
+    <p class="subtitle">
+      Termo conceitual original. Documento público para estabelecer definição canônica e precedência temporal com base no histórico verificável de publicação.
+    </p>
+
+    <div class="meta">
+      <span>Publicador: FalX</span>
+      <span>Ano: 2026</span>
+      <span>Objeto: Termo + definição canônica</span>
+    </div>
+
+    <section>
+      <h2>Definição fundacional</h2>
+
+      <p>
+        NeuroSaaS é a institucionalização da neurociência aplicada como arquitetura central de produtos e sistemas contínuos, concebidos para evoluir em sincronia com o desenvolvimento neurocognitivo humano — individual e coletivo.
       </p>
 
-      <div class="meta-plate" aria-label="Placa de metadados">
-        <div class="meta">
-          <span class="pill"><span class="dot" aria-hidden="true"></span>Publicador: <b>FalX</b></span>
-          <span class="pill"><span class="dot" aria-hidden="true"></span>Ano: <b>2026</b></span>
-          <span class="pill"><span class="dot" aria-hidden="true"></span>Objeto: <b>Termo + definição canônica</b></span>
-        </div>
-      </div>
+      <p>
+        Ele parte de um princípio estrutural incontornável:
+      </p>
 
-      <div class="rule" aria-hidden="true"></div>
+      <p>
+        o cérebro humano é um sistema vivo, plástico e permanentemente inacabado;<br/>
+        portanto, qualquer produto que interaja de forma contínua com pessoas precisa ser, por definição, evolutivo no mesmo ritmo — ou se tornará cognitivamente limitante.
+      </p>
+
+      <p>
+        NeuroSaaS existe para resolver essa assimetria.
+      </p>
     </section>
 
-    <!-- Definição fundacional -->
+    <div class="divider"></div>
+
     <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">Definição fundacional</div>
-            <div class="mark">Texto canônico</div>
-          </div>
+      <h2>Natureza ontológica do termo</h2>
 
-          <div class="block">NeuroSaaS é a institucionalização da neurociência aplicada como arquitetura central de produtos e sistemas contínuos, concebidos para evoluir em sincronia com o desenvolvimento neurocognitivo humano — individual e coletivo.
+      <p>
+        NeuroSaaS não é um tipo de software, nem um modelo de negócio, nem uma vertical de mercado.
+      </p>
 
-Ele parte de um princípio estrutural incontornável:
+      <p>
+        Ele é uma função neuroevolutiva traduzida em produto.
+      </p>
 
-o cérebro humano é um sistema vivo, plástico e permanentemente inacabado;
-portanto, qualquer produto que interaja de forma contínua com pessoas precisa ser, por definição, evolutivo no mesmo ritmo — ou se tornará cognitivamente limitante.
+      <p>
+        Utiliza software, SaaS, sistemas digitais, infraestrutura tecnológica e qualquer outro meio técnico necessário — mas não se define por eles.
+      </p>
 
-NeuroSaaS existe para resolver essa assimetria.</div>
-        </div>
-      </article>
+      <p>
+        O software é o meio.<br/>
+        A neurociência aplicada é a lógica.<br/>
+        A evolução cognitiva contínua é a função.
+      </p>
     </section>
 
-    <!-- Natureza ontológica do termo -->
+    <div class="divider"></div>
+
     <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">Natureza ontológica do termo</div>
-            <div class="mark">Fechamento semântico</div>
-          </div>
+      <h2>O papel da neurociência aplicada</h2>
 
-          <div class="block">NeuroSaaS não é um tipo de software, nem um modelo de negócio, nem uma vertical de mercado.
+      <p>
+        No NeuroSaaS, a neurociência aplicada não é referência teórica, feature ou argumento de autoridade.
+      </p>
 
-Ele é uma função neuroevolutiva traduzida em produto.
+      <p>
+        Ela é arquitetura operacional.
+      </p>
 
-Utiliza software, SaaS, sistemas digitais, infraestrutura tecnológica e qualquer outro meio técnico necessário —
-mas não se define por eles.
+      <p>
+        Isso significa que o produto é desenhado a partir de princípios neurocognitivos como:
+      </p>
 
-O software é o meio.
-A neurociência aplicada é a lógica.
-A evolução cognitiva contínua é a função.</div>
-        </div>
-      </article>
+      <ul>
+        <li>plasticidade neural,</li>
+        <li>adaptação progressiva,</li>
+        <li>aumento graduado de complexidade,</li>
+        <li>reorganização contínua de padrões mentais,</li>
+        <li>desenvolvimento por exposição a desafios reais.</li>
+      </ul>
+
+      <p>
+        O sistema não se estabiliza.<br/>
+        Não se fecha.<br/>
+        Não se completa.
+      </p>
+
+      <p>
+        Ele se reorganiza continuamente em resposta ao avanço cognitivo humano.
+      </p>
     </section>
 
-    <!-- O papel da neurociência aplicada -->
+    <div class="divider"></div>
+
     <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">O papel da neurociência aplicada</div>
-            <div class="mark">Arquitetura operacional</div>
-          </div>
+      <h2>Produto em avanço com o neuro em avanço</h2>
 
-          <div class="block">No NeuroSaaS, a neurociência aplicada não é referência teórica, feature ou argumento de autoridade.
+      <p>
+        NeuroSaaS rompe com o modelo histórico de produtos digitais fragmentados, que:
+      </p>
 
-Ela é arquitetura operacional.
+      <ul>
+        <li>entregam valor pontual,</li>
+        <li>resolvem um passo isolado,</li>
+        <li>e permanecem estagnados enquanto o cérebro humano segue demandando evolução.</li>
+      </ul>
 
-Isso significa que o produto é desenhado a partir de princípios neurocognitivos como:
-	•	plasticidade neural,
-	•	adaptação progressiva,
-	•	aumento graduado de complexidade,
-	•	reorganização contínua de padrões mentais,
-	•	desenvolvimento por exposição a desafios reais.
+      <p>
+        NeuroSaaS é um produto que cresce cognitivamente junto com seus usuários, nunca abaixo deles.
+      </p>
 
-O sistema não se estabiliza.
-Não se fecha.
-Não se completa.
+      <p>
+        Não otimiza apenas eficiência.<br/>
+        Não atende apenas comportamento existente.<br/>
+        Não estabiliza padrões atuais.
+      </p>
 
-Ele se reorganiza continuamente em resposta ao avanço cognitivo humano.</div>
-        </div>
-      </article>
+      <p>
+        Ele expande capacidade de abstração, decisão e pensamento ao longo do tempo.
+      </p>
     </section>
 
-    <!-- Produto em avanço com o neuro em avanço -->
+    <div class="divider"></div>
+
     <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">Produto em avanço com o neuro em avanço</div>
-            <div class="mark">Função evolutiva</div>
-          </div>
+      <h2>Definição canônica</h2>
 
-          <div class="block">NeuroSaaS rompe com o modelo histórico de produtos digitais fragmentados, que:
-	•	entregam valor pontual,
-	•	resolvem um passo isolado,
-	•	e permanecem estagnados enquanto o cérebro humano segue demandando evolução.
+      <p>
+        NeuroSaaS é a tradução da neurociência aplicada em infraestrutura evolutiva contínua, projetada para sustentar e ampliar o desenvolvimento neurocognitivo humano por meio de sistemas e produtos que evoluem em sincronia com o cérebro — utilizando tecnologia como meio, nunca como limite.
+      </p>
 
-Em vez disso:
+      <p>
+        Essa definição é fundacional porque:
+      </p>
 
-NeuroSaaS é um produto que cresce cognitivamente junto com seus usuários, nunca abaixo deles.
+      <ul>
+        <li>não depende de aplicação específica,</li>
+        <li>não depende de tecnologia particular,</li>
+        <li>não depende de mercado atual,</li>
+        <li>não depende de indivíduo,</li>
+        <li>não depende de narrativa.</li>
+      </ul>
 
-Não otimiza apenas eficiência.
-Não atende apenas comportamento existente.
-Não estabiliza padrões atuais.
-
-Ele expande capacidade de abstração, decisão e pensamento ao longo do tempo.</div>
-        </div>
-      </article>
+      <p>
+        Ela descreve uma necessidade estrutural da era digital, não uma solução circunstancial.
+      </p>
     </section>
 
-    <!-- Definição canônica -->
+    <div class="divider"></div>
+
     <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">Definição canônica</div>
-            <div class="mark">Fundação</div>
-          </div>
+      <h2>Posição histórica</h2>
 
-          <div class="block">NeuroSaaS é a tradução da neurociência aplicada em infraestrutura evolutiva contínua, projetada para sustentar e ampliar o desenvolvimento neurocognitivo humano por meio de sistemas e produtos que evoluem em sincronia com o cérebro — utilizando tecnologia como meio, nunca como limite.
+      <p>
+        NeuroSaaS marca a transição de uma era em que a tecnologia avançava independentemente do impacto cognitivo que produzia,
+      </p>
 
-Essa definição é fundacional porque:
-	•	não depende de aplicação específica,
-	•	não depende de tecnologia particular,
-	•	não depende de mercado atual,
-	•	não depende de indivíduo,
-	•	não depende de narrativa.
+      <p>
+        para uma era em que o desenvolvimento do neuro humano passa a ser responsabilidade explícita da arquitetura dos produtos digitais.
+      </p>
 
-Ela descreve uma necessidade estrutural da era digital, não uma solução circunstancial.</div>
-        </div>
-      </article>
+      <p>
+        Nesse sentido, NeuroSaaS não é tendência, inovação incremental ou categoria emergente.
+      </p>
+
+      <p>
+        É uma correção de rota histórica.
+      </p>
     </section>
 
-    <!-- Posição histórica -->
+    <div class="divider"></div>
+
     <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">Posição histórica</div>
-            <div class="mark">Correção de rota</div>
-          </div>
+      <h2>Síntese</h2>
 
-          <div class="block">NeuroSaaS marca a transição de uma era em que:
-	•	a tecnologia avançava independentemente do impacto cognitivo que produzia,
+      <p>
+        NeuroSaaS é o momento em que a evolução neurocognitiva humana deixa de ser um efeito colateral do progresso tecnológico e passa a ser sua arquitetura central, sustentada por neurociência aplicada e materializada em sistemas evolutivos contínuos.
+      </p>
 
-para uma era em que:
-	•	o desenvolvimento do neuro humano passa a ser responsabilidade explícita da arquitetura dos produtos digitais.
+      <p>
+        Nada além disso é necessário.<br/>
+        Nada abaixo disso é suficiente.
+      </p>
 
-Nesse sentido, NeuroSaaS não é tendência, inovação incremental ou categoria emergente.
+      <p>
+        Aqui o conceito está:
+      </p>
 
-É uma correção de rota histórica.</div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Síntese -->
-    <section>
-      <article class="card">
-        <div class="card-inner">
-          <div class="eyebrow">
-            <div class="label">Síntese</div>
-            <div class="mark">Fechamento</div>
-          </div>
-
-          <div class="block">NeuroSaaS é o momento em que a evolução neurocognitiva humana deixa de ser um efeito colateral do progresso tecnológico e passa a ser sua arquitetura central, sustentada por neurociência aplicada e materializada em sistemas evolutivos contínuos.
-
-Nada além disso é necessário.
-Nada abaixo disso é suficiente.
-
-Aqui o conceito está:
-	•	ontologicamente fechado,
-	•	semanticamente estável,
-	•	impossível de confundir,
-	•	e impossível de reduzir sem perder essência.</div>
-        </div>
-      </article>
+      <ul>
+        <li>ontologicamente fechado,</li>
+        <li>semanticamente estável,</li>
+        <li>impossível de confundir,</li>
+        <li>impossível de reduzir sem perder essência.</li>
+      </ul>
     </section>
 
   </main>
 
-  <footer aria-label="Rodapé institucional">
-    <div class="foot">
-      <small>© FalX — 2026</small>
-      <small>Registro público canônico • NeuroSaaS</small>
-    </div>
+  <footer>
+    © FalX — Registro público canônico — 2026
   </footer>
 
 </body>
