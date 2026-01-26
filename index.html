@@ -23,19 +23,25 @@
     :root{
       --bg:#0b0b0b;
       --fg:#e9e7e4;
-      --muted:#a3a0a0;
-      --line:#1c1c1c;
-      --pill:#242424;
-      --pillLine:#2f2f2f;
+      --muted:#a7a4a4;
+      --line:rgba(255,255,255,.10);
+      --line2:rgba(255,255,255,.07);
+      --pillLine:rgba(255,255,255,.16);
+      --glass:rgba(255,255,255,.02);
+
+      /* “eixo lateral” do desenho */
+      --rail-max: 74ch; /* largura editorial */
     }
 
-    *{box-sizing:border-box;}
-    html,body{height:100%;}
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+
     body{
       margin:0;
-      background: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.06), transparent 55%),
-                  radial-gradient(900px 500px at 50% 0%, rgba(255,255,255,0.04), transparent 60%),
-                  var(--bg);
+      background:
+        radial-gradient(1200px 620px at 10% -10%, rgba(255,255,255,.07), transparent 55%),
+        radial-gradient(900px 520px at 30% 0%, rgba(255,255,255,.045), transparent 60%),
+        var(--bg);
       color:var(--fg);
       font-family:"Georgia","Times New Roman",serif;
       line-height:1.65;
@@ -44,31 +50,40 @@
     }
 
     main{
-      max-width: 920px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 88px 24px 120px;
     }
 
-    /* ===== HERO (alto padrão): centralizado e com hierarquia ===== */
+    /* BLOCO LATERAL: tudo segue o mesmo eixo esquerdo */
+    .rail{
+      max-width: var(--rail-max);
+    }
+
+    /* HEADER — exatamente como seu desenho: logo no topo esquerdo + linhas alinhadas */
     header{
-      text-align:center;
-      padding-bottom: 54px;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 54px;
+      position:relative;
+      padding-bottom: 42px;
+      margin-bottom: 42px;
     }
 
-    .logo-wrap{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      margin-bottom: 22px;
+    /* “linha” superior sutil (seu traço de cima) */
+    header::before{
+      content:"";
+      display:block;
+      height:1px;
+      background: linear-gradient(90deg, rgba(255,255,255,.18), rgba(255,255,255,0));
+      margin-bottom: 26px;
     }
 
+    /* Logo grande e com presença, mas elegante */
     .logo{
-      width: clamp(120px, 10vw, 180px);
-      height:auto;
-      opacity:.95;
-      filter: drop-shadow(0 16px 34px rgba(0,0,0,.55));
+      width: clamp(54px, 5vw, 74px);
+      height: auto;
+      display:block;
+      margin: 0 0 18px 0;
+      opacity: .96;
+      filter: drop-shadow(0 16px 30px rgba(0,0,0,.55));
     }
 
     .kicker{
@@ -81,20 +96,29 @@
     }
 
     .kicker.sub{
-      margin: 0 0 28px;
+      margin: 0 0 22px;
       opacity: .95;
     }
 
+    /* “linha” entre kicker e título (seu traço do meio) */
+    .hairline{
+      height:1px;
+      width: 100%;
+      max-width: 56ch;
+      background: linear-gradient(90deg, rgba(255,255,255,.14), rgba(255,255,255,0));
+      margin: 18px 0 26px;
+    }
+
     h1{
-      font-size: clamp(44px, 4.4vw, 64px);
+      font-size: clamp(46px, 4.6vw, 70px);
       font-weight: 400;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       letter-spacing: .01em;
     }
 
     .lede{
       max-width: 62ch;
-      margin: 0 auto 30px;
+      margin: 0 0 26px;
       font-size: 18px;
       color: rgba(233,231,228,.92);
     }
@@ -102,28 +126,31 @@
     .meta{
       display:flex;
       flex-wrap:wrap;
-      justify-content:center;
       gap:10px;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
     .pill{
       border: 1px solid var(--pillLine);
-      background: rgba(255,255,255,0.02);
+      background: var(--glass);
       padding: 9px 14px;
       border-radius: 999px;
       font-size: 13px;
       color: rgba(233,231,228,.78);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       letter-spacing: .02em;
-      box-shadow: 0 10px 24px rgba(0,0,0,.28) inset;
+      box-shadow: 0 10px 24px rgba(0,0,0,.26) inset;
     }
 
-    /* ===== CORPO: editorial à esquerda (alto padrão) ===== */
+    /* divisor editorial (seu traço “horizontal” separando) */
+    .divider{
+      border-top: 1px solid var(--line2);
+      margin: 42px 0;
+    }
+
+    /* Corpo editorial — alinhado no MESMO eixo esquerdo */
     section{
-      max-width: 74ch; /* largura de leitura premium */
-      margin: 0 auto;
-      text-align:left;
+      margin: 0;
     }
 
     p{
@@ -135,12 +162,12 @@
     h2{
       font-size: 26px;
       font-weight: 400;
-      margin: 52px 0 18px;
+      margin: 46px 0 16px;
       color: rgba(233,231,228,.96);
     }
 
     ul{
-      margin: 18px 0 0;
+      margin: 16px 0 0;
       padding-left: 22px;
     }
 
@@ -150,124 +177,118 @@
       color: rgba(233,231,228,.88);
     }
 
-    /* divisor sutil entre blocos longos */
-    .divider{
-      max-width: 74ch;
-      margin: 48px auto;
-      border-top: 1px solid var(--line);
-    }
-
     footer{
       margin-top: 88px;
       padding-top: 34px;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid var(--line2);
       font-size: 13px;
       color: rgba(233,231,228,.60);
-      text-align:center;
+      text-align:left;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       letter-spacing: .06em;
       text-transform: uppercase;
     }
 
-    /* ===== MOBILE REFINO ===== */
-    @media (max-width: 480px){
+    /* MOBILE: continua lateral (não centraliza), só ajusta tamanhos */
+    @media (max-width: 520px){
       main{ padding: 72px 18px 96px; }
 
-      .logo{ width: clamp(140px, 34vw, 190px); }
+      header::before{ margin-bottom: 20px; }
+      .logo{ width: clamp(56px, 16vw, 76px); margin-bottom: 16px; }
 
-      .lede{
-        font-size: 17px;
-        margin-bottom: 26px;
-      }
-
+      h1{ font-size: clamp(40px, 10vw, 52px); }
       p, li{ font-size: 17px; }
       h2{ font-size: 24px; }
+
+      .hairline{ max-width: 40ch; }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <header>
-      <!-- LOGO -->
-      <div class="logo-wrap">
+    <div class="rail">
+      <header>
+        <!-- LOGO (confirma esse path) -->
         <img class="logo" src="assets/img/falx-logo.svg" alt="FalX" />
-      </div>
 
-      <div class="kicker">FALX · Registro público canônico</div>
-      <div class="kicker sub">Documento fundador · Registro público · Precedência temporal</div>
+        <p class="kicker">FALX · Registro público canônico</p>
+        <p class="kicker sub">Documento fundador · Registro público · Precedência temporal</p>
 
-      <h1>NeuroSaaS —<br>definição funcional</h1>
+        <div class="hairline"></div>
 
-      <p class="lede">
-        Termo conceitual original. Documento público destinado a estabelecer
-        a definição canônica e a precedência temporal do termo NeuroSaaS,
-        com base em histórico verificável de publicação.
-      </p>
+        <h1>NeuroSaaS —<br>definição funcional</h1>
 
-      <div class="meta">
-        <div class="pill">Publicador: FalX</div>
-        <div class="pill">Ano: 2026</div>
-        <div class="pill">Objeto: termo + definição canônica</div>
-      </div>
-    </header>
+        <p class="lede">
+          Termo conceitual original. Documento público destinado a estabelecer
+          a definição canônica e a precedência temporal do termo NeuroSaaS,
+          com base em histórico verificável de publicação.
+        </p>
 
-    <section>
-      <p>
-        NeuroSaaS é a institucionalização da neurociência aplicada como
-        arquitetura central de sistemas contínuos, concebidos para evoluir
-        em sincronia com o desenvolvimento humano — individual e coletivo.
-      </p>
+        <div class="meta">
+          <div class="pill">Publicador: FalX</div>
+          <div class="pill">Ano: 2026</div>
+          <div class="pill">Objeto: termo + definição canônica</div>
+        </div>
+      </header>
 
-      <p>
-        Parte de um princípio estrutural inegociável: o cérebro humano é um
-        sistema vivo, plástico e permanentemente inacabado. Qualquer sistema
-        que interaja de forma contínua com pessoas deve, por definição,
-        permanecer adaptativo e evolutivo.
-      </p>
+      <section>
+        <p>
+          NeuroSaaS é a institucionalização da neurociência aplicada como
+          arquitetura central de sistemas contínuos, concebidos para evoluir
+          em sincronia com o desenvolvimento humano — individual e coletivo.
+        </p>
 
-      <p>
-        NeuroSaaS existe para resolver essa assimetria estrutural entre
-        cognição humana e sistemas estáticos.
-      </p>
-    </section>
+        <p>
+          Parte de um princípio estrutural inegociável: o cérebro humano é um
+          sistema vivo, plástico e permanentemente inacabado. Qualquer sistema
+          que interaja de forma contínua com pessoas deve, por definição,
+          permanecer adaptativo e evolutivo.
+        </p>
 
-    <div class="divider"></div>
+        <p>
+          NeuroSaaS existe para resolver essa assimetria estrutural entre
+          cognição humana e sistemas estáticos.
+        </p>
+      </section>
 
-    <section>
-      <h2>Nada além disso é necessário.</h2>
-      <h2>Nada abaixo disso é suficiente.</h2>
+      <div class="divider"></div>
 
-      <ul>
-        <li>ontologicamente fechado,</li>
-        <li>semanticamente estável,</li>
-        <li>impossível de confundir,</li>
-        <li>impossível de reduzir sem perda de essência.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Nada além disso é necessário.</h2>
+        <h2>Nada abaixo disso é suficiente.</h2>
 
-    <div class="divider"></div>
+        <ul>
+          <li>ontologicamente fechado,</li>
+          <li>semanticamente estável,</li>
+          <li>impossível de confundir,</li>
+          <li>impossível de reduzir sem perda de essência.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Natureza do termo</h2>
+      <div class="divider"></div>
 
-      <p>
-        NeuroSaaS não é um produto, não é uma categoria de mercado e não
-        constitui uma especificação técnica. Trata-se de um termo
-        conceitual estrutural, definido para orientar arquiteturas de
-        sistemas contínuos baseadas em princípios neurocientíficos
-        aplicados.
-      </p>
+      <section>
+        <h2>Natureza do termo</h2>
 
-      <p>
-        Este registro estabelece a leitura canônica do termo, independentemente
-        de implementações futuras, produtos comerciais ou variações de uso.
-      </p>
-    </section>
+        <p>
+          NeuroSaaS não é um produto, não é uma categoria de mercado e não
+          constitui uma especificação técnica. Trata-se de um termo
+          conceitual estrutural, definido para orientar arquiteturas de
+          sistemas contínuos baseadas em princípios neurocientíficos
+          aplicados.
+        </p>
 
-    <footer>
-      © FALX · Registro público canônico · 2026
-    </footer>
+        <p>
+          Este registro estabelece a leitura canônica do termo, independentemente
+          de implementações futuras, produtos comerciais ou variações de uso.
+        </p>
+      </section>
+
+      <footer>
+        © FALX · Registro público canônico · 2026
+      </footer>
+    </div>
   </main>
 </body>
 </html>
