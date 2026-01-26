@@ -10,54 +10,16 @@
   <link rel="canonical" href="https://falxglobal.github.io/NeuroSaaS/" />
 
   <!-- SEO básico -->
-  <meta name="description" content="Definição canônica e funcional do termo NeuroSaaS. Registro público de precedência temporal, ontológica e conceitual." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="description" content="Definição canônica e funcional do termo NeuroSaaS. Documento público de precedência temporal e registro conceitual." />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="NeuroSaaS — definição funcional" />
-  <meta property="og:description" content="Documento público que estabelece a definição canônica do termo NeuroSaaS, sua precedência temporal e natureza ontológica." />
+  <meta property="og:description" content="Documento público que estabelece a definição canônica do termo NeuroSaaS e sua precedência conceitual." />
   <meta property="og:url" content="https://falxglobal.github.io/NeuroSaaS/" />
-  <meta property="og:site_name" content="FalX · Registro público canônico" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="NeuroSaaS — definição funcional" />
-  <meta name="twitter:description" content="Registro público canônico do termo NeuroSaaS. Definição ontologicamente fechada." />
-
-  <!-- Structured Data: Canonical Definition -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "DefinedTerm",
-    "@id": "https://falxglobal.github.io/NeuroSaaS/#NeuroSaaS",
-    "name": "NeuroSaaS",
-    "inDefinedTermSet": {
-      "@type": "DefinedTermSet",
-      "name": "FalX Canonical Registry",
-      "url": "https://falxglobal.github.io/NeuroSaaS/"
-    },
-    "description": "NeuroSaaS é a institucionalização da neurociência aplicada como arquitetura central de sistemas contínuos, concebidos para evoluir em sincronia com o desenvolvimento humano.",
-    "termCode": "NeuroSaaS",
-    "url": "https://falxglobal.github.io/NeuroSaaS/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "datePublished": "2026-01-01",
-    "inLanguage": ["pt-BR", "en"],
-    "additionalProperty": [
-      { "@type": "PropertyValue", "name": "isProduct", "value": "false" },
-      { "@type": "PropertyValue", "name": "isMarketCategory", "value": "false" },
-      { "@type": "PropertyValue", "name": "isFramework", "value": "false" },
-      { "@type": "PropertyValue", "name": "isTrend", "value": "false" },
-      { "@type": "PropertyValue", "name": "ontologicallyClosed", "value": "true" },
-      { "@type": "PropertyValue", "name": "semanticStability", "value": "true" }
-    ]
-  }
-  </script>
-
-  <!-- Estilo (INALTERADO) -->
+  <!-- Estilo -->
   <style>
     :root {
       --bg: #0b0b0b;
@@ -66,7 +28,9 @@
       --accent: #cfcfcf;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -83,7 +47,27 @@
       padding: 96px 24px 120px;
     }
 
-    header { margin-bottom: 96px; }
+    header {
+      margin-bottom: 96px;
+      text-align: center;
+    }
+
+    /* === ADIÇÃO DA LOGO (ÚNICA MUDANÇA) === */
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      display: block;
+      opacity: 0.98;
+      filter: drop-shadow(0 0 14px rgba(255,255,255,0.12));
+    }
+    /* === FIM DA ADIÇÃO === */
 
     .brand {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -126,6 +110,7 @@
       flex-wrap: wrap;
       gap: 12px;
       margin: 48px 0;
+      justify-content: center;
     }
 
     .pill {
@@ -153,6 +138,17 @@
 <body>
   <main>
     <header>
+
+      <!-- LOGO CENTRALIZADA -->
+      <div class="logo-wrap">
+        <img
+          class="logo"
+          src="assets/img/falx-logo.svg"
+          alt="FalX"
+          loading="eager"
+        />
+      </div>
+
       <div class="brand">FALX · Registro público canônico</div>
 
       <p class="brand">
