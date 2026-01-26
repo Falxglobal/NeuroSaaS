@@ -4,245 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NeuroSaaS — Registro Público Canônico | Registro público canônico</title>
+  <title>NeuroSaaS — Registro Público Canônico</title>
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://falxglobal.github.io/NeuroSaaS/" />
 
-  <!-- SEO básico -->
-  <meta name="description" content="NeuroSaaS — Registro Público Canônico. Documento público destinado a estabelecer a definição canônica do termo NeuroSaaS, com precedência temporal verificável de publicação." />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="description" content="Registro público canônico do termo NeuroSaaS. Definição ontológica, princípios estruturais e precedência temporal." />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="NeuroSaaS — Registro Público Canônico" />
-  <meta property="og:description" content="Documento público destinado a estabelecer a definição canônica do termo NeuroSaaS, com precedência temporal verificável de publicação." />
+  <meta property="og:description" content="Definição canônica do termo NeuroSaaS, com precedência temporal registrada." />
   <meta property="og:url" content="https://falxglobal.github.io/NeuroSaaS/" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="NeuroSaaS — Registro Público Canônico" />
-  <meta name="twitter:description" content="Documento público destinado a estabelecer a definição canônica do termo NeuroSaaS, com precedência temporal verificável de publicação." />
-
-  <!-- Estrutura semântica para máquinas (IA/Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "NeuroSaaS — Registro Público Canônico",
-    "description": "Documento público destinado a estabelecer a definição canônica do termo NeuroSaaS, com precedência temporal verificável de publicação.",
-    "inLanguage": "pt-BR",
-    "author": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "mainEntityOfPage": "https://falxglobal.github.io/NeuroSaaS/",
-    "datePublished": "2026-01-26",
-    "dateModified": "2026-01-26"
-  }
-  </script>
-
   <style>
-    :root {
-      --bg: #0b0b0b;
-      --fg: #e9e9e9;
-      --muted: #a3a3a3;
-      --hairline: rgba(255,255,255,0.10);
-      --hairline2: rgba(255,255,255,0.06);
-      --pill: rgba(255,255,255,0.08);
-      --shadow: rgba(0,0,0,0.55);
-      --max: 980px;
-
-      --padX: clamp(22px, 5vw, 88px);
-      --padTop: clamp(44px, 7vw, 92px);
-      --padBottom: clamp(84px, 10vw, 140px);
-
-      --h1: clamp(40px, 5.2vw, 64px);
-      --h2: clamp(20px, 2.2vw, 28px);
-      --p: clamp(16px, 1.2vw, 18px);
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--fg);
+      background: #0b0b0b;
+      color: #e9e9e9;
       font-family: "Georgia", "Times New Roman", serif;
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: geometricPrecision;
+      line-height: 1.75;
     }
 
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Layout: lateral (não central) */
     main {
-      width: min(100%, var(--max));
-      margin-left: var(--padX);
-      margin-right: auto;
-      padding-top: var(--padTop);
-      padding-bottom: var(--padBottom);
+      max-width: 900px;
+      margin-left: 80px;
+      padding: 80px 24px 140px 0;
     }
 
     header {
-      padding-bottom: clamp(26px, 3.2vw, 44px);
-      border-bottom: 1px solid var(--hairline2);
-      margin-bottom: clamp(34px, 4vw, 56px);
-    }
-
-    /* Top brand */
-    .topline {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .logo {
-      width: clamp(56px, 5vw, 80px);
-      height: auto;
-      display: block;
-      opacity: 0.95;
-      filter: drop-shadow(0 10px 18px var(--shadow));
-    }
-
-    .brandblock {
-      display: grid;
-      gap: 6px;
-    }
-
-    .brandline {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-size: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding-bottom: 40px;
+      margin-bottom: 48px;
     }
 
     h1 {
-      font-size: var(--h1);
+      font-size: 56px;
       font-weight: 400;
-      margin: 22px 0 18px;
-      letter-spacing: -0.01em;
+      margin: 0 0 24px;
     }
 
-    .lead {
-      font-size: var(--p);
-      color: rgba(233,233,233,0.92);
+    h2 {
+      font-size: 28px;
+      font-weight: 400;
+      margin: 64px 0 20px;
+    }
+
+    p {
+      font-size: 18px;
       max-width: 78ch;
       margin: 0 0 22px;
     }
 
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      border: 1px solid var(--hairline);
-      background: rgba(255,255,255,0.03);
-      padding: 9px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.72);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.02em;
-    }
-
-    section { margin-top: clamp(38px, 4.4vw, 68px); }
-
-    h2 {
-      font-size: var(--h2);
-      font-weight: 400;
-      margin: 0 0 14px;
-      letter-spacing: -0.005em;
-    }
-
-    h3 {
-      font-size: calc(var(--h2) * 0.86);
-      font-weight: 400;
-      margin: 22px 0 12px;
-      letter-spacing: -0.004em;
-    }
-
-    p {
-      font-size: var(--p);
-      margin: 0 0 18px;
-      color: rgba(233,233,233,0.90);
-      max-width: 82ch;
-    }
-
-    .rule {
-      height: 1px;
-      background: var(--hairline2);
-      margin: 28px 0;
-      width: min(92%, 820px);
-    }
-
     ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
-      max-width: 84ch;
+      padding-left: 22px;
+      margin: 0 0 22px;
     }
 
     li {
-      font-size: var(--p);
-      margin: 0 0 10px;
-      color: rgba(233,233,233,0.88);
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
-    .quote {
-      border-left: 2px solid var(--hairline);
-      padding: 10px 0 10px 16px;
-      margin: 14px 0 22px;
-      color: rgba(233,233,233,0.92);
-      max-width: 82ch;
-      font-style: italic;
+    .kicker {
+      font-family: system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #a3a3a3;
+      margin-bottom: 12px;
     }
-
-    .quote p { margin: 0; }
-
-    strong { font-weight: 600; }
 
     footer {
-      margin-top: clamp(58px, 6vw, 96px);
-      padding-top: 22px;
-      border-top: 1px solid var(--hairline2);
+      margin-top: 120px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.12);
       font-size: 13px;
-      color: rgba(255,255,255,0.62);
-      text-align: left;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.04em;
+      color: #999;
+      font-family: system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 700px) {
       main {
-        margin-left: 18px;
-        padding-top: 34px;
-        padding-bottom: 96px;
+        margin-left: 24px;
+        padding-right: 24px;
       }
-
-      .topline { gap: 12px; }
-      .logo { width: 64px; }
-      h1 { margin-top: 18px; }
-      .meta { gap: 8px; }
-      .pill { font-size: 12.5px; padding: 8px 12px; }
-      .rule { width: 100%; }
+      h1 {
+        font-size: 44px;
+      }
     }
   </style>
 </head>
@@ -250,262 +100,247 @@
 <body>
   <main>
     <header>
-      <div class="topline">
-        <img class="logo" src="assets/img/falx-logo.svg" alt="FalX — símbolo" loading="eager" />
-        <div class="brandblock">
-          <div class="brandline">FALX · REGISTRO PÚBLICO CANÔNICO</div>
-          <div class="brandline">DOCUMENTO FUNDADOR · REGISTRO OFICIAL · PRECEDÊNCIA TEMPORAL</div>
-        </div>
-      </div>
+      <div class="kicker">FALX · Registro Público Canônico</div>
+      <h1>NeuroSaaS — Registro Público Canônico</h1>
 
-      <h1>NeuroSaaS —<br>Registro Público Canônico</h1>
-
-      <div class="rule"></div>
-
-      <p class="lead">
-        Documento público destinado a estabelecer a definição canônica do termo <strong>NeuroSaaS</strong>, com precedência temporal verificável de publicação.
+      <p>
+        Documento público destinado a estabelecer a definição canônica do termo NeuroSaaS,
+        com precedência temporal verificável de publicação.
       </p>
 
-      <div class="meta">
-        <div class="pill">Publicador: FalX</div>
-        <div class="pill">Ano: 2026</div>
-        <div class="pill">Objeto: Termo + Registro de referência</div>
-      </div>
+      <p>
+        Publicador: FalX<br />
+        Ano: 2026<br />
+        Objeto: Termo + Registro de referência
+      </p>
     </header>
 
-    <section id="definicao">
+    <section>
       <h2>1. Definição</h2>
 
       <p>
-        <strong>NeuroSaaS</strong> (Neuroscience-as-a-Service) é uma arquitetura de desenvolvimento de sistemas digitais, orientada por princípios da neurociência,
-        da plasticidade cognitiva e da metacognição humana.
+        NeuroSaaS (Neuroscience-as-a-Service) é uma arquitetura de desenvolvimento e
+        orquestração de sistemas digitais baseada nos princípios da neurociência, da
+        plasticidade cognitiva e da metacognição — não como metáforas, mas como
+        fundamentos estruturais.
       </p>
 
       <p>
-        Mais do que uma tecnologia, NeuroSaaS é uma estrutura para projetar produtos, serviços e plataformas que se adaptam e evoluem com as transformações mentais,
-        emocionais e comportamentais das pessoas.
+        Mais do que um software adaptativo, NeuroSaaS é uma infraestrutura cognitiva
+        sistêmica: um modelo para projetar ecossistemas tecnológicos capazes de evoluir
+        em sincronia com a transformação mental, emocional e cultural de seus usuários.
       </p>
 
-      <div class="quote">
-        <p>“E se nossos sistemas digitais fossem projetados para crescer junto com a mente humana?”</p>
-      </div>
+      <p>
+        Trata-se de criar sistemas que não apenas respondem ao comportamento, mas que
+        coexistem com a evolução interna do humano, acompanhando, refletindo e
+        potencializando seus ciclos reais de mudança.
+      </p>
 
       <p>
-        Ao reconhecer que a mente está em constante mudança — e não em estado fixo — NeuroSaaS propõe que os sistemas também possam se reorganizar e acompanhar esse processo,
-        de forma consciente e estruturada.
+        Não é uma técnica.<br />
+        É uma ontologia operacional.
       </p>
     </section>
 
-    <section id="proposito">
+    <section>
       <h2>2. Propósito</h2>
 
       <p>
-        Grande parte da tecnologia digital atual é construída sobre padrões fixos de comportamento, assumindo que os usuários não mudam — ou que suas mudanças não importam.
+        Grande parte dos sistemas digitais é desenvolvida a partir de padrões fixos de
+        uso, pressupondo estabilidade no comportamento humano.
       </p>
-
-      <p>NeuroSaaS inverte esse paradigma.</p>
 
       <p>
-        Ele parte da premissa de que o humano está sempre em transformação, e que os sistemas devem ser projetados para acompanhar essa jornada com coerência, ética e adaptabilidade.
+        O propósito do NeuroSaaS é estabelecer um modelo no qual essa premissa não se
+        sustenta. O ser humano é compreendido como um processo contínuo de transformação —
+        e os sistemas devem ser projetados para acompanhar essa dinâmica de forma coerente,
+        ética e adaptável.
       </p>
-
-      <div class="quote">
-        <p>A pergunta central é:<br><strong>“Como seriam os sistemas se fossem construídos para evoluir com o ser humano?”</strong></p>
-      </div>
     </section>
 
-    <section id="posicao">
+    <section>
       <h2>3. Posição Conceitual</h2>
 
       <p>
-        NeuroSaaS <strong>não é uma extensão de IA adaptativa</strong>.<br>
-        Não simula cognição, não depende de modelos preditivos, e não se limita a ajustar a interface com base em comportamento passado.
+        NeuroSaaS não é uma técnica, nem um framework de inteligência artificial.
+        É uma infraestrutura ontológica para o desenvolvimento de sistemas digitais
+        com capacidade de reorganização adaptativa contínua.
       </p>
 
       <p>
-        Trata-se de um modelo metacognitivo de desenvolvimento de sistemas:<br>
-        infraestruturas que observam seu próprio impacto, reorganizam suas estruturas, e evoluem com a mente em fluxo.
+        Ele pode utilizar IA, machine learning ou qualquer outra tecnologia
+        computacional — mas essas são ferramentas auxiliares, não o núcleo da proposta.
       </p>
 
       <p>
-        Não busca inteligência artificial.<br>
-        Busca <strong>coerência evolutiva real</strong> entre sistema e usuário.
+        O elemento central não é a tecnologia empregada, mas a capacidade do sistema de
+        manter coerência evolutiva com a transformação cognitiva humana ao longo do tempo.
       </p>
     </section>
 
-    <section id="principios">
+    <section>
       <h2>4. Princípios Fundamentais</h2>
 
       <h3>4.1 Plasticidade como base estrutural</h3>
       <p>
-        Inspirado pela neuroplasticidade, o modelo propõe que os sistemas reorganizem suas estruturas com o tempo, sem depender de rupturas totais.
+        Os sistemas devem ser concebidos para reorganizar suas estruturas ao longo do
+        tempo, inspirados pelo princípio da neuroplasticidade.
       </p>
 
       <h3>4.2 Design cognitivo centrado</h3>
       <p>
-        A experiência é pensada com base em atenção, foco, carga cognitiva, memória de trabalho e outras variáveis mentais reais.
+        A experiência do usuário é avaliada com base em carga cognitiva, atenção,
+        memória de trabalho, foco e disponibilidade mental.
       </p>
 
       <h3>4.3 Adaptação bidirecional</h3>
       <p>
-        O sistema evolui com o usuário, mas também influencia sua trajetória mental. É uma relação de coevolução contínua.
+        O sistema se adapta ao usuário e, simultaneamente, influencia sua trajetória
+        de uso de forma controlada e ética.
       </p>
 
       <h3>4.4 Sustentabilidade mental</h3>
       <p>
-        Evita-se sobrecarga, ruído e padrões de dependência. O foco é em experiências cognitivamente sustentáveis.
+        Devem ser evitados sobrecarga informacional, estímulos excessivos e padrões de
+        dependência. A prioridade é a estabilidade cognitiva.
       </p>
 
       <h3>4.5 Evolução contínua</h3>
       <p>
-        Sistemas NeuroSaaS são organismos digitais — desenvolvem-se com o tempo, com base em ciclos de transformação humana.
+        Sistemas NeuroSaaS não são estáticos. Seu desenvolvimento ocorre em ciclos
+        alinhados às transformações humanas.
       </p>
 
       <h3>4.6 Base metacognitiva</h3>
       <p>
-        Sistemas NeuroSaaS operam com lógica metacognitiva:<br>
-        observam seu próprio funcionamento em relação ao usuário,<br>
-        avaliam sua utilidade cognitiva,<br>
-        e reorganizam sua estrutura com base nessa percepção.
+        A arquitetura NeuroSaaS é metacognitiva por natureza. Cada instância do sistema
+        é projetada para observar seu próprio impacto cognitivo, avaliar utilidade e
+        reorganizar sua lógica a partir desse processo.
+      </p>
+
+      <p>
+        Não é sobre prever comportamento, mas sobre refletir e reestruturar com base no
+        impacto real da interação humana.
       </p>
     </section>
 
-    <section id="aplicacoes">
+    <section>
       <h2>5. Aplicações Potenciais</h2>
       <ul>
-        <li>Plataformas educacionais que ajustam estratégias conforme transformações cognitivas reais.</li>
-        <li>Ambientes digitais que respeitam ritmos mentais e estados emocionais.</li>
-        <li>Interfaces de recomendação que priorizam equilíbrio mental, não apenas engajamento.</li>
-        <li>Ecossistemas que sustentam múltiplos produtos e evoluem com sua cultura cognitiva interna.</li>
-        <li>Infraestruturas institucionais que se adaptam à maturação coletiva.</li>
+        <li>Plataformas educacionais com adaptação progressiva de estratégias de aprendizagem</li>
+        <li>Ambientes digitais sensíveis a ritmos mentais e estados emocionais</li>
+        <li>Sistemas de recomendação orientados por equilíbrio cognitivo</li>
+        <li>Ecossistemas que sustentam múltiplos produtos sob uma lógica evolutiva comum</li>
+        <li>Infraestruturas institucionais adaptáveis à maturação coletiva</li>
       </ul>
     </section>
 
-    <section id="nao-e">
+    <section>
       <h2>6. O que NeuroSaaS não é</h2>
       <ul>
-        <li>Não é IA adaptativa renomeada.</li>
-        <li>Não é coleta de dados disfarçada.</li>
-        <li>Não é uma “nova categoria de software”.</li>
-        <li>Não é uma técnica de simulação cognitiva.</li>
-        <li>Não visa imitar pensamento, mas respeitar e acompanhar a evolução do pensamento real.</li>
-        <li>Não é cosmético — é estrutural.</li>
+        <li>Não é uma redefinição de inteligência artificial</li>
+        <li>Não é um mecanismo de coleta de dados disfarçado</li>
+        <li>Não é uma categoria de software</li>
+        <li>Não é uma técnica de simulação cognitiva</li>
+        <li>Não tem caráter cosmético</li>
+        <li>Sua natureza é estrutural e ontológica</li>
       </ul>
     </section>
 
-    <section id="escalabilidade">
+    <section>
       <h2>7. Escalabilidade Sistêmica</h2>
 
-      <p>NeuroSaaS é uma linguagem replicável, capaz de:</p>
-
-      <ul>
-        <li>suportar múltiplos produtos e plataformas,</li>
-        <li>escalar em redes cognitivas distribuídas,</li>
-        <li>organizar estruturas organizacionais inteiras,</li>
-        <li>manter coerência conceitual à medida que evolui.</li>
-      </ul>
+      <p>
+        NeuroSaaS é uma linguagem arquitetural replicável, apta a sustentar múltiplos
+        produtos e plataformas, operar em redes distribuídas, estruturar organizações
+        e ecossistemas, mantendo coerência conceitual ao longo do tempo.
+      </p>
 
       <p>
-        O que escala aqui não é o código, nem o usuário.<br>
-        É a <strong>capacidade de manter sistemas vivos em sintonia com mentes em transformação.</strong>
+        Sua escalabilidade reside na lógica estrutural, não no código ou no volume de usuários.
       </p>
     </section>
 
-    <section id="evolucao">
+    <section>
       <h2>8. Evolução Arquitetada</h2>
 
-      <p>Toda mudança em um sistema NeuroSaaS deve respeitar três critérios:</p>
+      <p>
+        Toda modificação em um sistema NeuroSaaS deve atender simultaneamente aos
+        seguintes critérios:
+      </p>
 
-      <ol style="margin: 14px 0 0; padding-left: 22px; max-width: 84ch;">
-        <li style="font-size: var(--p); margin: 0 0 10px; color: rgba(233,233,233,0.88);"><strong>Melhora a leitura cognitiva do usuário?</strong></li>
-        <li style="font-size: var(--p); margin: 0 0 10px; color: rgba(233,233,233,0.88);"><strong>Preserva a plasticidade e a adaptabilidade?</strong></li>
-        <li style="font-size: var(--p); margin: 0 0 10px; color: rgba(233,233,233,0.88);"><strong>Está em sintonia com o ciclo humano de transformação?</strong></li>
-      </ol>
+      <ul>
+        <li>Melhoria da leitura cognitiva do usuário</li>
+        <li>Preservação da plasticidade e da adaptabilidade</li>
+        <li>Alinhamento com ciclos humanos de transformação</li>
+      </ul>
 
       <p>
-        Se não cumpre os três, <strong>não é evolução — é ruído.</strong>
+        Alterações que não atendam aos três critérios não constituem evolução válida.
       </p>
     </section>
 
-    <section id="neutralidade">
+    <section>
       <h2>9. Neutralidade de Aplicação</h2>
 
-      <p>NeuroSaaS não pertence a um nicho.</p>
-
-      <p>Pode ser aplicado em:</p>
-
-      <ul>
-        <li>Ambientes educacionais, corporativos ou sociais</li>
-        <li>Plataformas, redes, aplicativos ou sistemas internos</li>
-        <li>Organizações, produtos ou serviços</li>
-        <li>Infraestruturas institucionais ou culturais</li>
-      </ul>
+      <p>
+        NeuroSaaS não está vinculado a um setor, produto ou domínio específico.
+      </p>
 
       <p>
-        Desde que respeite seus princípios fundadores,<br>
-        <strong>a aplicação é livre — a base é canônica.</strong>
+        Pode ser aplicado em contextos educacionais, corporativos, sociais,
+        institucionais ou culturais, desde que seus princípios estruturais sejam
+        preservados.
+      </p>
+
+      <p>
+        A aplicação é livre.<br />
+        A definição é canônica.
       </p>
     </section>
 
-    <section id="registro">
-      <h2>10. Sobre este Registro</h2>
+    <section>
+      <h2>10. Prova Conceitual em Desenvolvimento</h2>
 
       <p>
-        Este documento estabelece a definição pública e oficial de <strong>NeuroSaaS</strong>, com precedência temporal registrada.
+        Estruturas NeuroSaaS já estão sendo testadas em contextos controlados e ambientes
+        experimentais, com foco na aplicação de seus princípios em cenários reais.
       </p>
 
-      <p>Sua função:</p>
+      <p>
+        Esses testes envolvem aplicações com reorganização cognitiva contínua,
+        interfaces com lógica metacognitiva e adaptação sistêmica baseada em ciclos
+        humanos de transformação.
+      </p>
 
-      <ul>
-        <li>servir de referência legítima,</li>
-        <li>blindar o conceito contra distorções,</li>
-        <li>orientar implementações coerentes,</li>
-        <li>e preservar a integridade filosófica e estrutural da proposta.</li>
-      </ul>
+      <p>
+        A natureza das aplicações é estratégica e protegida, mas os aprendizados vêm
+        alimentando iterações conceituais e técnicas que fortalecem a arquitetura
+        NeuroSaaS como fundação replicável.
+      </p>
+
+      <p>
+        Mais do que uma visão de futuro, trata-se de uma estrutura em ativação real,
+        guiada por processos de validação prática e ajuste contínuo.
+      </p>
     </section>
 
-    <section id="finais">
+    <section>
       <h2>11. Considerações Finais</h2>
 
       <p>
-        NeuroSaaS não propõe tecnologia “mais inteligente”.<br>
-        Propõe sistemas que respeitam a inteligência real —<br>
-        evolutiva, contextual, emocional, plástica.
+        NeuroSaaS propõe um modelo de desenvolvimento de sistemas alinhado à natureza
+        evolutiva do ser humano.
       </p>
 
       <p>
-        Não é IA tentando parecer humana.<br>
-        É tecnologia pensada para <strong>evoluir junto com o humano.</strong>
+        Não busca replicar cognição, nem automatizar adaptação. Propõe um novo
+        paradigma: sistemas que compartilham o processo evolutivo com seus usuários.
       </p>
 
       <p>
-        <strong>É metacognição em estrutura.</strong><br>
-        É engenharia do possível,<br>
-        com respeito ao que ainda estamos nos tornando.
-      </p>
-    </section>
-
-    <section id="prova">
-      <h2>12. Prova Conceitual em Desenvolvimento</h2>
-
-      <p>
-        Estruturas NeuroSaaS já estão sendo testadas em contextos controlados e ambientes experimentais, com foco na aplicação de seus princípios em cenários reais.
-      </p>
-
-      <p>Esses testes envolvem:</p>
-
-      <ul>
-        <li>Aplicações com reorganização cognitiva contínua</li>
-        <li>Interfaces com lógica metacognitiva</li>
-        <li>Adaptação sistêmica baseada em ciclos humanos de transformação</li>
-      </ul>
-
-      <p>
-        A natureza das aplicações é estratégica e protegida, mas os aprendizados vêm alimentando iterações conceituais e técnicas que fortalecem a arquitetura NeuroSaaS como fundação replicável.
-      </p>
-
-      <p>
-        Mais do que uma visão de futuro, trata-se de uma estrutura <strong>em ativação real</strong>, guiada por processos de validação prática e ajuste contínuo.
+        É tecnologia que não replica inteligência — mas evolui com ela.
       </p>
     </section>
 
