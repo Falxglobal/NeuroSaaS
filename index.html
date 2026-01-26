@@ -20,122 +20,168 @@
   <meta property="og:url" content="https://falxglobal.github.io/NeuroSaaS/" />
 
   <style>
-    :root {
-      --bg: #0b0b0b;
-      --fg: #e6e6e6;
-      --muted: #9a9a9a;
-      --accent: #cfcfcf;
+    :root{
+      --bg:#0b0b0b;
+      --fg:#e9e7e4;
+      --muted:#a3a0a0;
+      --line:#1c1c1c;
+      --pill:#242424;
+      --pillLine:#2f2f2f;
     }
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Georgia", "Times New Roman", serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      line-height: 1.65;
+    *{box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.06), transparent 55%),
+                  radial-gradient(900px 500px at 50% 0%, rgba(255,255,255,0.04), transparent 60%),
+                  var(--bg);
+      color:var(--fg);
+      font-family:"Georgia","Times New Roman",serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
 
-    main {
-      max-width: 820px;
+    main{
+      max-width: 920px;
       margin: 0 auto;
-      padding: 96px 24px 120px;
+      padding: 88px 24px 120px;
     }
 
-    header {
-      margin-bottom: 96px;
-      /* Harmonização: header deixa de centralizar tudo */
-      text-align: left;
+    /* ===== HERO (alto padrão): centralizado e com hierarquia ===== */
+    header{
+      text-align:center;
+      padding-bottom: 54px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 54px;
     }
 
-    /* ===== LOGO (centralizada, como você pediu) ===== */
-    .logo-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 36px;
+    .logo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-bottom: 22px;
     }
 
-    .logo {
-      width: clamp(96px, 12vw, 160px);
-      height: auto;
-      opacity: 0.95;
-      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.55));
+    .logo{
+      width: clamp(120px, 10vw, 180px);
+      height:auto;
+      opacity:.95;
+      filter: drop-shadow(0 16px 34px rgba(0,0,0,.55));
     }
 
-    @media (max-width: 480px) {
-      .logo {
-        width: clamp(104px, 28vw, 152px);
-      }
-      .logo-wrap { margin-bottom: 28px; }
-    }
-
-    /* ===== TEXTO ===== */
-    .brand {
+    .kicker{
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      letter-spacing: 0.18em;
+      letter-spacing: .22em;
       font-size: 12px;
       color: var(--muted);
       text-transform: uppercase;
-      margin-bottom: 24px;
+      margin: 0 0 10px;
     }
 
-    h1 {
-      font-size: 48px;
+    .kicker.sub{
+      margin: 0 0 28px;
+      opacity: .95;
+    }
+
+    h1{
+      font-size: clamp(44px, 4.4vw, 64px);
       font-weight: 400;
-      margin: 0 0 32px;
+      margin: 0 0 18px;
+      letter-spacing: .01em;
     }
 
-    h2 {
-      font-size: 28px;
-      font-weight: 400;
-      margin: 96px 0 24px;
-    }
-
-    p {
+    .lede{
+      max-width: 62ch;
+      margin: 0 auto 30px;
       font-size: 18px;
-      margin: 0 0 24px;
+      color: rgba(233,231,228,.92);
     }
 
-    ul {
-      margin: 32px 0;
-      padding-left: 24px;
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top: 8px;
     }
 
-    li {
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
-
-    /* Harmonização: pills deixam de ficar "soltas no centro" */
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 12px;
-      margin: 48px 0;
-    }
-
-    .pill {
-      border: 1px solid #2a2a2a;
-      padding: 8px 14px;
+    .pill{
+      border: 1px solid var(--pillLine);
+      background: rgba(255,255,255,0.02);
+      padding: 9px 14px;
       border-radius: 999px;
       font-size: 13px;
-      color: var(--muted);
-      font-family: system-ui, sans-serif;
+      color: rgba(233,231,228,.78);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: .02em;
+      box-shadow: 0 10px 24px rgba(0,0,0,.28) inset;
     }
 
-    footer {
-      margin-top: 120px;
-      padding-top: 48px;
-      border-top: 1px solid #1f1f1f;
+    /* ===== CORPO: editorial à esquerda (alto padrão) ===== */
+    section{
+      max-width: 74ch; /* largura de leitura premium */
+      margin: 0 auto;
+      text-align:left;
+    }
+
+    p{
+      font-size: 18px;
+      margin: 0 0 22px;
+      color: rgba(233,231,228,.90);
+    }
+
+    h2{
+      font-size: 26px;
+      font-weight: 400;
+      margin: 52px 0 18px;
+      color: rgba(233,231,228,.96);
+    }
+
+    ul{
+      margin: 18px 0 0;
+      padding-left: 22px;
+    }
+
+    li{
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: rgba(233,231,228,.88);
+    }
+
+    /* divisor sutil entre blocos longos */
+    .divider{
+      max-width: 74ch;
+      margin: 48px auto;
+      border-top: 1px solid var(--line);
+    }
+
+    footer{
+      margin-top: 88px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
       font-size: 13px;
-      color: var(--muted);
-      text-align: center;
-      font-family: system-ui, sans-serif;
-      letter-spacing: 0.04em;
+      color: rgba(233,231,228,.60);
+      text-align:center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* ===== MOBILE REFINO ===== */
+    @media (max-width: 480px){
+      main{ padding: 72px 18px 96px; }
+
+      .logo{ width: clamp(140px, 34vw, 190px); }
+
+      .lede{
+        font-size: 17px;
+        margin-bottom: 26px;
+      }
+
+      p, li{ font-size: 17px; }
+      h2{ font-size: 24px; }
     }
   </style>
 </head>
@@ -143,21 +189,17 @@
 <body>
   <main>
     <header>
-
-      <!-- LOGO FALX -->
+      <!-- LOGO -->
       <div class="logo-wrap">
         <img class="logo" src="assets/img/falx-logo.svg" alt="FalX" />
       </div>
 
-      <div class="brand">FALX · Registro público canônico</div>
-
-      <p class="brand">
-        Documento fundador · Registro público · Precedência temporal
-      </p>
+      <div class="kicker">FALX · Registro público canônico</div>
+      <div class="kicker sub">Documento fundador · Registro público · Precedência temporal</div>
 
       <h1>NeuroSaaS —<br>definição funcional</h1>
 
-      <p>
+      <p class="lede">
         Termo conceitual original. Documento público destinado a estabelecer
         a definição canônica e a precedência temporal do termo NeuroSaaS,
         com base em histórico verificável de publicação.
@@ -190,6 +232,8 @@
       </p>
     </section>
 
+    <div class="divider"></div>
+
     <section>
       <h2>Nada além disso é necessário.</h2>
       <h2>Nada abaixo disso é suficiente.</h2>
@@ -201,6 +245,8 @@
         <li>impossível de reduzir sem perda de essência.</li>
       </ul>
     </section>
+
+    <div class="divider"></div>
 
     <section>
       <h2>Natureza do termo</h2>
@@ -224,4 +270,4 @@
     </footer>
   </main>
 </body>
-</html> 
+</html>
