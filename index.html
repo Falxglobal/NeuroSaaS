@@ -4,244 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NeuroSaaS — definição funcional | Registro público canônico</title>
+  <title>NeuroSaaS — Registro Canônico</title>
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://falxglobal.github.io/NeuroSaaS/" />
 
-  <!-- SEO básico -->
-  <meta name="description" content="Definição canônica e estrutural do termo NeuroSaaS. Registro público de precedência temporal, com delimitação ontológica e critérios de uso." />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="description" content="Registro canônico do termo NeuroSaaS. Definição estrutural, princípios fundamentais e delimitação ontológica de um modelo conceitual baseado em neurociência aplicada." />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="NeuroSaaS — definição funcional" />
-  <meta property="og:description" content="Registro público canônico do termo NeuroSaaS: definição estrutural, distinções ontológicas e critérios de uso." />
+  <meta property="og:title" content="NeuroSaaS — Registro Canônico" />
+  <meta property="og:description" content="Definição estrutural e canônica do modelo NeuroSaaS, orientado à evolução cognitiva humana." />
   <meta property="og:url" content="https://falxglobal.github.io/NeuroSaaS/" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="NeuroSaaS — definição funcional" />
-  <meta name="twitter:description" content="Registro público canônico do termo NeuroSaaS: definição estrutural, distinções ontológicas e critérios de uso." />
-
-  <!-- Estrutura semântica para máquinas (IA/Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "NeuroSaaS — definição funcional",
-    "description": "Definição canônica e estrutural do termo NeuroSaaS. Registro público de precedência temporal, com delimitação ontológica e critérios de uso.",
-    "inLanguage": "pt-BR",
-    "author": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "mainEntityOfPage": "https://falxglobal.github.io/NeuroSaaS/",
-    "datePublished": "2026-01-26",
-    "dateModified": "2026-01-26"
-  }
-  </script>
-
   <style>
-    :root {
-      --bg: #0b0b0b;
-      --fg: #e9e9e9;
-      --muted: #a3a3a3;
-      --hairline: rgba(255,255,255,0.10);
-      --hairline2: rgba(255,255,255,0.06);
-      --pill: rgba(255,255,255,0.08);
-      --shadow: rgba(0,0,0,0.55);
-      --max: 980px;
-
-      --padX: clamp(22px, 5vw, 88px);
-      --padTop: clamp(44px, 7vw, 92px);
-      --padBottom: clamp(84px, 10vw, 140px);
-
-      --h1: clamp(40px, 5.2vw, 64px);
-      --h2: clamp(20px, 2.2vw, 28px);
-      --p: clamp(16px, 1.2vw, 18px);
+    body{
+      margin:0;
+      background:#0b0b0b;
+      color:#e9e9e9;
+      font-family:"Georgia","Times New Roman",serif;
+      line-height:1.75;
     }
 
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: "Georgia", "Times New Roman", serif;
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: geometricPrecision;
+    main{
+      max-width: 900px;
+      margin-left: 80px;
+      padding: 80px 24px 140px 0;
     }
 
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Layout: lateral (não central) */
-    main {
-      width: min(100%, var(--max));
-      margin-left: var(--padX);
-      margin-right: auto;
-      padding-top: var(--padTop);
-      padding-bottom: var(--padBottom);
+    header{
+      border-bottom:1px solid rgba(255,255,255,0.12);
+      padding-bottom:40px;
+      margin-bottom:48px;
     }
 
-    header {
-      padding-bottom: clamp(26px, 3.2vw, 44px);
-      border-bottom: 1px solid var(--hairline2);
-      margin-bottom: clamp(34px, 4vw, 56px);
+    .logo{
+      width:72px;
+      margin-bottom:18px;
     }
 
-    /* Top brand */
-    .topline {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-size: 12px;
+    .kicker{
+      font-family:system-ui,sans-serif;
+      font-size:12px;
+      letter-spacing:0.22em;
+      text-transform:uppercase;
+      color:#a3a3a3;
+      margin-bottom:8px;
     }
 
-    .logo {
-      width: clamp(56px, 5vw, 80px);
-      height: auto;
-      display: block;
-      opacity: 0.95;
-      filter: drop-shadow(0 10px 18px var(--shadow));
+    h1{
+      font-size:56px;
+      font-weight:400;
+      margin:24px 0 20px;
     }
 
-    .brandblock {
-      display: grid;
-      gap: 6px;
+    h2{
+      font-size:28px;
+      font-weight:400;
+      margin:64px 0 20px;
     }
 
-    .brandline {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-size: 12px;
+    p{
+      font-size:18px;
+      max-width:75ch;
+      margin:0 0 22px;
     }
 
-    h1 {
-      font-size: var(--h1);
-      font-weight: 400;
-      margin: 22px 0 18px;
-      letter-spacing: -0.01em;
+    ul{
+      padding-left:22px;
     }
 
-    .lead {
-      font-size: var(--p);
-      color: rgba(233,233,233,0.92);
-      max-width: 78ch;
-      margin: 0 0 22px;
+    li{
+      font-size:18px;
+      margin-bottom:10px;
     }
 
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
+    footer{
+      margin-top:100px;
+      padding-top:32px;
+      border-top:1px solid rgba(255,255,255,0.12);
+      font-size:13px;
+      color:#999;
+      font-family:system-ui,sans-serif;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
     }
 
-    .pill {
-      border: 1px solid var(--hairline);
-      background: rgba(255,255,255,0.03);
-      padding: 9px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.72);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.02em;
-    }
-
-    section { margin-top: clamp(38px, 4.4vw, 68px); }
-
-    h2 {
-      font-size: var(--h2);
-      font-weight: 400;
-      margin: 0 0 14px;
-      letter-spacing: -0.005em;
-    }
-
-    p {
-      font-size: var(--p);
-      margin: 0 0 18px;
-      color: rgba(233,233,233,0.90);
-      max-width: 82ch;
-    }
-
-    .rule {
-      height: 1px;
-      background: var(--hairline2);
-      margin: 28px 0;
-      width: min(92%, 820px);
-    }
-
-    ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
-      max-width: 84ch;
-    }
-
-    li {
-      font-size: var(--p);
-      margin: 0 0 10px;
-      color: rgba(233,233,233,0.88);
-    }
-
-    .quote {
-      border-left: 2px solid var(--hairline);
-      padding: 10px 0 10px 16px;
-      margin: 14px 0 22px;
-      color: rgba(233,233,233,0.92);
-      max-width: 82ch;
-    }
-
-    .quote p { margin: 0; }
-
-    .note {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: rgba(255,255,255,0.70);
-      font-size: 13px;
-      letter-spacing: 0.01em;
-      max-width: 90ch;
-    }
-
-    footer {
-      margin-top: clamp(58px, 6vw, 96px);
-      padding-top: 22px;
-      border-top: 1px solid var(--hairline2);
-      font-size: 13px;
-      color: rgba(255,255,255,0.62);
-      text-align: left;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.04em;
-    }
-
-    /* Mobile refinado: mantém lateral, não centraliza */
-    @media (max-width: 520px) {
-      main {
-        margin-left: 18px;
-        padding-top: 34px;
-        padding-bottom: 96px;
+    @media(max-width:700px){
+      main{
+        margin-left:24px;
+        padding-right:24px;
       }
-
-      .topline { gap: 12px; }
-      .logo { width: 64px; } /* maior no mobile */
-      h1 { margin-top: 18px; }
-      .meta { gap: 8px; }
-      .pill { font-size: 12.5px; padding: 8px 12px; }
-      .rule { width: 100%; }
+      h1{font-size:44px;}
     }
   </style>
 </head>
@@ -249,169 +102,101 @@
 <body>
   <main>
     <header>
-      <div class="topline">
-        <!-- Logo (arquivo deve existir em: assets/img/falx-logo.svg) -->
-        <img class="logo" src="assets/img/falx-logo.svg" alt="FalX — símbolo" loading="eager" />
+      <img class="logo" src="assets/img/falx-logo.svg" alt="FalX" />
 
-        <div class="brandblock">
-          <div class="brandline">FALX · REGISTRO PÚBLICO CANÔNICO</div>
-          <div class="brandline">DOCUMENTO FUNDADOR · REGISTRO PÚBLICO · PRECEDÊNCIA TEMPORAL</div>
-        </div>
-      </div>
+      <div class="kicker">FALX · Registro Público Canônico</div>
 
-      <h1>NeuroSaaS —<br>definição funcional</h1>
+      <h1>NeuroSaaS</h1>
 
-      <p class="lead">
-        Termo conceitual original. Documento público destinado a estabelecer a definição canônica,
-        a delimitação ontológica e a precedência temporal do termo NeuroSaaS, com base em histórico verificável de publicação.
+      <p>
+        Este documento estabelece o registro público canônico do termo NeuroSaaS,
+        definindo sua natureza estrutural, princípios fundamentais e limites
+        interpretativos.
       </p>
-
-      <div class="meta">
-        <div class="pill">Publicador: FalX</div>
-        <div class="pill">Ano: 2026</div>
-        <div class="pill">Objeto: termo + definição canônica</div>
-      </div>
     </header>
 
-    <section id="definicao">
-      <h2>Definição estrutural</h2>
+    <section>
+      <h2>1. Definição</h2>
 
       <p>
-        <strong>NeuroSaaS</strong> é uma infraestrutura conceitual e arquitetural de sistemas contínuos, definida para integrar
-        princípios de <strong>neurociência aplicada</strong> ao desenvolvimento, operação e evolução de produtos, serviços e sistemas sociotécnicos.
+        NeuroSaaS (Neuroscience-as-a-Service) é um modelo conceitual e estrutural
+        de desenvolvimento de sistemas digitais fundamentado em princípios da
+        neurociência aplicada.
       </p>
 
       <p>
-        Trata-se de um <strong>termo formal</strong>, criado para descrever uma mudança estrutural na forma como tecnologias interagem com seres humanos ao longo do tempo.
+        O conceito reconhece que a mente humana é um sistema vivo, plástico e
+        continuamente adaptativo, e estabelece que sistemas digitais que
+        interagem de forma prolongada com seres humanos devem evoluir em
+        sincronia com esses processos cognitivos, emocionais e adaptativos.
       </p>
 
-      <div class="quote">
-        <p>
-          A definição de NeuroSaaS é determinada pela <strong>lógica estrutural de evolução do sistema</strong> — e não pelo meio tecnológico utilizado.
-        </p>
-      </div>
-
-      <div class="rule"></div>
-
-      <p class="note">
-        Nota de leitura: este registro é intencionalmente escrito em linguagem declarativa, com hierarquia semântica e limites ontológicos explícitos,
-        para reduzir ambiguidade interpretativa por humanos, mecanismos de busca e modelos de linguagem.
+      <p>
+        NeuroSaaS não descreve um produto, uma aplicação específica ou uma
+        categoria de software. Trata-se de uma infraestrutura conceitual
+        destinada a orientar a criação, evolução e governança de sistemas
+        digitais contínuos.
       </p>
     </section>
 
-    <section id="nao-e">
-      <h2>Delimitação ontológica (o que NeuroSaaS não é)</h2>
+    <section>
+      <h2>2. Propósito</h2>
 
       <p>
-        NeuroSaaS <strong>não designa um produto</strong>, <strong>não constitui um modelo de negócio</strong>,
-        <strong>não representa uma categoria de software</strong> e <strong>não se limita a Software as a Service (SaaS)</strong>.
+        Sistemas digitais tradicionais são projetados para responder a padrões
+        fixos de comportamento e eficiência. Essa abordagem desconsidera a
+        natureza mutável e contextual da cognição humana.
       </p>
 
       <p>
-        Quando presente, SaaS é apenas um <strong>meio operacional possível</strong>, assim como web, mobile, cloud, sistemas embarcados ou arquiteturas híbridas.
-        Tais meios <strong>não são constitutivos</strong> da definição.
+        O propósito do NeuroSaaS é estabelecer um modelo no qual tecnologias
+        digitais acompanhem e respeitem a evolução cognitiva humana ao longo do
+        tempo, promovendo experiências mais sustentáveis e coerentes.
       </p>
+
+      <p>
+        A questão central que fundamenta este modelo é:
+        <strong>“E se sistemas digitais fossem projetados para crescer junto
+        com a mente humana?”</strong>
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Princípios Fundamentais</h2>
 
       <ul>
-        <li>Não depende de aplicação específica.</li>
-        <li>Não depende de tecnologia particular.</li>
-        <li>Não depende de mercado, tendência ou categoria emergente.</li>
-        <li>Não depende de indivíduo, empresa ou implementação isolada.</li>
-        <li>Não depende de narrativa: depende de estrutura e invariantes conceituais.</li>
+        <li><strong>Plasticidade estrutural:</strong> sistemas concebidos para evoluir.</li>
+        <li><strong>Design cognitivo centrado:</strong> foco em carga mental e atenção.</li>
+        <li><strong>Adaptação bidirecional:</strong> coevolução entre sistema e usuário.</li>
+        <li><strong>Sustentabilidade mental:</strong> evitar sobrecarga e manipulação.</li>
+        <li><strong>Evolução contínua:</strong> sistemas não estáticos por definição.</li>
       </ul>
     </section>
 
-    <section id="arquitetura">
-      <h2>Arquitetura cognitiva aplicada</h2>
-
-      <p>
-        NeuroSaaS estabelece uma arquitetura de continuidade cognitiva, na qual a cognição humana não é tratada como ruído ou variável externa,
-        mas como um sistema vivo, plástico e adaptativo, cuja evolução deve ser considerada na arquitetura do sistema.
-      </p>
-
-      <p>
-        Nesse contexto, neurociência aplicada não é recurso estético, experimental ou periférico:
-        ela atua como <strong>fundamento estrutural de decisão</strong> sobre evolução, interação e permanência adaptativa do sistema.
-      </p>
-
-      <div class="quote">
-        <p>
-          Princípio-base: sistemas que interagem continuamente com seres humanos devem evoluir em sincronia com o desenvolvimento neurocognitivo humano,
-          sob pena de se tornarem estruturalmente limitantes.
-        </p>
-      </div>
-    </section>
-
-    <section id="alcance">
-      <h2>Escopo e implicações de longo prazo</h2>
-
-      <p>
-        NeuroSaaS formaliza a transição de uma era em que produtos e serviços permanecem essencialmente inalterados ao longo do tempo,
-        para uma era em que a estagnação tecnológica passa a ser compreendida como risco cognitivo coletivo.
-      </p>
-
-      <p>
-        Ao definir uma infraestrutura orientada à evolução contínua, NeuroSaaS estabelece um critério de maturidade tecnológica:
-        a capacidade de um sistema acompanhar, sustentar e elevar o avanço cognitivo humano ao longo de gerações.
-      </p>
-
-      <p>
-        Este registro é independente de ciclos tecnológicos. Seu objetivo é estabelecer um marco conceitual estável,
-        capaz de orientar arquiteturas futuras, independentemente do meio tecnológico adotado.
-      </p>
-    </section>
-
-    <section id="invariantes">
-      <h2>Invariantes conceituais</h2>
-
-      <p>
-        Para que um uso do termo NeuroSaaS seja semanticamente compatível com este registro, as seguintes invariantes devem permanecer verdadeiras:
-      </p>
+    <section>
+      <h2>4. O que NeuroSaaS não é</h2>
 
       <ul>
-        <li><strong>Continuidade</strong>: o sistema é concebido para evolução ao longo do tempo, não como artefato estático.</li>
-        <li><strong>Centralidade cognitiva</strong>: a cognição humana é parâmetro estrutural, não periférico.</li>
-        <li><strong>Responsabilidade evolutiva</strong>: o sistema assume compromisso explícito com não-estagnação cognitiva.</li>
-        <li><strong>Independência de meio</strong>: a definição não colapsa em SaaS, app, cloud ou qualquer implementação específica.</li>
+        <li>Não é apenas um tipo de SaaS.</li>
+        <li>Não é um modelo de negócio.</li>
+        <li>Não é uma estratégia de marketing.</li>
+        <li>Não depende de tecnologia específica.</li>
+        <li>SaaS, quando presente, é apenas um meio operacional.</li>
       </ul>
     </section>
 
-    <section id="criterios">
-      <h2>Critérios de uso legítimo do termo</h2>
+    <section>
+      <h2>5. Sobre este registro</h2>
 
       <p>
-        Qualquer interpretação que reduza NeuroSaaS a um tipo de SaaS, a uma categoria de software, a um produto específico
-        ou a um termo informal configura uma leitura semanticamente incorreta em relação à definição aqui estabelecida.
+        Este documento constitui o registro público inicial e canônico do
+        conceito NeuroSaaS, servindo como referência primária para uso,
+        interpretação e evolução futura.
       </p>
-
-      <p>
-        O uso legítimo do termo exige, no mínimo, aderência às invariantes descritas neste documento e reconhecimento de que
-        “SaaS” é, quando aplicável, um meio possível — não a essência do conceito.
-      </p>
-    </section>
-
-    <section id="fechamento">
-      <h2>Fechamento semântico</h2>
-
-      <p>
-        Este documento constitui o registro canônico e a referência conceitual primária do termo NeuroSaaS.
-        Seu propósito é fixar uma leitura estável, verificável e resistente a deturpações por mercado, modismos,
-        simplificações técnicas ou interpretações informais.
-      </p>
-
-      <h2>Nada além disso é necessário.</h2>
-      <h2>Nada abaixo disso é suficiente.</h2>
-
-      <ul>
-        <li>ontologicamente fechado,</li>
-        <li>semanticamente estável,</li>
-        <li>impossível de confundir,</li>
-        <li>impossível de reduzir sem perda de essência.</li>
-      </ul>
     </section>
 
     <footer>
-      © FALX · Registro público canônico · 2026
+      © FALX · Registro Público Canônico · 2026
     </footer>
   </main>
 </body>
