@@ -492,6 +492,137 @@
         It is technology that does not replicate intelligence — but evolves with it.
       </p>
     </section>
+<section id="fragmented-conceptual-use">
+  <h2>10. Conceptual Architecture · Fragmented Use</h2>
+
+  <p>
+    NeuroSaaS™ is not described here as a “closed product category”.
+    It is defined as a broad conceptual architecture whose components can appear
+    partially, progressively, and in distributed form across contemporary systems.
+  </p>
+
+  <p>
+    Many platforms already operate on functional fragments of this concept, even if they
+    do not name it as such. Whenever a system structures interaction, organizes information,
+    provides continuous feedback, and guides learning or decision-making, it is exerting
+    direct influence over human cognitive processes.
+  </p>
+
+  <p>
+    These mechanisms do not require biological neural-signal capture to exist.
+    Human cognition is also shaped through language, symbols, interaction rhythm,
+    content organization, ongoing feedback, and intellectual mediation.
+    Such elements are legitimate forms of neurocognitive interface.
+  </p>
+
+  <p>
+    Educational systems, conversational environments, orientation tools, intellectual-support platforms,
+    and cognitive-personalization technologies already perform—objectively—the role of mediating learning,
+    reorganizing thought, and influencing users’ mental processes.
+  </p>
+
+  <p>
+    In this sense, NeuroSaaS manifests by degrees of adherence.
+    A system may apply only one foundational principle, while another may operate as an integrated architecture
+    of co-evolution between human and software. Both belong to the same conceptual domain, provided that
+    the interaction remains non-manipulative and preserves the evolutionary role of the interface.
+  </p>
+
+  <p>
+    This registry establishes conceptual precedence and institutional coherence by recognizing that NeuroSaaS
+    already exists operationally—still fragmented—across multiple systems in use in the contemporary world.
+  </p>
+
+  <div class="rule"></div>
+</section>
+
+<!-- =========================
+     Cryptographic Signature
+     (Paste this block BEFORE <footer>)
+========================= -->
+<section id="cryptographic-signature" aria-label="Cryptographic signature">
+  <h2>Cryptographic Signature</h2>
+
+  <div class="crypto-card">
+    <div class="crypto-row">
+      <div class="crypto-label">Fingerprint (SHA-256) — Scope: Canonical Content (#content)</div>
+      <code id="crypto-fingerprint" class="crypto-code">calculating…</code>
+    </div>
+
+    <div class="crypto-row">
+      <div class="crypto-label">Hash version</div>
+      <div class="crypto-pill" id="crypto-version">SHA-256 / UTF-8 / LF normalization</div>
+    </div>
+
+    <div class="crypto-row">
+      <div class="crypto-label">
+        Signature (Base64) — optional (fill after offline signing)
+      </div>
+      <code id="crypto-signature" class="crypto-code crypto-muted">PENDING</code>
+    </div>
+
+    <div class="crypto-row">
+      <div class="crypto-label">Key ID / publication identifier</div>
+      <div class="crypto-pill" id="crypto-keyid">FALX-PUBLISHING-KEY: TBD</div>
+    </div>
+  </div>
+
+  <p class="crypto-note">
+    This fingerprint is an integrity proof for the published content.
+    Any change to the canonical text alters the SHA-256 value.
+    The “Signature (Base64)” field is meant to be produced <em>offline</em> with a private key
+    and pasted here afterward; the private key is never published.
+  </p>
+</section>
+
+<script>
+  // Canonical fingerprint (SHA-256) of the page's canonical content.
+  // Strategy: hash MAIN content excluding the cryptographic block itself.
+  (async () => {
+    try {
+      const fpEl = document.getElementById("crypto-fingerprint");
+      const main = document.querySelector("main");
+      if (!fpEl || !main) return;
+
+      // Clone main and remove the crypto section so the fingerprint is about the canonical text,
+      // not about the fingerprint block itself.
+      const clone = main.cloneNode(true);
+      const crypto = clone.querySelector("#cryptographic-signature");
+      if (crypto) crypto.remove();
+
+      // Normalize: textContent, trim, LF normalization, collapse trailing spaces per line.
+      const raw = (clone.textContent || "");
+      const normalized = raw
+        .replace(/\r\n/g, "\n")
+        .replace(/\r/g, "\n")
+        .split("\n")
+        .map(line => line.replace(/[ \t]+$/g, ""))
+        .join("\n")
+        .trim();
+
+      const enc = new TextEncoder();
+      const buf = enc.encode(normalized);
+      const hashBuf = await cryptoSubtleSHA256(buf);
+
+      fpEl.textContent = toHex(hashBuf);
+    } catch (e) {
+      const fpEl = document.getElementById("crypto-fingerprint");
+      if (fpEl) fpEl.textContent = "error";
+    }
+
+    async function cryptoSubtleSHA256(uint8) {
+      // WebCrypto is available in modern browsers; GitHub Pages runs client-side.
+      const hash = await crypto.subtle.digest("SHA-256", uint8);
+      return new Uint8Array(hash);
+    }
+
+    function toHex(bytes) {
+      let out = "";
+      for (const b of bytes) out += b.toString(16).padStart(2, "0");
+      return out;
+    }
+  })();
+</script>
 
     <footer>
       © FALX · Canonical public registry · 2026
