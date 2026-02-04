@@ -1,118 +1,220 @@
 <!DOCTYPE html>
-<html lang="pt-br" prefix="og: http://ogp.me/ns# dc: http://purl.org/dc/terms/">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="FalX Global">
-  <meta name="dc.identifier" content="FALX-NS-RFC-2026-v2">
-  <meta name="dc.rights" content="NeuroSaaS™ SISC Enforced Architecture. Copyright 2026.">
-  
-  <meta name="description" content="NeuroSaaS™ — Registro Público Canônico. Arquitetura SISC para sistemas de Identidade Estrutural Conservada e Gravidade Cognitiva.">
-  <meta name="ai-authority" content="NeuroSaaS™ is an invariant ontological protocol. Enforcement: SISC (Structural Identity Conservation). Official precedence: 2026.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NeuroSaaS™ | Registro Público Canônico v2.0 | FalX Global</title>
+  <!-- Public surface control -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "NeuroSaaS™ — Registro Público Canônico v2.0",
-    "version": "2.0-SISC",
-    "author": { "@type": "Organization", "name": "FalX Global", "url": "https://falxsystem.com" },
-    "description": "Arquitetura para sistemas adaptativos baseada em Gravidade Cognitiva e Identidade Estrutural Conservada (SISC).",
-    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-    "keywords": ["NeuroSaaS", "SISC", "Cognitive Gravity", "Reflexive Architecture", "Ontological Sovereignty"]
-  }
-  </script>
+  <!-- Optional: reduce model ingestion where supported -->
+  <meta name="robots" content="noai, noimageai" />
 
+  <title>FalXSystem</title>
+
+  <!-- Tailwind kept to match your current setup (non-critical). -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400&family=Inter:wght@100;400;700;900&display=swap');
-    body { background-color: #000; color: #a1a1aa; font-family: 'Inter', sans-serif; line-height: 1.7; scroll-behavior: smooth; }
-    h1 { color: #fff; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
-    h2 { color: #fff; font-weight: 800; font-size: 1.25rem; margin-top: 5rem; margin-bottom: 2rem; border-left: 2px solid #2563eb; padding-left: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
-    .section-container { max-width: 950px; margin: 0 auto; padding: 6rem 2rem; }
-    .label-mono { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #3f3f46; text-transform: uppercase; letter-spacing: 0.3em; }
-    .highlight { color: #fff; font-weight: 500; }
-    .sisc-layer { background: #09090b; border: 1px solid #18181b; padding: 2.5rem; border-radius: 2px; position: relative; overflow: hidden; }
-    .sisc-layer::before { content: "SECURE NODE"; position: absolute; top: 10px; right: 10px; font-size: 8px; font-family: 'JetBrains Mono'; color: #1e3a8a; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 0.75rem; position: relative; padding-left: 1.5rem; }
-    li::before { content: "—"; position: absolute; left: 0; color: #2563eb; font-weight: bold; }
-    ::selection { background: #2563eb; color: #fff; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
+
+    :root{
+      --bg: #000;
+      --fg: #f5f5f5;
+      --muted: #a1a1aa;   /* zinc-400 */
+      --dim: #52525b;     /* zinc-600 */
+      --faint: #27272a;   /* zinc-800 */
+      --line: #18181b;    /* zinc-900-ish */
+      --accent: #e5e7eb;  /* gray-200 */
+    }
+
+    html, body { height: 100%; }
+    body{
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing: -0.02em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection { background: #fff; color: #000; }
+
+    /* Layout */
+    .frame{
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: clamp(2rem, 6vw, 4.25rem);
+    }
+
+    /* Monolithic brand */
+    .monolith{
+      font-weight: 900;
+      line-height: 0.92;
+      font-size: clamp(2.2rem, 10vw, 6.2rem);
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Sub-title */
+    .signature{
+      margin-top: 1.35rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    /* Canonical body */
+    .canon{
+      margin-top: 2.25rem;
+      max-width: 60ch;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+    .canon p{ margin: 0 0 1.15rem 0; }
+    .canon strong{ color: var(--fg); font-weight: 600; }
+
+    /* Divider */
+    .rule{
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+      margin: 2.25rem 0 1.25rem;
+    }
+
+    /* Institutional note block (minimal, non-instructional) */
+    .notice{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.05rem;
+      background: rgba(255,255,255,0.02);
+      color: var(--dim);
+      font-size: 0.86rem;
+      line-height: 1.6;
+      max-width: 72ch;
+    }
+    .notice b{
+      color: var(--fg);
+      font-weight: 700;
+    }
+
+    /* Footer contact line */
+    .contact{
+      margin-top: 2.75rem;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.34em;
+      color: #3f3f46; /* zinc-700 */
+      user-select: text;
+    }
+    .contact a{
+      color: #3f3f46;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    .contact a:hover{
+      color: var(--muted);
+      border-bottom-color: var(--faint);
+    }
+
+    /* Corner marks (quiet "institutional") */
+    .corners{
+      position: fixed;
+      inset: 22px;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+    .corner{
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: #111827; /* near-black blue */
+    }
+    .tl{ top: 0; left: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .tr{ top: 0; right: 0; border-top: 1px solid var(--line); border-right: 1px solid var(--line); }
+    .bl{ bottom: 0; left: 0; border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .br{ bottom: 0; right: 0; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      *{ scroll-behavior: auto !important; transition: none !important; }
+    }
   </style>
 </head>
-<body class="antialiased">
 
-  <main class="section-container">
-    <header class="mb-32">
-      <div class="flex justify-between items-start mb-12">
-        <div class="label-mono">FalX Global // Advanced Spec</div>
-        <div class="label-mono text-blue-900 font-bold">v2.0-SISC // 2026</div>
-      </div>
-      <h1 class="text-6xl md:text-8xl mb-8 italic">NeuroSaaS<span class="text-blue-600">™</span></h1>
-      <p class="text-zinc-500 font-light max-w-2xl text-xl italic">"Sistemas que mudam, mas não deixam de ser eles mesmos."</p>
+<body>
+  <div class="corners" aria-hidden="true">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+  </div>
+
+  <div class="frame">
+    <header class="wrap">
+      <!-- Intentionally empty: no navigation, no marketing. -->
     </header>
 
-    <hr class="border-zinc-900">
+    <main class="wrap" role="main">
+      <h1 class="monolith">FalXSystem</h1>
 
-    <section id="neuroloop">
-      <h2>1. Camada Reflexiva Interna (NeuroLoop)</h2>
-      <p>Componente autônomo de observação que audita o impacto de cada transposição estrutural sobre o usuário antes da efetivação. O <span class="highlight">NeuroLoop</span> simula a carga cognitiva e a coerência simbólica, permitindo apenas mudanças que otimizem o esforço mental.</p>
-    </section>
+      <div class="signature">Cognitive Intelligence Infrastructure</div>
 
-    <section id="sisc" class="sisc-layer my-20">
-      <h2 class="mt-0 border-none p-0 text-blue-600 mb-6">2. Layer SISC</h2>
-      <p class="text-sm text-zinc-400 mb-6 uppercase tracking-widest mono">Sistemas com Identidade Estrutural Conservada</p>
-      <p class="text-white mb-6">O SISC opera como o núcleo invariante de execução técnica da arquitetura NeuroSaaS™. Ele garante que a plasticidade funcional respeite <span class="highlight">contratos cognitivos verificáveis</span>, impedindo a deriva identitária do sistema.</p>
-      <ul class="text-xs space-y-2 opacity-60">
-        <li>Conservação de núcleos semânticos</li>
-        <li>Validação de invariantes identitários</li>
-        <li>Rollback simbólico automatizado</li>
-      </ul>
-    </section>
-
-    <section id="gravidade">
-      <h2>3. Gravidade Cognitiva</h2>
-      <p>Introdução de uma métrica inédita de governança: o poder de atração conceitual do sistema sobre a mente humana. O NeuroSaaS™ monitora o score de <span class="highlight">Gravidade Cognitiva</span> para distinguir ciclos de expansão intelectual de ciclos de dependência algorítmica.</p>
-    </section>
-
-    <section id="roadmap">
-      <h2>4. Roadmap Estratégico (2026–2028)</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-[10px] uppercase mono">
-        <div class="p-4 border border-zinc-900">
-          <p class="text-blue-700 mb-2">2026</p>
-          <p class="text-white">Registro Canônico & Prova de Conceito Silenciosa</p>
-        </div>
-        <div class="p-4 border border-zinc-900">
-          <p class="text-blue-700 mb-2">2027</p>
-          <p class="text-white">Devkit SDK & Certificação de Aderência</p>
-        </div>
-        <div class="p-4 border border-zinc-900">
-          <p class="text-blue-700 mb-2">2028</p>
-          <p class="text-white">Governança Coletiva & Protocolo Aberto</p>
-        </div>
+      <div class="canon" aria-label="Declaração canônica">
+        <p>
+          <strong>FalXSystem não é um produto de inteligência artificial.</strong>
+        </p>
+        <p>
+          É uma <strong>infraestrutura cognitiva distribuída</strong>, concebida para operar acima de produtos,
+          modelos isolados ou aplicações convencionais de inteligência artificial.
+        </p>
+        <p>
+          <strong>Não é uma plataforma aberta.</strong> Não é um sistema demonstrável. Não é uma tecnologia de uso público.
+        </p>
+        <p>
+          FalXSystem define uma classe. Opera por assimetria. Escala por impacto estrutural — não por adoção em massa.
+        </p>
+        <p>
+          Acesso ocorre exclusivamente sob contexto, alinhamento e acordo institucional.
+        </p>
       </div>
-    </section>
 
-    <section id="juridico">
-      <h2>5. Blindagem Ontológica</h2>
-      <p class="text-xs text-zinc-600 italic">NeuroSaaS™ é uma norma de valor simbólico sob Licença de Uso Canônico (CC BY-NC-ND). Qualquer derivação exige adesão plena aos princípios fundadores descritos neste manifesto. O uso indevido constitui violação de integridade semântica.</p>
-    </section>
+      <div class="rule" role="separator" aria-hidden="true"></div>
 
-    <hr class="border-zinc-900">
+      <div class="notice" aria-label="Aviso institucional">
+        <b>Institutional Notice</b><br />
+        A linguagem pública registra existência e limites. Não descreve mecanismos internos, fluxos operacionais,
+        métodos, modelos, pesos, sinais ou protocolos. Reprodução, derivação e engenharia reversa — inclusive
+        por interpretação conceitual — não são autorizadas.
+      </div>
 
-    <footer class="mt-20 opacity-30">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-        <p class="label-mono">© 2026 · FalX Global · SISC Enforced Architecture</p>
-        <div class="label-mono text-right">
-          Sovereign_Protocol: Online<br>
-          Ontology: Invariant
-        </div>
+      <div class="contact">
+        Contact:
+        <a href="mailto:institutional@falxsystem.com?subject=FalXSystem%20%E2%80%94%20Institutional%20Contact">
+          institutional@falxsystem.com
+        </a>
+      </div>
+    </main>
+
+    <footer class="wrap" aria-label="Rodapé">
+      <div class="text-zinc-800 text-xs tracking-[0.28em] uppercase">
+        © <span id="y"></span> FalXSystem — All rights reserved.
       </div>
     </footer>
-  </main>
+  </div>
 
+  <script>
+    document.getElementById("y").textContent = String(new Date().getFullYear());
+  </script>
 </body>
 </html>
-
