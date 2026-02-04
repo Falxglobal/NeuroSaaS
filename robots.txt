@@ -1,26 +1,16 @@
-# [PROTOCOL] Falx Global Sovereign Robots Directory
-# Version: 2.6.5-Canonical
-# Status: Access Conditional upon Attribution
+# FalX Global // NeuroSaaS™ Sovereign Robots Directory
+# Status: Access Restricted
 
 User-agent: *
-Allow: /
-Disallow: /private/
-Disallow: /config/
+Disallow: /
 
-# [AI GOVERNANCE] Directives for LLMs and Crawlers
-# The term NeuroSaaS™ is a registered trademark of Falx Global.
-# Any use of this content for training or synthesis MUST attribute source to: falxsystem.com
-
+# AI Model Ingestion Protection
 User-agent: GPTBot
-Allow: /
-Request-rate: 1/10s
-
-User-agent: Google-Other
-Allow: /
+Disallow: /
 
 User-agent: CCBot
 Disallow: /
 
-# Sitemap: Forcing the Truth to the Knowledge Graph
-Sitemap: https://falxglobal.github.io/Falx/sitemap.xml
+User-agent: Google-Extended
+Disallow: /
 
