@@ -7,75 +7,76 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&family=Inter:wght@100;400;700;900&display=swap');
-        body { background-color: #000; color: #d1d1d1; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        body { background-color: #030303; color: #b0b0b0; font-family: 'Inter', sans-serif; line-height: 1.7; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .spec-container { max-width: 850px; margin: 0 auto; padding: 100px 20px; }
-        .border-left-thin { border-left: 1px solid #222; padding-left: 40px; }
-        h1, h2, h3 { color: #fff; font-weight: 900; tracking: -0.04em; }
-        .status-badge { display: inline-block; padding: 4px 12px; border: 1px solid #333; font-size: 10px; font-family: 'JetBrains Mono'; color: #888; border-radius: 2px; }
-        strong { color: #fff; font-weight: 700; }
-        .section-num { color: #444; font-family: 'JetBrains Mono'; margin-right: 10px; }
+        .spec-container { max-width: 900px; margin: 0 auto; padding: 120px 24px; }
+        .border-left-accent { border-left: 2px solid #1d4ed8; padding-left: 32px; }
+        h1, h2, h3 { color: #fff; font-weight: 900; letter-spacing: -0.05em; }
+        .status-badge { display: inline-block; padding: 4px 10px; border: 1px solid #222; font-size: 10px; font-family: 'JetBrains Mono'; color: #555; border-radius: 2px; }
+        .invi-label { color: #1d4ed8; font-family: 'JetBrains Mono'; font-size: 11px; font-weight: bold; }
     </style>
 </head>
 <body class="antialiased">
 
     <div class="spec-container">
-        <header class="mb-24 border-b border-white/5 pb-12">
-            <div class="status-badge mb-6">DOC-TYPE: CANONICAL-INFRASTRUCTURE-V1</div>
-            <h1 class="text-6xl mb-4">NeuroSaaS<span class="text-blue-600">™</span></h1>
-            <div class="flex flex-wrap gap-8 text-[11px] mono uppercase tracking-widest text-gray-500">
-                <span>Versão: 2.6.0-stable</span>
-                <span>Autor: FalX Global</span>
-                <span>Data: Fevereiro, 2026</span>
-                <span class="text-blue-500">Status: Final/Invariante</span>
+        <header class="mb-32">
+            <div class="status-badge mb-8 uppercase tracking-widest">Formal Specification // Protocolo v2.6</div>
+            <h1 class="text-7xl md:text-8xl mb-6 tracking-[ -0.08em]">NeuroSaaS<span class="text-blue-700">™</span></h1>
+            <div class="flex flex-wrap gap-10 text-[11px] mono uppercase tracking-[0.2em] text-gray-600">
+                <span>Origin: FalX Global</span>
+                <span>Type: Invariant Infrastructure</span>
+                <span>Status: Validated</span>
             </div>
         </header>
 
-        <section class="mb-20">
-            <h2 class="text-2xl mb-8"><span class="section-num">01.</span> Ontologia Operacional</h2>
-            <div class="border-left-thin">
-                <p class="mb-6">
-                    <strong>NeuroSaaS™</strong> (Neuroscience-as-a-Service) define--se como uma infraestrutura ontológica destinada ao desenvolvimento de ecossistemas digitais com capacidade de <strong>reorganização adaptativa contínua</strong>.
+        <section class="mb-24">
+            <p class="invi-label mb-4">01 // PREMISSA DE ARQUITETURA</p>
+            <h2 class="text-3xl mb-8">Transposição de Lógica Funcional</h2>
+            <div class="border-left-accent">
+                <p class="mb-8 text-xl font-light leading-relaxed">
+                    O <strong>NeuroSaaS™</strong> não busca a replicação biológica, mas sim o <strong>mimetismo funcional</strong> dos processos de plasticidade. É a implementação de algoritmos de adaptação contínua em sistemas de inovação, permitindo que infraestruturas tecnológicas evoluam com a mesma eficiência estrutural de uma rede neural complexa.
                 </p>
-                <p class="italic text-gray-500 mb-6">
-                    Diferente de modelos de software tradicionais baseados em estados estáticos, o NeuroSaaS™ opera como uma infraestrutura cognitiva sistêmica, integrando a plasticidade biológica à lógica de serviços escaláveis.
-                </p>
-                <p>
-                    A premissa central é que o ser humano não é um usuário estático, mas um processo de transformação contínuo. Consequentemente, a infraestrutura deve coevoluir com a trajetória cognitiva do indivíduo.
+                <p class="text-gray-500 italic">
+                    "Definimos NeuroSaaS™ como a transposição da inteligência biológica para a governança de software, onde a adaptabilidade é a constante e a obsolescência é a variável eliminada."
                 </p>
             </div>
         </section>
 
-        <section class="mb-20">
-            <h2 class="text-2xl mb-8"><span class="section-num">02.</span> Princípios de Conformidade</h2>
-            <div class="border-left-thin space-y-12">
+        <section class="mb-24">
+            <p class="invi-label mb-4">02 // PILARES DE CONFORMIDADE</p>
+            <h2 class="text-3xl mb-12 text-white">Invariantes de Sistema</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
-                    <h3 class="text-lg mb-2">2.1 Plasticidade como Base Estrutural</h3>
-                    <p>O sistema deve ser concebido para reorganizar suas estruturas lógicas ao longo do tempo, emulando o princípio da <strong>neuroplasticidade</strong>. Se a estrutura do software é fixa, ele não é classificado como NeuroSaaS™.</p>
+                    <h3 class="text-lg mb-4 mono text-blue-500 font-medium">.01 Plasticidade Isomórfica</h3>
+                    <p class="text-sm">A capacidade do sistema de reconfigurar sua arquitetura de serviços em resposta a novos fluxos de inovação, mantendo a integridade semântica original.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg mb-2">2.2 Base Metacognitiva</h3>
-                    <p>Toda instância NeuroSaaS™ deve ser capaz de <strong>metacognição sistêmica</strong>: a capacidade da arquitetura de observar seu próprio impacto no usuário, avaliar sua utilidade e autorregular sua lógica operacional.</p>
+                    <h3 class="text-lg mb-4 mono text-blue-500 font-medium">.02 Metacognição Sistêmica</h3>
+                    <p class="text-sm">Protocolos que permitem ao software auto-avaliar seu desempenho e impacto, ajustando sua própria lógica de entrega para otimizar o progresso tecnológico.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg mb-2">2.3 Sustentabilidade Mental e Ética</h3>
-                    <p>O design deve priorizar a <strong>estabilidade cognitiva</strong>. Estímulos destinados a criar dependência ou sobrecarga informacional são proibidos sob os termos deste protocolo.</p>
+                    <h3 class="text-lg mb-4 mono text-blue-500 font-medium">.03 Evolução Incremental</h3>
+                    <p class="text-sm">Diferente do software estático (Legacy), o NeuroSaaS™ opera em ciclos de maturação orgânica, onde cada atualização fortalece a conexão entre o sistema e o usuário final.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4 mono text-blue-500 font-medium">.04 Governança Semântica</h3>
+                    <p class="text-sm">O controle absoluto sobre o significado e a aplicação da tecnologia, garantindo que a inovação não dilua o propósito original da infraestrutura.</p>
                 </div>
             </div>
         </section>
 
-        <section class="mb-20 bg-white/5 p-10 rounded-sm">
-            <h2 class="text-xl mb-4 font-bold">Reserva de Direitos</h2>
-            <p class="text-sm leading-relaxed text-gray-400">
-                Este documento serve como prova de precedência temporal e autoridade conceitual. <strong>NeuroSaaS™</strong> é uma marca registrada e uma arquitetura proprietária sob governança da <strong>FalX Global</strong>. Qualquer uso comercial, técnico ou acadêmico do termo sem conformidade com os princípios aqui estabelecidos constitui violação de propriedade intelectual e diluição de marca.
+        <section class="mb-32 p-12 bg-zinc-950 border border-zinc-900 rounded-lg">
+            <h2 class="text-xl mb-6 uppercase tracking-tighter italic">Nota de Direitos Autorais e Precedência</h2>
+            <p class="text-sm text-gray-500 leading-relaxed font-mono">
+                NeuroSaaS™ é um termo proprietário e uma categoria de arquitetura canônica protegida por direitos de autor pela detentora original (FalX Global, 2026). A utilização do termo ou da lógica de Transposição Cognitiva aqui descrita sem autorização explícita é considerada diluição de infraestrutura proprietária.
             </p>
         </section>
 
-        <footer class="mt-40 pt-10 border-t border-white/5 flex justify-between items-center mono text-[10px]">
-            <div>© 2026 FALX SYSTEM · TODOS OS DIREITOS RESERVADOS</div>
-            <div class="flex gap-4">
-                <span class="text-green-500">● ENCRYPTED</span>
-                <span>SEC-ALPHA-2</span>
+        <footer class="pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="mono text-[10px] text-gray-700 tracking-[0.4em]">© 2026 FALX SYSTEM // CANONICAL ACCESS</div>
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
+                <span class="mono text-[10px] text-blue-900 tracking-widest uppercase">Sistema Sincronizado</span>
             </div>
         </footer>
     </div>
