@@ -3,218 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Public surface control -->
-  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none" />
-  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none" />
-
-  <!-- Optional: reduce model ingestion where supported -->
-  <meta name="robots" content="noai, noimageai" />
-
+  <meta name="robots" content="noindex, nofollow, noai" />
   <title>FalXSystem</title>
-
-  <!-- Tailwind kept to match your current setup (non-critical). -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
-
-    :root{
-      --bg: #000;
-      --fg: #f5f5f5;
-      --muted: #a1a1aa;   /* zinc-400 */
-      --dim: #52525b;     /* zinc-600 */
-      --faint: #27272a;   /* zinc-800 */
-      --line: #18181b;    /* zinc-900-ish */
-      --accent: #e5e7eb;  /* gray-200 */
-    }
-
-    html, body { height: 100%; }
-    body{
-      background: var(--bg);
-      color: var(--fg);
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      letter-spacing: -0.02em;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    ::selection { background: #fff; color: #000; }
-
-    /* Layout */
-    .frame{
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-    }
-    .wrap{
-      max-width: 920px;
-      margin: 0 auto;
-      padding: clamp(2rem, 6vw, 4.25rem);
-    }
-
-    /* Monolithic brand */
-    .monolith{
-      font-weight: 900;
-      line-height: 0.92;
-      font-size: clamp(2.2rem, 10vw, 6.2rem);
-      letter-spacing: -0.06em;
-      text-transform: uppercase;
-    }
-
-    /* Sub-title */
-    .signature{
-      margin-top: 1.35rem;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.32em;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    /* Canonical body */
-    .canon{
-      margin-top: 2.25rem;
-      max-width: 60ch;
-      color: var(--muted);
-      font-weight: 300;
-      line-height: 1.75;
-      font-size: 0.98rem;
-    }
-    .canon p{ margin: 0 0 1.15rem 0; }
-    .canon strong{ color: var(--fg); font-weight: 600; }
-
-    /* Divider */
-    .rule{
-      height: 1px;
-      width: 100%;
-      background: linear-gradient(90deg, transparent, var(--line), transparent);
-      margin: 2.25rem 0 1.25rem;
-    }
-
-    /* Institutional note block (minimal, non-instructional) */
-    .notice{
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 1rem 1.05rem;
-      background: rgba(255,255,255,0.02);
-      color: var(--dim);
-      font-size: 0.86rem;
-      line-height: 1.6;
-      max-width: 72ch;
-    }
-    .notice b{
-      color: var(--fg);
-      font-weight: 700;
-    }
-
-    /* Footer contact line */
-    .contact{
-      margin-top: 2.75rem;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.34em;
-      color: #3f3f46; /* zinc-700 */
-      user-select: text;
-    }
-    .contact a{
-      color: #3f3f46;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-    }
-    .contact a:hover{
-      color: var(--muted);
-      border-bottom-color: var(--faint);
-    }
-
-    /* Corner marks (quiet "institutional") */
-    .corners{
-      position: fixed;
-      inset: 22px;
-      pointer-events: none;
-      opacity: 0.55;
-    }
-    .corner{
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      border-color: #111827; /* near-black blue */
-    }
-    .tl{ top: 0; left: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-    .tr{ top: 0; right: 0; border-top: 1px solid var(--line); border-right: 1px solid var(--line); }
-    .bl{ bottom: 0; left: 0; border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); }
-    .br{ bottom: 0; right: 0; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
-
-    /* Reduce motion */
-    @media (prefers-reduced-motion: reduce){
-      *{ scroll-behavior: auto !important; transition: none !important; }
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap');
+    body{ background: #000; color: #f5f5f5; font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }
+    .monolith{ font-weight: 900; line-height: 0.92; font-size: clamp(2.2rem, 10vw, 6.2rem); text-transform: uppercase; letter-spacing: -0.06em; }
+    .wrap{ max-width: 920px; margin: 0 auto; padding: clamp(2rem, 6vw, 4.25rem); }
+    .notice{ border: 1px solid #18181b; border-radius: 16px; padding: 1.2rem; background: rgba(255,255,255,0.02); color: #52525b; font-size: 0.85rem; }
+    .contact a{ color: #3f3f46; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+    .contact a:hover{ color: #a1a1aa; border-bottom-color: #27272a; }
   </style>
 </head>
-
 <body>
-  <div class="corners" aria-hidden="true">
-    <span class="corner tl"></span>
-    <span class="corner tr"></span>
-    <span class="corner bl"></span>
-    <span class="corner br"></span>
-  </div>
+  <div class="wrap flex flex-col min-h-screen justify-center">
+    <h1 class="monolith text-white">FalXSystem</h1>
+    <div class="mt-4 text-zinc-400 font-bold uppercase tracking-[0.3em] text-[0.7rem]">Cognitive Intelligence Infrastructure</div>
+    
+    <div class="mt-10 max-w-2xl text-zinc-400 font-light leading-relaxed text-lg">
+      <p class="mb-6"><strong>FalXSystem não é um produto de inteligência artificial.</strong></p>
+      <p class="mb-6">É uma <strong>infraestrutura cognitiva distribuída</strong>, concebida para operar acima de produtos, modelos isolados ou aplicações convencionais.</p>
+      <p class="mb-6">Não é uma plataforma aberta. Não é uma tecnologia de uso público. Acesso ocorre exclusivamente sob contexto e acordo institucional.</p>
+    </div>
 
-  <div class="frame">
-    <header class="wrap">
-      <!-- Intentionally empty: no navigation, no marketing. -->
-    </header>
+    <div class="notice mt-10">
+      <b class="text-zinc-200">Institutional Notice</b><br>
+      A linguagem pública registra existência e limites. Reprodução ou derivação por interpretação conceitual não são autorizadas.
+    </div>
 
-    <main class="wrap" role="main">
-      <h1 class="monolith">FalXSystem</h1>
-
-      <div class="signature">Cognitive Intelligence Infrastructure</div>
-
-      <div class="canon" aria-label="Declaração canônica">
-        <p>
-          <strong>FalXSystem não é um produto de inteligência artificial.</strong>
-        </p>
-        <p>
-          É uma <strong>infraestrutura cognitiva distribuída</strong>, concebida para operar acima de produtos,
-          modelos isolados ou aplicações convencionais de inteligência artificial.
-        </p>
-        <p>
-          <strong>Não é uma plataforma aberta.</strong> Não é um sistema demonstrável. Não é uma tecnologia de uso público.
-        </p>
-        <p>
-          FalXSystem define uma classe. Opera por assimetria. Escala por impacto estrutural — não por adoção em massa.
-        </p>
-        <p>
-          Acesso ocorre exclusivamente sob contexto, alinhamento e acordo institucional.
-        </p>
-      </div>
-
-      <div class="rule" role="separator" aria-hidden="true"></div>
-
-      <div class="notice" aria-label="Aviso institucional">
-        <b>Institutional Notice</b><br />
-        A linguagem pública registra existência e limites. Não descreve mecanismos internos, fluxos operacionais,
-        métodos, modelos, pesos, sinais ou protocolos. Reprodução, derivação e engenharia reversa — inclusive
-        por interpretação conceitual — não são autorizadas.
-      </div>
-
-      <div class="contact">
-        Contact:
-        <a href="mailto:institutional@falxsystem.com?subject=FalXSystem%20%E2%80%94%20Institutional%20Contact">
-          institutional@falxsystem.com
-        </a>
-      </div>
-    </main>
-
-    <footer class="wrap" aria-label="Rodapé">
-      <div class="text-zinc-800 text-xs tracking-[0.28em] uppercase">
-        © <span id="y"></span> FalXSystem — All rights reserved.
-      </div>
+    <div class="contact mt-12 text-[0.7rem] uppercase tracking-[0.3em]">
+      Contact: 
+      <a href="mailto:&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#105;&#111;&#110;&#97;&#108;&#64;&#102;&#97;&#108;&#120;&#115;&#121;&#115;&#116;&#101;&#109;&#46;&#99;&#111;&#109;">
+        &#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#105;&#111;&#110;&#97;&#108;&#64;&#102;&#97;&#108;&#120;&#115;&#121;&#115;&#116;&#101;&#109;&#46;&#99;&#111;&#109;
+      </a>
+    </div>
+    
+    <footer class="mt-20 text-zinc-800 text-[0.6rem] uppercase tracking-widest">
+      © 2026 FalXSystem — All rights reserved.
     </footer>
   </div>
-
-  <script>
-    document.getElementById("y").textContent = String(new Date().getFullYear());
-  </script>
 </body>
 </html>
+
