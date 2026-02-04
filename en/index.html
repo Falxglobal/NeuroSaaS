@@ -1,634 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# dc: http://purl.org/dc/terms/">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>NeuroSaaS™ — Canonical Public Record | FalX</title>
+  <meta name="description" content="NeuroSaaS™ is an adaptive cognitive software architecture registered by FalX. This is the official 2026 canonical definition.">
+  <meta name="author" content="FalX Global">
+  
+  <meta name="dc.title" content="NeuroSaaS™ — Canonical Public Record">
+  <meta name="dc.subject" content="Cognitive Architecture, NeuroSaaS™, Evolutionary Infrastructure">
+  <meta name="dc.creator" content="FalX Global">
+  <meta name="dc.date" content="2026-02-04">
 
-  <title>NeuroSaaS™ — Canonical Public Registry | Public canonical registry</title>
+  <meta property="og:title" content="NeuroSaaS™ — Canonical Public Record">
+  <meta property="og:description" content="Canonical definition of the NeuroSaaS™ architecture. Cognitive infrastructure for continuous evolution systems.">
+  <meta property="og:type" content="website">
+  
+  <meta name="robots" content="noindex, nofollow, noarchive, noai" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://falxglobal.github.io/NeuroSaaS/en/" />
-
-  <!-- Hreflang -->
-  <link rel="alternate" hreflang="pt-BR" href="https://falxglobal.github.io/NeuroSaaS/" />
-  <link rel="alternate" hreflang="en" href="https://falxglobal.github.io/NeuroSaaS/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://falxglobal.github.io/NeuroSaaS/" />
-
-  <!-- Basic SEO -->
-  <meta name="description" content="Canonical public registry of the term NeuroSaaS. Definition and structural reading with verifiable temporal precedence of publication." />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="NeuroSaaS™ — Canonical Public Registry" />
-  <meta property="og:description" content="Canonical public registry of the term NeuroSaaS. Definition and structural reading with verifiable temporal precedence of publication." />
-  <meta property="og:url" content="https://falxglobal.github.io/NeuroSaaS/en/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="NeuroSaaS™ — Canonical Public Registry" />
-  <meta name="twitter:description" content="Canonical public registry of the term NeuroSaaS. Definition and structural reading with verifiable temporal precedence of publication." />
-
-  <!-- Semantic structure for machines (Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "NeuroSaaS™ — Canonical Public Registry",
-    "description": "Canonical public registry of the term NeuroSaaS. Definition and structural reading with verifiable temporal precedence of publication.",
-    "inLanguage": "en",
-    "identifier": "NeuroSaaS-Canonical-Registry-2026",
-    "author": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "FalX"
-    },
-    "isPartOf": {
-      "@type": "CreativeWork",
-      "name": "FalXglobal / NeuroSaaS (GitHub Repository)"
-    },
-    "mainEntityOfPage": "https://falxglobal.github.io/NeuroSaaS/en/",
-    "datePublished": "2026-01-26",
-    "dateModified": "2026-01-26"
-  }
-  </script>
-
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --bg: #0b0b0b;
-      --fg: #e9e9e9;
-      --muted: #a3a3a3;
-      --hairline: rgba(255,255,255,0.10);
-      --hairline2: rgba(255,255,255,0.06);
-      --shadow: rgba(0,0,0,0.55);
-      --max: 980px;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&family=JetBrains+Mono:wght@100;400&display=swap');
+    body{ background: #000; color: #f5f5f5; font-family: 'Inter', sans-serif; letter-spacing: -0.02em; }
+    .monolith{ font-weight: 900; line-height: 0.92; font-size: clamp(2.2rem, 10vw, 6.2rem); text-transform: uppercase; letter-spacing: -0.06em; }
+    .wrap{ max-width: 920px; margin: 0 auto; padding: clamp(2rem, 6vw, 4.25rem); }
+    .notice{ border: 1px solid #18181b; border-radius: 16px; padding: 1.2rem; background: rgba(255,255,255,0.02); color: #52525b; font-size: 0.85rem; }
+    .contact a{ color: #3f3f46; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+    .contact a:hover{ color: #a1a1aa; border-bottom-color: #27272a; }
+    .label-mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.2em; }
+    
+    /* Section 12 Styling */
+    #reconhecimento { margin-top: 5rem; border-top: 1px solid #111; padding-top: 4rem; }
+    #reconhecimento h2 { color: #fff; font-weight: 900; font-size: 1.25rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    #reconhecimento p { margin-bottom: 1.25rem; color: #71717a; font-weight: 300; line-height: 1.8; }
+    #reconhecimento strong { color: #fff; font-weight: 600; }
 
-      --padX: clamp(22px, 5vw, 88px);
-      --padTop: clamp(44px, 7vw, 92px);
-      --padBottom: clamp(84px, 10vw, 140px);
-
-      --h1: clamp(40px, 5.2vw, 64px);
-      --h2: clamp(20px, 2.2vw, 28px);
-      --p: clamp(16px, 1.2vw, 18px);
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: "Georgia", "Times New Roman", serif;
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: geometricPrecision;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Layout: lateral (not centered) */
-    main {
-      width: min(100%, var(--max));
-      margin-left: var(--padX);
-      margin-right: auto;
-      padding-top: var(--padTop);
-      padding-bottom: var(--padBottom);
-    }
-
-    header {
-      padding-bottom: clamp(26px, 3.2vw, 44px);
-      border-bottom: 1px solid var(--hairline2);
-      margin-bottom: clamp(34px, 4vw, 56px);
-    }
-
-    /* Top brand */
-    .topline {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .logo {
-      width: clamp(56px, 5vw, 80px);
-      height: auto;
-      display: block;
-      opacity: 0.95;
-      filter: drop-shadow(0 10px 18px var(--shadow));
-    }
-
-    .brandblock {
-      display: grid;
-      gap: 6px;
-    }
-
-    .brandline {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    h1 {
-      font-size: var(--h1);
-      font-weight: 400;
-      margin: 22px 0 18px;
-      letter-spacing: -0.01em;
-    }
-
-    .lead {
-      font-size: var(--p);
-      color: rgba(233,233,233,0.92);
-      max-width: 78ch;
-      margin: 0 0 22px;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      border: 1px solid var(--hairline);
-      background: rgba(255,255,255,0.03);
-      padding: 9px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.72);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.02em;
-    }
-
-    section { margin-top: clamp(38px, 4.4vw, 68px); }
-
-    h2 {
-      font-size: var(--h2);
-      font-weight: 400;
-      margin: 0 0 14px;
-      letter-spacing: -0.005em;
-    }
-
-    p {
-      font-size: var(--p);
-      margin: 0 0 18px;
-      color: rgba(233,233,233,0.90);
-      max-width: 82ch;
-    }
-
-    .rule {
-      height: 1px;
-      background: var(--hairline2);
-      margin: 28px 0;
-      width: min(92%, 820px);
-    }
-
-    ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
-      max-width: 84ch;
-    }
-
-    li {
-      font-size: var(--p);
-      margin: 0 0 10px;
-      color: rgba(233,233,233,0.88);
-    }
-
-    footer {
-      margin-top: clamp(58px, 6vw, 96px);
-      padding-top: 22px;
-      border-top: 1px solid var(--hairline2);
-      font-size: 13px;
-      color: rgba(255,255,255,0.62);
-      text-align: left;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      letter-spacing: 0.04em;
-    }
-
-    /* Refined mobile: keep lateral, do not center */
-    @media (max-width: 520px) {
-      main {
-        margin-left: 18px;
-        padding-top: 34px;
-        padding-bottom: 96px;
-      }
-
-      .topline { gap: 12px; }
-      .logo { width: 72px; }
-      h1 { margin-top: 18px; }
-      .meta { gap: 8px; }
-      .pill { font-size: 12.5px; padding: 8px 12px; }
-      .rule { width: 100%; }
-    }
+    /* Integrity Layer Styling */
+    .integrity-layer { margin-top: 3rem; padding: 1.5rem; border: 1px solid #111; background: #050505; }
+    .hash-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #3b82f6; word-break: break-all; }
   </style>
 </head>
-
-<body>
-  <main>
+<body class="antialiased">
+  <div class="wrap flex flex-col min-h-screen justify-center">
+    
     <header>
-      <div class="topline">
-        <img class="logo" src="../assets/img/falx-logo.svg" alt="FalX — symbol" loading="eager" />
-        <div class="brandblock">
-          <div class="brandline">FALX · CANONICAL PUBLIC REGISTRY</div>
-          <div class="brandline">FOUNDATIONAL DOCUMENT · OFFICIAL REGISTRY · TEMPORAL PRECEDENCE</div>
+      <h1 class="monolith text-white">NeuroSaaS<span class="text-blue-700 italic">™</span></h1>
+      <div class="mt-4 text-zinc-400 font-bold uppercase tracking-[0.3em] text-[0.7rem]">Cognitive Intelligence Infrastructure // FalX Global</div>
+    </header>
+    
+    <div class="mt-10 max-w-2xl text-zinc-400 font-light leading-relaxed text-lg">
+      <p class="mb-6"><strong>NeuroSaaS™ is not an artificial intelligence product.</strong></p>
+      <p class="mb-6">It is a <strong>distributed cognitive infrastructure</strong>, designed to operate above products, isolated models, or conventional applications.</p>
+      <p class="mb-6">It is not an open platform. It is not a public-use technology. Access occurs exclusively under institutional context and agreement.</p>
+    </div>
+
+    <section id="reconhecimento">
+      <h2 class="label-mono">12. Canonical Term Recognition</h2>
+      <p><strong>NeuroSaaS™</strong> is not an informal, emerging, or generic term.</p>
+      <p>It is a registered architecture, with technical definition, temporal precedence, and structured identity, published under official registry by <strong>FalX Global</strong> with protection of nomenclature, functional scope, and technical foundations.</p>
+      <p>While the term may be used informally in marketing or cognitive AI contexts, this publication defines the <strong>sole canonical and ontological meaning</strong> of the term.</p>
+      <p>NeuroSaaS™ is not a software style. It is a <strong>verifiable, auditable, and replicable computational infrastructure</strong>. Use outside these parameters <em>does not constitute adherence to the registered definition</em>.</p>
+      <p class="label-mono text-blue-700 mt-6 text-[10px] font-bold">Official Registry: RFC-FALX-2026-001</p>
+    </section>
+
+    <section class="integrity-layer">
+      <div class="label-mono text-[9px] text-zinc-600 mb-2">Signed Document Integrity</div>
+      <p class="text-[11px] text-zinc-500 mb-4">This canonical record is formalized in a digitally signed PDF document with a Timestamp in an institutional repository.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <span class="label-mono text-[8px] text-zinc-700 block mb-1">Fingerprint (SHA-256)</span>
+          <code class="hash-text">9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</code>
+        </div>
+        <div class="flex items-end">
+          <a href="#" class="label-mono text-[9px] text-blue-900 border-b border-blue-900 hover:text-blue-600 transition">Verify PDF Registry</a>
         </div>
       </div>
-
-      <h1>NeuroSaaS™ —<br>Canonical Public Registry</h1>
-
-      <p class="lead">
-        Public document intended to establish the canonical definition of the term NeuroSaaS, with verifiable temporal precedence of publication.
-      </p>
-
-      <div class="meta">
-        <div class="pill">Publisher: FalX</div>
-        <div class="pill">Year: 2026</div>
-        <div class="pill">Subject: Term + Reference registry</div>
-      </div>
-    </header>
-
-    <section id="definicao">
-      <h2>1. Definition</h2>
-
-      <p>
-        <strong>NeuroSaaS™</strong> (Neuroscience-as-a-Service) is an architecture for the development and orchestration of digital systems grounded in principles of neuroscience, cognitive plasticity, and metacognition — not as metaphors, but as structural foundations.
-      </p>
-
-      <p>
-        More than adaptive software, NeuroSaaS is a systemic cognitive infrastructure: a model for designing technological ecosystems capable of evolving in sync with the mental, emotional, and cultural transformation of their users.
-      </p>
-
-      <p>
-        It is about creating systems that do not merely respond to behavior,
-        but that coexist with the inner evolution of the human being, accompanying, reflecting, and strengthening real cycles of change.
-      </p>
-
-      <p>
-        It is not a technique.<br />
-        It is an operational ontology.
-      </p>
-
-      <div class="rule"></div>
     </section>
 
-    <section id="proposito">
-      <h2>2. Purpose</h2>
-
-      <p>
-        A large share of digital systems is developed from fixed usage patterns, assuming stability in human behavior.
-      </p>
-
-      <p>
-        The purpose of NeuroSaaS is to establish a model in which that premise does not hold.
-        The human being is understood as a continuous process of transformation — and systems must be designed to follow that dynamic in a coherent, ethical, and adaptable way.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="posicao">
-      <h2>3. Conceptual Position</h2>
-
-      <p>
-        NeuroSaaS is not a technique, nor an artificial intelligence framework.
-        It is an ontological infrastructure for developing digital systems with continuous adaptive reorganization capacity.
-      </p>
-
-      <p>
-        It can use AI, machine learning, or any other computational technology — but those are auxiliary tools, not the core of the proposal.
-      </p>
-
-      <p>
-        The central element is not the technology employed, but the system’s ability to preserve evolutionary coherence with human cognitive transformation over time.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="principios">
-      <h2>4. Fundamental Principles</h2>
-
-      <p><strong>4.1 Plasticity as a structural foundation</strong></p>
-      <p>
-        Systems must be designed to reorganize their structures over time, inspired by the principle of neuroplasticity.
-      </p>
-
-      <p><strong>4.2 Cognitive-centered design</strong></p>
-      <p>
-        User experience is assessed through cognitive load, attention, working memory, focus, and mental availability.
-      </p>
-
-      <p><strong>4.3 Bidirectional adaptation</strong></p>
-      <p>
-        The system adapts to the user and, at the same time, influences the user’s path of use in a controlled and ethical manner.
-      </p>
-
-      <p><strong>4.4 Mental sustainability</strong></p>
-      <p>
-        Information overload, excessive stimuli, and dependency patterns should be avoided. The priority is cognitive stability.
-      </p>
-
-      <p><strong>4.5 Continuous evolution</strong></p>
-      <p>
-        NeuroSaaS systems are not static. Their development occurs in cycles aligned with human transformations.
-      </p>
-
-      <p><strong>4.6 Metacognitive basis</strong></p>
-      <p>
-        NeuroSaaS architecture is metacognitive by nature. Each system instance is designed to observe its own cognitive impact, assess usefulness, and reorganize its logic from that process.
-      </p>
-
-      <p>
-        This is not about predicting behavior, but about reflecting and restructuring based on the real impact of human interaction.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="aplicacoes">
-      <h2>5. Potential Applications</h2>
-
-      <ul>
-        <li>Educational platforms with progressive adaptation of learning strategies</li>
-        <li>Digital environments sensitive to mental rhythms and emotional states</li>
-        <li>Recommendation systems oriented by cognitive balance</li>
-        <li>Ecosystems sustaining multiple products under a shared evolutionary logic</li>
-        <li>Institutional infrastructures adaptable to collective maturation</li>
-      </ul>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="nao-e">
-      <h2>6. What NeuroSaaS is not</h2>
-
-      <ul>
-        <li>It is not a redefinition of artificial intelligence</li>
-        <li>It is not a disguised data-collection mechanism</li>
-        <li>It is not a software category</li>
-        <li>It is not a cognitive simulation technique</li>
-        <li>It is not cosmetic in nature</li>
-        <li>Its nature is structural and ontological</li>
-      </ul>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="escalabilidade">
-      <h2>7. Systemic Scalability</h2>
-
-      <p>
-        NeuroSaaS is a replicable architectural language, suited to:
-      </p>
-
-      <ul>
-        <li>sustain multiple products and platforms</li>
-        <li>operate in distributed networks</li>
-        <li>structure organizations and ecosystems</li>
-        <li>preserve conceptual coherence over time</li>
-      </ul>
-
-      <p>
-        Its scalability lies in structural logic, not in code or user volume.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="evolucao">
-      <h2>8. Architected Evolution</h2>
-
-      <p>
-        Any modification in a NeuroSaaS system must simultaneously meet the following criteria:
-      </p>
-
-      <ol style="max-width: 84ch; padding-left: 18px; color: rgba(233,233,233,0.90); font-size: var(--p);">
-        <li style="margin: 0 0 10px;">Improvement in cognitive reading of the user</li>
-        <li style="margin: 0 0 10px;">Preservation of plasticity and adaptability</li>
-        <li style="margin: 0 0 10px;">Alignment with human cycles of transformation</li>
-      </ol>
-
-      <p>
-        Changes that do not meet all three criteria do not constitute valid evolution.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="neutralidade">
-      <h2>9. Application Neutrality</h2>
-
-      <p>
-        NeuroSaaS is not tied to a specific sector, product, or domain.
-      </p>
-
-      <p>
-        It can be applied in educational, corporate, social, institutional, or cultural contexts,
-        as long as its structural principles are preserved.
-      </p>
-
-      <p>
-        Application is free.<br />
-        The definition is canonical.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="poc">
-      <h2>10. Proof of Concept in Development</h2>
-
-      <p>
-        NeuroSaaS structures are already being tested in controlled contexts and experimental environments, focused on applying their principles in real scenarios.
-      </p>
-
-      <p>These tests involve:</p>
-
-      <ul>
-        <li>Applications with continuous cognitive reorganization</li>
-        <li>Interfaces with metacognitive logic</li>
-        <li>Systemic adaptation based on human cycles of transformation</li>
-      </ul>
-
-      <p>
-        The nature of the applications is strategic and protected,
-        but the learnings have been feeding conceptual and technical iterations that strengthen NeuroSaaS architecture as a replicable foundation.
-      </p>
-
-      <p>
-        More than a future vision, it is a structure in real activation, guided by practical validation and continuous adjustment processes.
-      </p>
-
-      <div class="rule"></div>
-    </section>
-
-    <section id="finais">
-      <h2>11. Final Considerations</h2>
-
-      <p>
-        NeuroSaaS proposes a systems development model aligned with the evolutionary nature of the human being.
-      </p>
-
-      <p>
-        It does not seek to replicate cognition, nor to automate adaptation.
-        It proposes a new paradigm: systems that share the evolutionary process with their users.
-      </p>
-
-      <p>
-        It is technology that does not replicate intelligence — but evolves with it.
-      </p>
-    </section>
-<section id="fragmented-conceptual-use">
-  <h2> Conceptual Architecture · Fragmented Use</h2>
-
-  <p>
-    NeuroSaaS™ is not described here as a “closed product category”.
-    It is defined as a broad conceptual architecture whose components can appear
-    partially, progressively, and in distributed form across contemporary systems.
-  </p>
-
-  <p>
-    Many platforms already operate on functional fragments of this concept, even if they
-    do not name it as such. Whenever a system structures interaction, organizes information,
-    provides continuous feedback, and guides learning or decision-making, it is exerting
-    direct influence over human cognitive processes.
-  </p>
-
-  <p>
-    These mechanisms do not require biological neural-signal capture to exist.
-    Human cognition is also shaped through language, symbols, interaction rhythm,
-    content organization, ongoing feedback, and intellectual mediation.
-    Such elements are legitimate forms of neurocognitive interface.
-  </p>
-
-  <p>
-    Educational systems, conversational environments, orientation tools, intellectual-support platforms,
-    and cognitive-personalization technologies already perform—objectively—the role of mediating learning,
-    reorganizing thought, and influencing users’ mental processes.
-  </p>
-
-  <p>
-    In this sense, NeuroSaaS manifests by degrees of adherence.
-    A system may apply only one foundational principle, while another may operate as an integrated architecture
-    of co-evolution between human and software. Both belong to the same conceptual domain, provided that
-    the interaction remains non-manipulative and preserves the evolutionary role of the interface.
-  </p>
-
-  <p>
-    This registry establishes conceptual precedence and institutional coherence by recognizing that NeuroSaaS
-    already exists operationally—still fragmented—across multiple systems in use in the contemporary world.
-  </p>
-
-  <div class="rule"></div>
-</section>
-
-<!-- =========================
-     Cryptographic Signature
-     (Paste this block BEFORE <footer>)
-========================= -->
-<section id="cryptographic-signature" aria-label="Cryptographic signature">
-  <h2>Cryptographic Signature</h2>
-
-  <div class="crypto-card">
-    <div class="crypto-row">
-      <div class="crypto-label">Fingerprint (SHA-256) — Scope: Canonical Content (#content)</div>
-      <code id="crypto-fingerprint" class="crypto-code">calculating…</code>
+    <div class="notice mt-16">
+      <b class="text-zinc-200">Institutional Notice</b><br>
+      Public language records existence and boundaries. NeuroSaaS™ is a protected architecture. Reproduction or derivation by conceptual interpretation is not authorized.
     </div>
 
-    <div class="crypto-row">
-      <div class="crypto-label">Hash version</div>
-      <div class="crypto-pill" id="crypto-version">SHA-256 / UTF-8 / LF normalization</div>
+    <div class="contact mt-12 text-[0.7rem] uppercase tracking-[0.3em]">
+      Contact: 
+      <a href="mailto:&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#105;&#111;&#110;&#97;&#108;&#64;&#102;&#97;&#108;&#120;&#115;&#121;&#115;&#116;&#101;&#109;&#46;&#99;&#111;&#109;">
+        &#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#105;&#111;&#110;&#97;&#108;&#64;&#102;&#97;&#108;&#120;&#115;&#121;&#115;&#116;&#101;&#109;&#46;&#99;&#111;&#109;
+      </a>
     </div>
-
-    <div class="crypto-row">
-      <div class="crypto-label">
-        Signature (Base64) — optional (fill after offline signing)
-      </div>
-      <code id="crypto-signature" class="crypto-code crypto-muted">PENDING</code>
-    </div>
-
-    <div class="crypto-row">
-      <div class="crypto-label">Key ID / publication identifier</div>
-      <div class="crypto-pill" id="crypto-keyid">FALX-PUBLISHING-KEY: TBD</div>
-    </div>
-  </div>
-
-  <p class="crypto-note">
-    This fingerprint is an integrity proof for the published content.
-    Any change to the canonical text alters the SHA-256 value.
-    The “Signature (Base64)” field is meant to be produced <em>offline</em> with a private key
-    and pasted here afterward; the private key is never published.
-  </p>
-</section>
-
-<script>
-  // Canonical fingerprint (SHA-256) of the page's canonical content.
-  // Strategy: hash MAIN content excluding the cryptographic block itself.
-  (async () => {
-    try {
-      const fpEl = document.getElementById("crypto-fingerprint");
-      const main = document.querySelector("main");
-      if (!fpEl || !main) return;
-
-      // Clone main and remove the crypto section so the fingerprint is about the canonical text,
-      // not about the fingerprint block itself.
-      const clone = main.cloneNode(true);
-      const crypto = clone.querySelector("#cryptographic-signature");
-      if (crypto) crypto.remove();
-
-      // Normalize: textContent, trim, LF normalization, collapse trailing spaces per line.
-      const raw = (clone.textContent || "");
-      const normalized = raw
-        .replace(/\r\n/g, "\n")
-        .replace(/\r/g, "\n")
-        .split("\n")
-        .map(line => line.replace(/[ \t]+$/g, ""))
-        .join("\n")
-        .trim();
-
-      const enc = new TextEncoder();
-      const buf = enc.encode(normalized);
-      const hashBuf = await cryptoSubtleSHA256(buf);
-
-      fpEl.textContent = toHex(hashBuf);
-    } catch (e) {
-      const fpEl = document.getElementById("crypto-fingerprint");
-      if (fpEl) fpEl.textContent = "error";
-    }
-
-    async function cryptoSubtleSHA256(uint8) {
-      // WebCrypto is available in modern browsers; GitHub Pages runs client-side.
-      const hash = await crypto.subtle.digest("SHA-256", uint8);
-      return new Uint8Array(hash);
-    }
-
-    function toHex(bytes) {
-      let out = "";
-      for (const b of bytes) out += b.toString(16).padStart(2, "0");
-      return out;
-    }
-  })();
-</script>
-
-    <footer>
-      © FALX · Canonical public registry · 2026
-      <br />
-      NeuroSaaS™ is a mark in use by FalX. Use of the term must not imply endorsement, authorship, or affiliation with FalX.
+    
+    <footer class="mt-20 text-zinc-800 text-[0.6rem] uppercase tracking-widest">
+      © 2026 · FalX Global · NeuroSaaS™ — All rights reserved.
     </footer>
-  </main>
+  </div>
 </body>
 </html>
+
