@@ -35,6 +35,10 @@
     #reconhecimento h2 { color: #fff; font-weight: 900; font-size: 1.25rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.1em; }
     #reconhecimento p { margin-bottom: 1.25rem; color: #71717a; font-weight: 300; line-height: 1.8; }
     #reconhecimento strong { color: #fff; font-weight: 600; }
+
+    /* Estilização da Camada de Integridade */
+    .integrity-layer { margin-top: 3rem; padding: 1.5rem; border: 1px solid #111; background: #050505; }
+    .hash-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #3b82f6; word-break: break-all; }
   </style>
 </head>
 <body class="antialiased">
@@ -58,6 +62,20 @@
       <p>Embora o termo possa ser usado informalmente em contextos de marketing ou IA cognitiva, esta publicação define o <strong>único significado canônico e ontológico</strong> do termo.</p>
       <p>NeuroSaaS™ não é um estilo de software. É uma <strong>infraestrutura computacional verificável, auditável e replicável</strong>. Seu uso fora desses parâmetros <em>não constitui aderência à definição registrada</em>.</p>
       <p class="label-mono text-blue-700 mt-6 text-[10px] font-bold">Registro Oficial: RFC-FALX-2026-001</p>
+    </section>
+
+    <section class="integrity-layer">
+      <div class="label-mono text-[9px] text-zinc-600 mb-2">Integridade do Documento Assinado</div>
+      <p class="text-[11px] text-zinc-500 mb-4">Este registro canônico encontra-se formalizado em documento PDF com assinatura digital e carimbo de tempo (Timestamp) em repositório institucional.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <span class="label-mono text-[8px] text-zinc-700 block mb-1">Fingerprint (SHA-256)</span>
+          <code class="hash-text">9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</code>
+        </div>
+        <div class="flex items-end">
+          <a href="#" class="label-mono text-[9px] text-blue-900 border-b border-blue-900 hover:text-blue-600 transition">Verificar Registro PDF</a>
+        </div>
+      </div>
     </section>
 
     <div class="notice mt-16">
