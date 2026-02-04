@@ -4,104 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>NeuroSaaS™ Specification | FalX Global Infrastructure</title>
-    <meta name="description" content="A especificação canônica do NeuroSaaS™. A transposição isomórfica da lógica neural para infraestruturas de inovação.">
+    <title>NeuroSaaS™ Specification | Falx Canonical Protocol</title>
+    <meta name="author" content="Falx Global">
+    <meta name="copyright" content="Falx Global 2026">
     <link rel="canonical" href="http://falxsystem.com/">
     
+    <meta property="og:title" content="NeuroSaaS™ — Registro Público Canônico">
+    <meta property="og:description" content="A infraestrutura soberana para sistemas de evolução contínua.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Falx System">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "NeuroSaaS™: Arquitetura de Transposição Cognitiva",
-      "description": "Uma nova categoria de infraestrutura de software baseada em mimetismo funcional de plasticidade neural.",
-      "author": {
-        "@type": "Organization",
-        "name": "FalX Global",
-        "url": "http://falxsystem.com"
-      },
-      "keywords": "NeuroSaaS, Neuroscience-as-a-Service, Arquitetura Semântica, Inovação Contínua"
+      "@type": "WebPage",
+      "name": "NeuroSaaS™ Official Specification",
+      "mainEntity": {
+        "@type": "TechArticle",
+        "headline": "NeuroSaaS™: Isomorfismo Funcional e Plasticidade",
+        "author": {"@type": "Organization", "name": "Falx Global"}
+      }
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;900&family=JetBrains+Mono:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;900&family=JetBrains+Mono:wght@100;400&display=swap');
         
-        :root { --accent: #2563eb; }
-        body { background-color: #000; color: #777; font-family: 'Inter', sans-serif; letter-spacing: -0.03em; }
+        body { background-color: #000; color: #555; font-family: 'Inter', sans-serif; letter-spacing: -0.05em; margin: 0; }
+        .hero-title { font-size: clamp(5rem, 25vw, 18rem); font-weight: 900; line-height: 0.75; color: #fff; letter-spacing: -0.08em; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 9px; tracking: 0.5em; }
         
-        /* Tipografia Cinematográfica: Escala fluida */
-        .hero-title { font-size: clamp(4rem, 15vw, 12rem); line-height: 0.8; font-weight: 900; color: #fff; letter-spacing: -0.07em; }
-        
-        .mono { font-family: 'JetBrains Mono', monospace; font-size: 10px; tracking: 0.2em; }
-        .glass-panel { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
-        
-        /* Efeito de Scanline: Para parecer um terminal de elite */
-        body::before {
-            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-            z-index: 100; background-size: 100% 4px, 3px 100%; pointer-events: none;
+        /* Estratégia Visual: Profundidade Infinita */
+        .bg-vignette {
+            background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            background-attachment: fixed;
         }
+
+        /* Linha de Progresso Canônico */
+        .progress-line { height: 1px; background: linear-gradient(90deg, transparent, #222, transparent); }
+        
+        ::selection { background: #fff; color: #000; }
+        
+        .section-label { writing-mode: vertical-rl; transform: rotate(180deg); }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-vignette">
 
-    <aside class="fixed left-0 top-0 h-full w-12 border-r border-white/5 hidden lg:flex items-center justify-center">
-        <span class="vertical-text mono text-gray-800 uppercase italic">Canonical Access Protocol // v2.6.0</span>
+    <aside class="fixed right-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-12">
+        <span class="section-label mono uppercase text-gray-800 italic">Auth: Falx_Global_Invariant</span>
+        <div class="w-px h-32 bg-gray-900"></div>
     </aside>
 
-    <main class="lg:ml-12 px-8 lg:px-24 py-20">
-        
-        <header class="mb-40">
-            <div class="flex items-center gap-4 mb-12">
-                <div class="w-10 h-[1px] bg-blue-600"></div>
-                <span class="mono text-blue-600 uppercase font-bold">Registro de Precedência FalX</span>
+    <nav class="p-12 flex justify-between items-start sticky top-0 z-50">
+        <div class="flex flex-col">
+            <div class="flex items-center gap-2 mb-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_12px_#2563eb]"></div>
+                <span class="mono uppercase text-blue-800 font-bold">Invariant Node</span>
             </div>
-            <h1 class="hero-title mb-16">
-                Neuro<br>SaaS<span class="text-blue-600 italic">™</span>
-            </h1>
-            <div class="max-w-3xl">
-                <p class="text-2xl md:text-4xl font-extralight text-gray-300 leading-tight mb-8">
-                    Não é apenas software. É a <span class="text-white font-normal">Soberania da Evolução Contínua</span>.
-                </p>
-                <p class="text-lg text-gray-500 font-light max-w-xl">
-                    Implementamos a lógica de plasticidade neural como uma camada de governança invariante para sistemas de inovação globais.
-                </p>
+            <div class="text-3xl font-black text-white italic tracking-tighter">FALX<span class="opacity-10">.</span></div>
+        </div>
+        <div class="text-right">
+            <p class="text-[9px] mono uppercase text-gray-700">Canonical Release // 2.6.5</p>
+            <p class="text-[8px] mono text-gray-800 mt-1">Sovereign Encryption Active</p>
+        </div>
+    </nav>
+
+    <main class="max-w-[1600px] mx-auto px-12 pt-20 pb-64">
+        
+        <header class="mb-60">
+            <span class="mono text-gray-600 uppercase mb-12 block tracking-[0.8em]">Registro Público Canônico</span>
+            <h1 class="hero-title mb-20">Neuro<br>SaaS<span class="text-blue-700 italic">™</span></h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+                <div class="lg:col-span-8">
+                    <p class="text-3xl md:text-5xl font-extralight text-gray-200 leading-[1.05] tracking-tighter">
+                        Transposição isomórfica de <span class="text-blue-600 font-medium">plasticidade funcional</span> para ecossistemas de inovação soberana.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 border-l border-white/5 pl-8 py-2">
+                    <p class="text-sm font-light text-gray-500 leading-relaxed italic">
+                        "A tecnologia não deve replicar inteligência; deve evoluir com ela."
+                    </p>
+                </div>
             </div>
         </header>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-60">
-            <div class="glass-panel p-10 rounded-sm">
-                <h3 class="text-white font-bold mb-4 uppercase text-xs mono tracking-widest">.01 Ontologia</h3>
-                <p class="text-sm leading-relaxed">NeuroSaaS™ redefine a relação entre usuário e sistema através do <strong>Isomorfismo Funcional</strong>: a transposição da inteligência biológica para o fluxo de inovação tecnológica.</p>
+        <div class="progress-line mb-40"></div>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-24 items-start">
+            <div class="space-y-6">
+                <span class="text-blue-900 mono uppercase font-black tracking-widest text-[10px]">01 // Ontologia</span>
+                <h2 class="text-3xl font-black text-white italic">Sistemas Co-Evolutivos</h2>
+                <p class="text-sm leading-relaxed text-gray-500">NeuroSaaS™ redefine a relação entre usuário e sistema através do mimetismo de plasticidade sináptica. O software deixa de ser um produto estático para se tornar um <strong>organismo de inovação</strong>.</p>
             </div>
-            <div class="glass-panel p-10 rounded-sm">
-                <h3 class="text-white font-bold mb-4 uppercase text-xs mono tracking-widest">.02 Metacognição</h3>
-                <p class="text-sm leading-relaxed">A infraestrutura possui capacidade de <strong>auto-regulação semântica</strong>. O sistema avalia seu próprio impacto e utilidade, evoluindo em tempo real sem interrupção de serviço.</p>
+            
+            <div class="space-y-6">
+                <span class="text-blue-900 mono uppercase font-black tracking-widest text-[10px]">02 // Metacognição</span>
+                <h2 class="text-3xl font-black text-white italic">Governança Autônoma</h2>
+                <p class="text-sm leading-relaxed text-gray-500">A infraestrutura possui capacidade de introspecção semântica. O protocolo avalia seu próprio impacto, ajustando sua ontologia operacional para garantir a expansão tecnológica perpétua.</p>
             </div>
-            <div class="glass-panel p-10 rounded-sm">
-                <h3 class="text-white font-bold mb-4 uppercase text-xs mono tracking-widest">.03 Invariância</h3>
-                <p class="text-sm leading-relaxed">O protocolo NeuroSaaS™ é agnóstico a ferramentas. Ele é a lei que governa como a inovação se adapta, tornando o conceito de "software legado" tecnicamente obsoleto.</p>
+
+            <div class="space-y-6">
+                <span class="text-blue-900 mono uppercase font-black tracking-widest text-[10px]">03 // Invariância</span>
+                <h2 class="text-3xl font-black text-white italic">Design Invariante</h2>
+                <p class="text-sm leading-relaxed text-gray-500">Protocolo agnóstico a substratos lógicos. Se a tecnologia de processamento evolui, a lógica de evolução do NeuroSaaS™ permanece imutável e soberana.</p>
             </div>
         </section>
-
-        <section class="max-w-4xl border-l-2 border-blue-600 pl-12 py-12">
-            <h2 class="text-4xl text-white font-black mb-8 tracking-tighter italic">"A tecnologia não deve replicar inteligência; deve evoluir com ela."</h2>
-            <div class="space-y-4 text-gray-600 mono text-[10px] uppercase tracking-[0.2em]">
-                <p>Propriedade Intelectual: FalX Global</p>
-                <p>Status de Mercado: Categoria Original / Detentora de Termo</p>
-                <p>Governança: Invariante / Canônica</p>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="lg:ml-12 p-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <span class="mono text-[9px] uppercase tracking-[0.4em] text-gray-700">© 2026 FALX SYSTEM // ALL RIGHTS RESERVED</span>
-        <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_10px_#2563eb]"></div>
-            <span class="mono text-[9px] text-blue-900">NODE_STATUS: ACTIVE</span>
+    <footer class="p-12 border-t border-white/5 bg-black/50 backdrop-blur-3xl fixed bottom-0 w-full flex justify-between items-center z-50">
+        <p class="text-[9px] mono uppercase tracking-[0.5em] text-gray-600">
+            © 2026 FALX GLOBAL · PROPRIEDADE INTELECTUAL NEUROSAAS™
+        </p>
+        <div class="flex gap-4">
+            <div class="px-3 py-1 border border-white/5 rounded-full text-[8px] mono uppercase text-gray-700">Protocol Sincronized</div>
         </div>
     </footer>
 
