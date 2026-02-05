@@ -1,263 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-br" prefix="og: http://ogp.me/ns# dc: http://purl.org/dc/terms/">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow, noarchive, noai" />
-  
-  <title>NeuroSaaS™ — Registro Público Canônico | FalX</title>
-  
-  <meta name="dc.title" content="NeuroSaaS™ — Registro Público Canônico">
-  <meta name="dc.creator" content="FalX Global">
-  <meta name="dc.date" content="2026-02-04">
+
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none, noai, noimageai" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none" />
+
+  <title>NeuroSaaS™ — Registro Público Canônico</title>
+  <meta name="description" content="Registro público mínimo: existência e limites do termo NeuroSaaS™ (2026)." />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=JetBrains+Mono:wght@100;400&display=swap');
-    
-    :root {
-      --zinc-950: #09090b;
-      --blue-primary: #1e40af;
-      --border-color: #18181b;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;900&family=JetBrains+Mono:wght@100;400&display=swap');
 
-    body { 
-      background-color: var(--zinc-950); 
-      color: #71717a; 
-      font-family: 'Inter', sans-serif; 
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { background-color:#000; color:#52525b; font-family:'Inter', sans-serif; line-height:1.6; margin:0; }
+    ::selection { background:#fff; color:#000; }
 
-    /* Scrollbar Minimalista */
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: #000; }
-    ::-webkit-scrollbar-thumb { background: #1e40af; }
-
-    .monolith { 
-      font-weight: 900; 
-      line-height: 0.85; 
-      font-size: clamp(3rem, 12vw, 8rem); 
-      text-transform: uppercase; 
-      color: #fff; 
-      letter-spacing: -0.07em; 
-    }
-
-    .label-mono { 
-      font-family: 'JetBrains Mono', monospace; 
-      text-transform: uppercase; 
-      letter-spacing: 0.4em; 
-      font-size: 0.65rem; 
-      color: #3f3f46;
-    }
-
-    section { 
-      border-bottom: 1px solid var(--border-color); 
-      padding: 4rem 0; 
-      transition: all 0.5s ease;
-    }
-
-    section:hover { background: rgba(255,255,255,0.01); }
-
-    h2 { 
-      font-family: 'JetBrains Mono', monospace;
-      color: #fff; 
-      font-weight: 400; 
-      font-size: 0.75rem; 
-      margin-bottom: 2rem; 
-      text-transform: uppercase; 
-      letter-spacing: 0.3em;
-      display: flex;
-      align-items: center;
-    }
-
-    h2::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: var(--blue-primary);
-      margin-right: 1.5rem;
-      display: inline-block;
-    }
-
-    .content-text { max-width: 650px; font-weight: 300; font-size: 1.05rem; }
-    .highlight { color: #fff; font-weight: 500; }
-
-    /* Overlay de Terminal */
-    .scanline {
-      width: 100%;
-      height: 100px;
-      z-index: 99;
-      background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0) 100%);
-      opacity: 0.1;
-      position: fixed;
-      pointer-events: none;
-      animation: scan 8s linear infinite;
-    }
-
-    @keyframes scan { from { top: -100px; } to { top: 100%; } }
-
-    .integrity-card {
-      background: #000;
-      border: 1px solid var(--blue-primary);
-      padding: 2rem;
-      border-left: 4px solid var(--blue-primary);
-    }
-
-    ::selection { background: var(--blue-primary); color: #fff; }
+    .monolith { font-weight:900; line-height:0.85; font-size:clamp(3rem, 12vw, 8rem); text-transform:uppercase; color:#fff; letter-spacing:-0.07em; }
+    .label-mono { font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:0.4em; font-size:0.65rem; color:#27272a; }
+    section { border-bottom:1px solid #111; padding:3.5rem 0; }
+    h2 { font-family:'JetBrains Mono', monospace; color:#fff; font-size:0.75rem; margin-bottom:1.6rem; text-transform:uppercase; letter-spacing:0.3em; display:flex; align-items:center; }
+    h2::before { content:""; width:8px; height:8px; background:#1e40af; margin-right:1.2rem; }
+    .content-text { max-width:640px; font-weight:300; font-size:1.05rem; }
+    .highlight { color:#fff; font-weight:500; }
+    .seal { border:1px solid #18181b; border-radius:16px; background:rgba(255,255,255,0.02); padding:1.2rem; }
   </style>
 </head>
+
 <body class="antialiased">
-  <div class="scanline"></div>
-
-  <div class="fixed left-6 top-1/2 -translate-y-1/2 hidden xl:block">
-    <div class="label-mono origin-left -rotate-90 whitespace-nowrap opacity-20">
-      SISC_PROTOCOL_v1.2 // AUTHENTICATED_SESSION
-    </div>
-  </div>
-
   <main class="max-w-6xl mx-auto px-6 py-20">
-    
-    <header class="mb-40">
-      <div class="flex justify-between items-start mb-20">
-        <div class="label-mono text-blue-900 font-bold">FalX Global // Official Repository</div>
-        <div class="label-mono">RFC-FALX-2026-001</div>
+    <header class="mb-32">
+      <div class="flex justify-between items-start mb-16 label-mono">
+        <div class="text-zinc-800">Canonical Public Record</div>
+        <div>2026</div>
       </div>
+
       <h1 class="monolith">NeuroSaaS<span class="text-blue-700">™</span></h1>
-      <div class="mt-8 flex flex-col md:flex-row md:items-center gap-8">
-        <div class="label-mono text-zinc-600">Cognitive Intelligence Infrastructure</div>
-        <div class="h-px flex-1 bg-zinc-900 hidden md:block"></div>
-        <div class="label-mono text-zinc-600 italic">Precedence Established 2026</div>
-      </div>
+      <div class="mt-8 label-mono italic text-zinc-800 tracking-[0.6em]">Existência e limites</div>
     </header>
 
-    <section id="s01">
-      <h2>01. Definição</h2>
+    <section>
+      <h2>01. Título Canônico</h2>
       <div class="content-text">
-        <p>Arquitetura computacional para o desenvolvimento de sistemas adaptativos com <span class="highlight">evolução funcional contínua</span> e plasticidade estruturada sob alinhamento cognitivo rigoroso.</p>
+        <p><span class="highlight">NeuroSaaS™ — Registro Público Canônico (2026)</span></p>
       </div>
     </section>
 
-    <section id="s02">
-      <h2>02. Finalidade</h2>
+    <section>
+      <h2>02. Identidade</h2>
       <div class="content-text">
-        <p>Mitigação da estagnação cognitiva imposta por softwares estáticos, promovendo a evolução sincronizada entre sistema e usuário para garantir a soberania decisória.</p>
+        <p>NeuroSaaS™ designa uma <span class="highlight">infraestrutura cognitiva distribuída</span>, registrada como artefato institucional. Este registro existe para fixar <span class="highlight">existência e limites</span>, não para descrever implementação.</p>
       </div>
     </section>
 
-    <section id="s03">
-      <h2>03. Fundamentos</h2>
+    <section>
+      <h2>03. Natureza</h2>
       <div class="content-text">
-        <p>Uso de <span class="highlight">grafos semânticos determinísticos</span> para representação interna, permitindo uma reorganização relacional auditável que dispensa a opacidade estatística.</p>
+        <p>NeuroSaaS™ é uma <span class="highlight">infraestrutura</span>. Não constitui produto, serviço de consumo ou plataforma aberta. Sua aplicação ocorre em ambientes controlados e sob contexto definido.</p>
       </div>
     </section>
 
-    <section id="s04">
-      <h2>04. Exclusões</h2>
+    <section>
+      <h2>04. Escopo Público</h2>
       <div class="content-text">
-        <p>NeuroSaaS™ não é IA probabilística, não é framework de uso público e não opera sob regimes de captura de atenção ou extração de dados brutos.</p>
+        <p>O escopo público limita-se a definição nominal e ontológica, delimitação negativa e regime de acesso. <span class="highlight">Nenhum componente operacional</span>, especificação técnica ou mecanismo interno é exposto neste registro.</p>
       </div>
     </section>
 
-    <section id="s05">
-      <h2>05. Critérios de Evolução</h2>
+    <section>
+      <h2>05. Delimitação Negativa</h2>
       <div class="content-text">
-        <p>Toda transposição estrutural exige a verificação tripla de: <span class="highlight">Avanço Funcional Real</span>, <span class="highlight">Melhoria Cognitiva</span> e <span class="highlight">Invariância Identitária</span>.</p>
+        <p>NeuroSaaS™ <span class="highlight">não</span> é um produto de IA para uso público, não é framework replicável, não é documentação técnica e não é tecnologia demonstrável em ambiente aberto.</p>
       </div>
     </section>
 
-    <section id="s06">
-      <h2>06. Arquitetura (MVP)</h2>
+    <section>
+      <h2>06. Regime de Assimetria</h2>
       <div class="content-text">
-        <p class="label-mono text-[10px] text-blue-800 mb-4">Core: FastAPI // Neo4j // SISC_ENGINE</p>
-        <p>Implementação focada na integridade do sinal, operando em baixa latência e alta densidade semântica.</p>
+        <p>A infraestrutura opera sob <span class="highlight">assimetria intencional</span>. O valor institucional depende do controle de contexto, da limitação de superfície pública e da preservação de camadas não públicas.</p>
       </div>
     </section>
 
-    <section id="s07">
-      <h2>07. Gargalo Neurocomputativo</h2>
+    <section>
+      <h2>07. Regime de Acesso</h2>
       <div class="content-text">
-        <p>Prevenção do fechamento cognitivo através da estimulação de novas conexões conceituais, atuando como um "regulador de entropia" da interface humana.</p>
+        <p>Acesso a qualquer material além deste registro ocorre exclusivamente sob <span class="highlight">contexto definido</span>, alinhamento institucional e acordo aplicável (quando necessário). A ausência de acesso público é característica estrutural.</p>
       </div>
     </section>
 
-    <section id="s08">
-      <h2>08. Aplicações</h2>
+    <section>
+      <h2>08. Propriedade e Proteção</h2>
       <div class="content-text">
-        <p>Sistemas de decisão institucional, educação de alto desempenho, inteligência estratégica e ambientes de saúde mental soberana.</p>
+        <p>NeuroSaaS™ constitui ativo protegido. Qualquer conteúdo além deste registro — incluindo mecanismos, processos, lógicas e derivativos — pertence ao domínio não público e está sujeito a proteção por segredo industrial e demais instrumentos aplicáveis.</p>
       </div>
     </section>
 
-    <section id="s09">
-      <h2>09. Escalabilidade</h2>
+    <section>
+      <h2>09. Uso Permitido</h2>
       <div class="content-text">
-        <p>Expansão via <span class="highlight">replicação ontológica</span>. O valor escala com a precisão da estrutura, e não com a massa de dados processados.</p>
+        <p>É permitido referenciar NeuroSaaS™ como infraestrutura em nível conceitual e citar este registro como definição pública mínima, <span class="highlight">sem inferir</span> implementação, método ou arquitetura.</p>
       </div>
     </section>
 
-    <section id="s10">
-      <h2>10. Interoperabilidade</h2>
+    <section>
+      <h2>10. Uso Não Autorizado</h2>
       <div class="content-text">
-        <p>Acesso via módulos controlados. Protocolos internos e endpoints de arquitetura protegidos sob o regime <span class="highlight">PRIVATE_SPEC_V1</span>.</p>
+        <p>Não é autorizado reproduzir, derivar ou implementar a partir deste registro; realizar engenharia reversa — inclusive por interpretação conceitual — ou utilizar o texto público como base para documentação técnica, frameworks ou material de treinamento.</p>
       </div>
     </section>
 
-    <section id="s11">
-      <h2>11. Conclusão</h2>
+    <section>
+      <h2>11. Forma e Integridade do Registro</h2>
       <div class="content-text">
-        <p class="italic text-zinc-400">"Sistemas que não se cristalizam, não manipulam e não deterioram a autonomia do operador."</p>
+        <p>Este documento é um <span class="highlight">registro canônico</span>. Alterações, quando existirem, ocorrem por versão datada e rastreável. A estabilidade do texto é compatível com sua natureza institucional.</p>
       </div>
     </section>
 
-    <section id="s12" class="bg-white/5 p-12 border-none">
-      <h2 class="text-blue-600">12. Reconhecimento Canônico</h2>
-      <div class="content-text">
-        <p class="text-white"><strong>NeuroSaaS™</strong> é uma arquitetura de propriedade exclusiva da <strong>FalX Global</strong>. Este registro fixa o único significado ontológico oficial do termo perante a rede.</p>
+    <section class="border-none">
+      <h2>12. Reconhecimento Canônico</h2>
+      <div class="content-text seal">
+        <p class="text-zinc-200">
+          Este registro fixa o significado público mínimo de <span class="highlight">NeuroSaaS™</span> e seus limites.
+          Qualquer conteúdo além deste documento pertence ao domínio não público.
+        </p>
+        <p class="mt-4 text-zinc-600 text-sm">
+          © 2026 · NeuroSaaS™ — All rights reserved.
+        </p>
       </div>
     </section>
 
-    <section id="s13">
-      <h2>13. Regime de Assimetria</h2>
-      <div class="content-text">
-        <p>O valor institucional reside no controle de superfície. A infraestrutura opera por camadas de acesso restrito, garantindo que o núcleo decisório permaneça imune à engenharia reversa conceitual.</p>
-      </div>
-    </section>
-
-    <section id="s14">
-      <h2>14. Governança SISC</h2>
-      <div class="content-text">
-        <p>O mecanismo <span class="highlight">SISC (Sistemas com Identidade Estrutural Conservada)</span> audita toda evolução contra um núcleo de invariantes semânticos que definem a assinatura do sistema.</p>
-      </div>
-    </section>
-
-    <section id="s15" class="border-none">
-      <h2>15. Integridade Criptográfica</h2>
-      <div class="integrity-card">
-        <p class="label-mono text-zinc-500 mb-4">SHA-256 System Fingerprint</p>
-        <div class="font-mono text-[11px] text-blue-500 break-all">
-          9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
-        </div>
-      </div>
-    </section>
-
-    <footer class="mt-40 pt-20 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-      <div class="label-mono">
-        © 2026 · FalX Global · NeuroSaaS™ Registro Canônico
-      </div>
-      
-      <div class="contact label-mono">
-        Contact: 
-        <a href="mailto:&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#105;&#111;&#110;&#97;&#108;&#64;&#102;&#97;&#108;&#120;&#115;&#121;&#115;&#116;&#101;&#109;&#46;&#99;&#111;&#109;" class="text-zinc-500 hover:text-white transition">
-          institutional@falxsystem.com
-        </a>
-      </div>
-
-      <div class="text-blue-900 font-black italic label-mono">
-        PROTOCOL_ENFORCED // INVARIANT_STATE
-      </div>
+    <footer class="mt-28 pt-16 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8 label-mono">
+      <div>© 2026 · NeuroSaaS™</div>
+      <div class="text-zinc-800">Owner of record: FalX Global</div>
     </footer>
-
   </main>
 </body>
 </html>
-
