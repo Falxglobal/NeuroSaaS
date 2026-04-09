@@ -4,82 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NeuroSaaS™ — Registro Público Canônico | FALX GLOBAL</title>
-  <meta name="description" content="Registro Público Canônico da infraestrutura cognitiva distribuída NeuroSaaS™. FALX GLOBAL.">
+  <meta name="description" content="Registro Público Canônico da infraestrutura cognitiva distribuída NeuroSaaS™. Definição ontológica, delimitação de escopo e regime de acesso institucional. FALX GLOBAL.">
   <meta name="robots" content="index, follow">
+  <meta property="og:title" content="NeuroSaaS™ — Registro Público Canônico | FALX GLOBAL">
+  <meta property="og:description" content="Infraestrutura cognitiva distribuída. Definição ontológica e regime de acesso institucional.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://falxsystem.com/neurosaas">
   <link rel="canonical" href="https://falxsystem.com/neurosaas">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"NeuroSaaS™ — Canonical Public Record","datePublished":"2026-02-11T00:00:00Z","author":{"@type":"Organization","name":"FALX GLOBAL","url":"https://falxsystem.com"},"copyrightHolder":{"@type":"Organization","name":"FALX GLOBAL"},"copyrightYear":"2026","license":"All rights reserved"}
+  {"@context":"https://schema.org","@type":"Article","headline":"NeuroSaaS™ — Canonical Public Record","datePublished":"2026-02-11T00:00:00Z","dateModified":"2026-02-11T00:00:00Z","author":{"@type":"Organization","name":"FALX GLOBAL","url":"https://falxsystem.com"},"copyrightHolder":{"@type":"Organization","name":"FALX GLOBAL"},"copyrightYear":"2026","license":"All rights reserved","inLanguage":"pt-BR"}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ═══════════════════════════════════════════════════
-       DESIGN TOKENS
-    ═══════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════
+       TOKENS
+    ═══════════════════════════════════════════════ */
     :root {
-      /* Backgrounds */
       --bg:          #020202;
       --bg-raised:   #060606;
-      --bg-elevated: #0A0A0A;
+      --bg-elevated: #0B0B0B;
 
-      /* Borders */
-      --rule-1: rgba(255,255,255,0.04);
-      --rule-2: rgba(255,255,255,0.08);
-      --rule-3: rgba(255,255,255,0.13);
+      --rule-0: rgba(255,255,255,0.025);
+      --rule-1: rgba(255,255,255,0.05);
+      --rule-2: rgba(255,255,255,0.09);
+      --rule-3: rgba(255,255,255,0.15);
 
-      /* Typography — warm whites */
-      --t0:  #F5F4F0;
-      --t1:  #C4C3BC;
-      --t2:  #7C7B73;
-      --t3:  #434340;
+      --t0:  #F4F3EF;
+      --t1:  #BFBEB6;
+      --t2:  #787770;
+      --t3:  #3E3E3A;
+      --t4:  #252522;
 
-      /* Accent — institutional steel blue */
-      --acc:      #4868E8;
-      --acc-glow: rgba(72,104,232,0.07);
-      --acc-bdr:  rgba(72,104,232,0.16);
+      --acc:      #4262E0;
+      --acc-mid:  rgba(66,98,224,0.15);
+      --acc-dim:  rgba(66,98,224,0.07);
+      --acc-bdr:  rgba(66,98,224,0.20);
 
-      /* Signal — deep crimson */
-      --sig:     #7A1515;
-      --sig-dim: rgba(122,21,21,0.06);
-      --sig-bdr: rgba(122,21,21,0.30);
+      --sig:     #6E1111;
+      --sig-mid: rgba(110,17,17,0.12);
+      --sig-dim: rgba(110,17,17,0.05);
+      --sig-bdr: rgba(110,17,17,0.28);
 
-      /* Type families */
-      --serif: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
-      --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono:  'JetBrains Mono', 'Courier New', monospace;
+      --serif:  'Times New Roman', 'Times', Georgia, serif;
+      --sans:   'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono:   'JetBrains Mono', 'Courier New', monospace;
 
-      /* Layout */
-      --nav-h:  64px;
-      --pad:    clamp(2rem, 7vw, 6rem);
-      --max:    820px;
+      --nav-h: 62px;
+      --pad:   clamp(1.75rem, 7vw, 6rem);
+      --max:   800px;
 
-      /* Spacing scale (8px base) */
-      --sp-1: 8px;
-      --sp-2: 16px;
-      --sp-3: 24px;
-      --sp-4: 32px;
-      --sp-5: 48px;
-      --sp-6: 64px;
-      --sp-7: 96px;
-      --sp-8: 128px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        RESET
-    ═══════════════════════════════════════════════════ */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-    }
-
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--bg); }
     body {
       background: var(--bg);
       color: var(--t1);
@@ -92,473 +76,405 @@
       overflow-x: hidden;
       min-height: 100vh;
     }
+    ::selection { background: rgba(66,98,224,0.22); color: var(--t0); }
+    a { color: inherit; text-decoration: none; }
 
-    ::selection {
-      background: rgba(72,104,232,0.25);
-      color: var(--t0);
+    /* ═══════════════════════════════════════════════
+       READING PROGRESS BAR
+    ═══════════════════════════════════════════════ */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 1px;
+      width: 0%;
+      background: var(--acc);
+      z-index: 9999;
+      transition: width 0.1s linear;
     }
 
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
+       BACKGROUND GRID
+    ═══════════════════════════════════════════════ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--rule-0) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rule-0) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ═══════════════════════════════════════════════
        NAVIGATION
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .site-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       height: var(--nav-h);
-      background: var(--bg);
+      background: rgba(2,2,2,0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--rule-1);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 var(--pad);
-      z-index: 200;
-      transition: border-color 0.4s ease;
+      z-index: 500;
+      transition: border-color 0.4s ease, background 0.4s ease;
     }
-
     .site-nav.scrolled {
       border-bottom-color: var(--rule-2);
+      background: rgba(2,2,2,0.98);
     }
-
     .nav-brand {
       display: flex;
-      align-items: baseline;
-      gap: 0.9rem;
-      text-decoration: none;
+      align-items: center;
+      gap: 0.85rem;
     }
-
     .nav-brand-mark {
       font-family: var(--sans);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.38em;
+      letter-spacing: 0.40em;
       text-transform: uppercase;
       color: var(--t0);
     }
-
-    .nav-brand-sep {
+    .nav-divider {
       width: 1px;
-      height: 11px;
-      background: var(--rule-3);
-      align-self: center;
+      height: 12px;
+      background: var(--rule-2);
     }
-
-    .nav-brand-doc {
+    .nav-doc-id {
       font-family: var(--mono);
-      font-size: 0.5rem;
+      font-size: 0.48rem;
       color: var(--t3);
       letter-spacing: 0.1em;
-      text-transform: uppercase;
     }
-
     .nav-right {
       display: flex;
       align-items: center;
       gap: 1.5rem;
     }
-
     .nav-pulse {
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.5rem;
       font-family: var(--mono);
-      font-size: 0.5rem;
+      font-size: 0.46rem;
       color: var(--t3);
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
-
     .nav-pulse-dot {
       width: 5px;
       height: 5px;
       background: var(--acc);
       border-radius: 50%;
-      animation: pulse-dot 3s ease-in-out infinite;
+      animation: pulse 3s ease-in-out infinite;
     }
-
-    @keyframes pulse-dot {
+    @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.3; transform: scale(0.7); }
+      50%       { opacity: 0.25; transform: scale(0.65); }
     }
-
-    .nav-status {
+    .nav-tag {
       font-family: var(--mono);
-      font-size: 0.48rem;
+      font-size: 0.46rem;
       font-weight: 500;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      padding: 5px 11px;
+      padding: 5px 12px;
       background: var(--sig);
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.82);
     }
 
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        PAGE WRAP
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .page-wrap {
+      position: relative;
+      z-index: 1;
       padding-top: var(--nav-h);
     }
 
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        DOCUMENT HEADER
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .doc-header {
-      padding: var(--sp-8) var(--pad) var(--sp-7);
+      padding: 7rem var(--pad) 5.5rem;
       border-bottom: 1px solid var(--rule-2);
       position: relative;
       overflow: hidden;
     }
-
     .doc-header::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
       width: 2px;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--acc), transparent 70%);
-      opacity: 0.4;
+      height: 55%;
+      background: linear-gradient(to bottom, var(--acc), transparent);
+      opacity: 0.5;
     }
-
     .doc-header::after {
       content: '';
       position: absolute;
-      top: -200px; right: -300px;
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(ellipse at center, rgba(72,104,232,0.05) 0%, transparent 65%);
+      top: -300px; right: -400px;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(66,98,224,0.045) 0%, transparent 65%);
       pointer-events: none;
     }
 
-    .inner {
-      max-width: var(--max);
-      margin: 0 auto;
-    }
+    .inner { max-width: var(--max); margin: 0 auto; }
 
-    /* Eyebrow */
     .doc-eyebrow {
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: var(--sp-5);
-      padding-bottom: var(--sp-4);
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
       border-bottom: 1px solid var(--rule-1);
     }
-
-    .eyebrow-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .eyebrow-badge {
       font-family: var(--mono);
-      font-size: 0.46rem;
+      font-size: 0.44rem;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       padding: 5px 12px;
       background: var(--sig);
-      color: rgba(255,255,255,0.88);
+      color: rgba(255,255,255,0.85);
     }
-
     .eyebrow-id {
       font-family: var(--mono);
-      font-size: 0.48rem;
+      font-size: 0.46rem;
+      color: var(--t3);
+      letter-spacing: 0.1em;
+    }
+    .eyebrow-rule { flex: 1; height: 1px; background: var(--rule-1); }
+    .eyebrow-date {
+      font-family: var(--mono);
+      font-size: 0.44rem;
       color: var(--t3);
       letter-spacing: 0.12em;
     }
 
-    .eyebrow-sep {
-      flex: 1;
-      height: 1px;
-      background: var(--rule-1);
-    }
-
-    .eyebrow-year {
-      font-family: var(--mono);
-      font-size: 0.46rem;
-      color: var(--t3);
-      letter-spacing: 0.14em;
-    }
-
-    /* Title */
     .doc-title {
       font-family: var(--serif);
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
       font-weight: 300;
-      line-height: 1.04;
-      letter-spacing: -0.01em;
+      line-height: 1.03;
+      letter-spacing: -0.015em;
       color: var(--t0);
-      margin-bottom: var(--sp-4);
+      margin-bottom: 2rem;
     }
-
     .doc-title sup {
-      font-size: 0.3em;
+      font-size: 0.28em;
       vertical-align: super;
       color: var(--acc);
       font-family: var(--sans);
       font-weight: 400;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
     }
+    .doc-title em { font-style: italic; color: var(--t1); font-weight: 300; }
 
-    .doc-title em {
-      font-style: italic;
-      font-weight: 300;
-      color: var(--t1);
-    }
-
-    /* Subtitle */
     .doc-subtitle {
-      font-size: 0.88rem;
+      font-size: 0.875rem;
       font-weight: 300;
-      line-height: 1.85;
+      line-height: 1.9;
       color: var(--t2);
-      max-width: 540px;
-      padding-left: 1.25rem;
+      max-width: 520px;
+      padding-left: 1.2rem;
       border-left: 1px solid var(--acc-bdr);
-      margin-bottom: var(--sp-6);
+      margin-bottom: 3.5rem;
     }
 
-    /* Metadata grid */
     .doc-meta {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       border: 1px solid var(--rule-2);
-      overflow: hidden;
     }
-
     .meta-cell {
-      padding: var(--sp-3) var(--sp-3);
+      padding: 1.2rem 1.4rem;
       border-right: 1px solid var(--rule-1);
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
-    .meta-cell:last-child {
-      border-right: none;
-    }
-
+    .meta-cell:last-child { border-right: none; }
     .meta-lbl {
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--t3);
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
     }
-
     .meta-val {
       font-family: var(--mono);
-      font-size: 0.65rem;
+      font-size: 0.63rem;
       color: var(--t1);
       font-weight: 400;
-      letter-spacing: 0.02em;
     }
+    .meta-val.active { color: var(--acc); }
 
-    .meta-val.active {
-      color: var(--acc);
-    }
-
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        TABLE OF CONTENTS
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .doc-toc {
-      padding: var(--sp-5) var(--pad);
+      padding: 2.5rem var(--pad);
       border-bottom: 1px solid var(--rule-2);
       background: var(--bg-raised);
     }
-
     .toc-header {
       display: flex;
       align-items: center;
       gap: 1.25rem;
-      margin-bottom: var(--sp-4);
+      margin-bottom: 1.5rem;
     }
-
-    .toc-heading {
+    .toc-label-text {
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--t3);
-      letter-spacing: 0.28em;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
       white-space: nowrap;
     }
-
-    .toc-rule {
-      flex: 1;
-      height: 1px;
-      background: var(--rule-1);
-    }
-
-    .toc-count {
+    .toc-rule { flex: 1; height: 1px; background: var(--rule-1); }
+    .toc-n-sections {
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--t3);
       letter-spacing: 0.1em;
+      white-space: nowrap;
     }
-
-    .toc-list {
-      list-style: none;
+    .toc-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2px;
+      list-style: none;
     }
-
-    .toc-item a {
+    .toc-grid li a {
       display: flex;
       align-items: baseline;
-      gap: 0.75rem;
-      padding: 0.6rem 0.8rem;
+      gap: 0.7rem;
+      padding: 0.55rem 0.75rem;
       font-family: var(--mono);
-      font-size: 0.6rem;
+      font-size: 0.58rem;
       color: var(--t3);
-      letter-spacing: 0.03em;
-      text-decoration: none;
+      letter-spacing: 0.02em;
       border: 1px solid transparent;
-      transition: all 0.18s ease;
+      transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
     }
-
-    .toc-item a:hover {
+    .toc-grid li a:hover,
+    .toc-grid li a.active {
       color: var(--t1);
-      background: rgba(255,255,255,0.02);
-      border-color: var(--rule-2);
+      background: rgba(255,255,255,0.025);
+      border-color: var(--rule-1);
     }
-
-    .toc-n {
-      font-size: 0.44rem;
+    .toc-grid li a.active { color: var(--acc); border-color: var(--acc-bdr); }
+    .toc-num {
+      font-size: 0.42rem;
       color: var(--acc);
-      opacity: 0.45;
+      opacity: 0.4;
       font-weight: 500;
       letter-spacing: 0.06em;
       flex-shrink: 0;
       transition: opacity 0.18s;
     }
+    .toc-grid li a:hover .toc-num,
+    .toc-grid li a.active .toc-num { opacity: 0.85; }
 
-    .toc-item a:hover .toc-n {
-      opacity: 0.8;
-    }
+    /* ═══════════════════════════════════════════════
+       MAIN BODY
+    ═══════════════════════════════════════════════ */
+    .doc-body { padding: 5.5rem var(--pad) 7rem; }
 
-    /* ═══════════════════════════════════════════════════
-       MAIN DOCUMENT BODY
-    ═══════════════════════════════════════════════════ */
-    .doc-main {
-      background: var(--bg);
-    }
-
-    .doc-body {
-      padding: var(--sp-7) var(--pad) var(--sp-8);
-    }
-
-    /* Section */
     .doc-section {
       position: relative;
-      padding: var(--sp-5) 0 var(--sp-6);
+      padding: 3rem 0 3.5rem;
       border-bottom: 1px solid var(--rule-1);
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
     }
+    .doc-section.visible { opacity: 1; transform: translateY(0); }
+    .doc-section:last-child { border-bottom: none; padding-bottom: 0; }
 
-    .doc-section:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    /* Section marker — large ghost number */
     .sec-ghost {
       position: absolute;
-      top: var(--sp-4);
-      right: 0;
+      top: 1.5rem; right: 0;
       font-family: var(--serif);
-      font-size: clamp(4rem, 8vw, 6rem);
+      font-size: clamp(5rem, 10vw, 7.5rem);
       font-weight: 300;
-      color: rgba(255,255,255,0.02);
+      color: rgba(255,255,255,0.018);
       line-height: 1;
       pointer-events: none;
       user-select: none;
       letter-spacing: -0.04em;
     }
-
     .sec-tag {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--acc);
-      letter-spacing: 0.24em;
+      letter-spacing: 0.26em;
       text-transform: uppercase;
-      opacity: 0.55;
-      margin-bottom: var(--sp-2);
+      opacity: 0.5;
+      margin-bottom: 0.85rem;
     }
-
     .sec-tag::before {
       content: '';
       display: block;
-      width: 16px;
+      width: 18px;
       height: 1px;
       background: currentColor;
-      opacity: 0.6;
     }
 
     h2 {
       font-family: var(--serif);
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
       font-weight: 400;
       line-height: 1.15;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       color: var(--t0);
-      margin-bottom: var(--sp-4);
+      margin-bottom: 1.75rem;
     }
-
-    h2 em {
-      font-style: italic;
-      color: var(--t1);
-      font-weight: 300;
-    }
+    h2 em { font-style: italic; color: var(--t1); font-weight: 300; }
 
     p {
-      font-size: 0.9rem;
-      line-height: 1.9;
+      font-size: 0.875rem;
+      line-height: 1.92;
       color: var(--t2);
-      margin-bottom: var(--sp-3);
+      margin-bottom: 1.1rem;
     }
+    p:last-child { margin-bottom: 0; }
+    p strong { font-weight: 500; color: var(--t1); }
+    p em { font-style: italic; color: var(--t1); }
+    sup { font-size: 0.6em; vertical-align: super; }
 
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    p strong {
-      font-weight: 500;
-      color: var(--t1);
-    }
-
-    p em {
-      font-style: italic;
-      color: var(--t1);
-    }
-
-    sup {
-      font-size: 0.6em;
-      vertical-align: super;
-    }
-
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        DEFINITION BOX
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .def-box {
-      position: relative;
-      background: var(--acc-glow);
+      background: var(--acc-dim);
       border: 1px solid var(--acc-bdr);
       border-left: 2px solid var(--acc);
-      padding: var(--sp-4) var(--sp-5);
-      margin: var(--sp-4) 0;
+      padding: 1.75rem 2rem;
+      margin: 1.75rem 0;
     }
-
     .def-label {
       display: block;
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--acc);
-      letter-spacing: 0.24em;
+      letter-spacing: 0.26em;
       text-transform: uppercase;
       opacity: 0.6;
-      margin-bottom: var(--sp-2);
+      margin-bottom: 0.85rem;
     }
-
     .def-body {
       font-family: var(--serif);
       font-size: 1.05rem;
@@ -567,330 +483,411 @@
       color: var(--t0);
       margin: 0;
     }
+    .def-body .hl { color: var(--acc); font-style: italic; font-weight: 400; }
 
-    .def-body .hl {
-      color: var(--acc);
-      font-style: italic;
-      font-weight: 400;
-    }
-
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        LEGAL BLOCK
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .legal-block {
       background: var(--sig-dim);
       border: 1px solid var(--sig-bdr);
       border-left: 2px solid var(--sig);
-      padding: var(--sp-4) var(--sp-5);
-      margin: var(--sp-4) 0;
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
     }
-
-    .legal-block.neutral {
-      background: rgba(255,255,255,0.02);
+    .legal-block.info {
+      background: rgba(255,255,255,0.015);
       border-color: var(--rule-2);
       border-left-color: var(--acc);
     }
-
     .legal-label {
       display: block;
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--sig);
-      letter-spacing: 0.22em;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
       opacity: 0.7;
-      margin-bottom: var(--sp-2);
+      margin-bottom: 0.75rem;
     }
-
-    .legal-block.neutral .legal-label {
-      color: var(--acc);
-    }
-
+    .legal-block.info .legal-label { color: var(--acc); }
     .legal-body {
       font-family: var(--mono);
-      font-size: 0.68rem;
-      line-height: 2;
+      font-size: 0.66rem;
+      line-height: 2.05;
       color: var(--t2);
     }
+    .legal-body strong { color: var(--t1); font-weight: 500; }
 
-    .legal-body strong {
-      color: var(--t1);
-      font-weight: 500;
-    }
-
-    /* ═══════════════════════════════════════════════════
-       SPECIFICATION TABLE
-    ═══════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════
+       SPEC TABLE
+    ═══════════════════════════════════════════════ */
     .spec-table {
       width: 100%;
-      border: 1px solid var(--rule-2);
       border-collapse: collapse;
-      margin: var(--sp-4) 0;
+      border: 1px solid var(--rule-2);
+      margin: 1.5rem 0;
     }
-
     .spec-table td {
-      padding: var(--sp-3) var(--sp-4);
+      padding: 1rem 1.4rem;
       border-bottom: 1px solid var(--rule-1);
       border-right: 1px solid var(--rule-1);
-      vertical-align: top;
+      vertical-align: middle;
     }
-
-    .spec-table td:last-child {
-      border-right: none;
-    }
-
-    .spec-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .spec-table .spec-key {
+    .spec-table td:last-child { border-right: none; }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .spec-table .k {
       font-family: var(--mono);
-      font-size: 0.48rem;
+      font-size: 0.46rem;
       color: var(--acc);
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      width: 30%;
-      white-space: nowrap;
+      width: 28%;
+      opacity: 0.65;
     }
+    .spec-table .v { font-size: 0.84rem; color: var(--t1); }
 
-    .spec-table .spec-val {
-      font-size: 0.85rem;
-      color: var(--t1);
+    /* ═══════════════════════════════════════════════
+       PILLARS GRID (new)
+    ═══════════════════════════════════════════════ */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--rule-1);
+      border: 1px solid var(--rule-2);
+      margin: 2rem 0;
+    }
+    .pillar-card {
+      background: var(--bg);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.2s ease;
+    }
+    .pillar-card:hover { background: var(--bg-raised); }
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 2px;
+      height: 32px;
+      background: var(--acc);
+      opacity: 0.3;
+      transition: height 0.3s var(--ease-out), opacity 0.3s ease;
+    }
+    .pillar-card:hover::before { opacity: 0.6; height: 100%; }
+    .pillar-num {
+      font-family: var(--mono);
+      font-size: 0.44rem;
+      color: var(--acc);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      display: block;
+      margin-bottom: 0.85rem;
+    }
+    .pillar-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
       font-weight: 400;
+      color: var(--t0);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.65rem;
+      display: block;
+    }
+    .pillar-desc {
+      font-size: 0.8rem;
+      color: var(--t2);
+      line-height: 1.75;
+      margin: 0;
     }
 
-    /* Access grid — three-column cards */
+    /* ═══════════════════════════════════════════════
+       ACCESS GRID (3-col)
+    ═══════════════════════════════════════════════ */
     .access-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--rule-1);
       border: 1px solid var(--rule-2);
-      margin: var(--sp-4) 0;
+      margin: 1.75rem 0;
     }
-
     .access-card {
       background: var(--bg);
-      padding: var(--sp-4);
+      padding: 1.75rem;
       transition: background 0.2s;
     }
-
-    .access-card:hover {
-      background: var(--bg-raised);
-    }
-
+    .access-card:hover { background: var(--bg-raised); }
     .access-key {
       display: block;
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--acc);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--rule-1);
+      opacity: 0.6;
+    }
+    .access-val { font-size: 0.8rem; color: var(--t2); line-height: 1.7; }
+
+    /* ═══════════════════════════════════════════════
+       CTA — ACESSO INSTITUCIONAL (new)
+    ═══════════════════════════════════════════════ */
+    .cta-box {
+      margin-top: 1rem;
+      padding: 3rem;
+      background: var(--bg-raised);
+      border: 1px solid var(--rule-2);
+      border-left: 2px solid var(--acc);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -200px; right: -200px;
+      width: 500px; height: 500px;
+      background: radial-gradient(ellipse at center, rgba(66,98,224,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-eyebrow {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.42rem;
+      color: var(--acc);
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-bottom: 1.25rem;
+    }
+    .cta-title {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      font-weight: 400;
+      color: var(--t0);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      margin-bottom: 1rem;
+    }
+    .cta-desc {
+      font-size: 0.875rem;
+      color: var(--t2);
+      line-height: 1.85;
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+    .cta-contacts { display: flex; flex-direction: column; gap: 2px; }
+    .cta-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 0.8rem 1.1rem;
+      border: 1px solid var(--rule-1);
+      background: var(--bg);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .cta-row:hover { border-color: var(--rule-2); background: var(--bg-elevated); }
+    .cta-type {
+      font-family: var(--mono);
+      font-size: 0.42rem;
+      color: var(--t3);
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      margin-bottom: var(--sp-2);
-      padding-bottom: var(--sp-2);
-      border-bottom: 1px solid var(--rule-1);
+      min-width: 80px;
     }
+    .cta-val { font-family: var(--mono); font-size: 0.62rem; color: var(--t1); }
 
-    .access-val {
-      font-size: 0.82rem;
-      color: var(--t2);
-      line-height: 1.6;
+    /* ═══════════════════════════════════════════════
+       BACK TO TOP
+    ═══════════════════════════════════════════════ */
+    #back-top {
+      position: fixed;
+      bottom: 2rem;
+      right: var(--pad);
+      width: 36px;
+      height: 36px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--rule-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+      z-index: 100;
     }
+    #back-top.visible { opacity: 1; transform: translateY(0); }
+    #back-top:hover { background: var(--bg-raised); border-color: var(--rule-3); }
+    #back-top svg { color: var(--t2); }
 
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        FOOTER
-    ═══════════════════════════════════════════════════ */
+    ═══════════════════════════════════════════════ */
     .doc-footer {
       border-top: 1px solid var(--rule-2);
       background: var(--bg-raised);
     }
-
-    .footer-body {
-      padding: var(--sp-7) var(--pad) var(--sp-5);
+    .footer-upper {
+      padding: 5rem var(--pad) 3.5rem;
       display: grid;
       grid-template-columns: 1.6fr 1fr 1fr;
-      gap: var(--sp-7);
+      gap: 5rem;
       border-bottom: 1px solid var(--rule-1);
     }
-
-    .footer-brand .f-mark {
+    .f-brand-mark {
       font-family: var(--sans);
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.34em;
+      letter-spacing: 0.38em;
       text-transform: uppercase;
       color: var(--t0);
       display: block;
-      margin-bottom: var(--sp-3);
+      margin-bottom: 1rem;
     }
-
-    .footer-brand .f-desc {
-      font-size: 0.78rem;
-      color: var(--t3);
-      line-height: 1.7;
-      max-width: 240px;
-    }
-
-    .footer-col .col-title {
+    .f-brand-desc { font-size: 0.78rem; color: var(--t3); line-height: 1.75; max-width: 220px; }
+    .footer-col { display: flex; flex-direction: column; gap: 3px; }
+    .col-label {
       display: block;
       font-family: var(--mono);
-      font-size: 0.44rem;
+      font-size: 0.42rem;
       color: var(--acc);
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      margin-bottom: var(--sp-3);
-      padding-bottom: var(--sp-2);
+      opacity: 0.45;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.75rem;
       border-bottom: 1px solid var(--rule-1);
-      opacity: 0.55;
     }
-
-    .footer-col .f-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .footer-col .f-links a {
-      font-size: 0.78rem;
+    .footer-col a {
+      font-size: 0.76rem;
       color: var(--t3);
-      text-decoration: none;
       padding: 4px 0;
-      transition: color 0.2s;
+      transition: color 0.18s;
       display: block;
     }
+    .footer-col a:hover { color: var(--t1); }
 
-    .footer-col .f-links a:hover {
-      color: var(--t1);
-    }
-
-    /* Footer notice */
-    .footer-notice {
-      padding: var(--sp-4) var(--pad);
-      border-bottom: 1px solid var(--rule-1);
-    }
-
-    .footer-notice-inner {
+    .footer-notice { padding: 1.5rem var(--pad); border-bottom: 1px solid var(--rule-1); }
+    .footer-notice-box {
       max-width: var(--max);
       margin: 0 auto;
       background: var(--sig-dim);
       border: 1px solid var(--sig-bdr);
       border-left: 2px solid var(--sig);
-      padding: var(--sp-3) var(--sp-4);
+      padding: 1.25rem 1.6rem;
       font-family: var(--mono);
-      font-size: 0.56rem;
-      line-height: 2;
+      font-size: 0.54rem;
+      line-height: 2.1;
       color: var(--t3);
     }
+    .footer-notice-box strong { color: var(--t2); font-weight: 500; }
 
-    .footer-notice-inner strong {
-      color: var(--t2);
-      font-weight: 500;
-    }
-
-    /* Footer bottom bar */
     .footer-bottom {
-      padding: var(--sp-4) var(--pad);
+      padding: 1.5rem var(--pad);
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: var(--sp-4);
+      gap: 2rem;
     }
-
-    .footer-bottom-left {
-      font-family: var(--mono);
-      font-size: 0.46rem;
-      color: var(--t3);
-      line-height: 2;
-    }
-
-    .footer-bottom-left span {
-      display: inline-block;
-      margin-right: 1.25rem;
-    }
-
-    .footer-hash {
+    .footer-bottom-meta {
       font-family: var(--mono);
       font-size: 0.44rem;
+      color: var(--t3);
+      line-height: 2.2;
+    }
+    .footer-bottom-meta span { display: inline-block; margin-right: 1.5rem; }
+    .footer-hash {
+      font-family: var(--mono);
+      font-size: 0.42rem;
       color: var(--t3);
       text-align: right;
       line-height: 2;
       word-break: break-all;
-      max-width: 380px;
+      max-width: 360px;
     }
-
-    .footer-hash .hash-label {
-      color: var(--t3);
-      font-size: 0.4rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+    .hash-label {
       display: block;
-      margin-bottom: 2px;
+      font-size: 0.38rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      color: var(--t4);
     }
 
-    /* ═══════════════════════════════════════════════════
+    /* ═══════════════════════════════════════════════
        RESPONSIVE
-    ═══════════════════════════════════════════════════ */
-    @media (max-width: 680px) {
-      :root { --pad: 1.5rem; }
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 700px) {
+      :root { --pad: 1.6rem; }
+      .doc-header { padding-top: 4.5rem; }
       .doc-meta { grid-template-columns: repeat(2, 1fr); }
       .meta-cell { border-right: none; border-bottom: 1px solid var(--rule-1); }
       .meta-cell:last-child { border-bottom: none; }
-      .toc-list { grid-template-columns: repeat(2, 1fr); }
+      .toc-grid { grid-template-columns: repeat(2, 1fr); }
+      .pillars-grid { grid-template-columns: 1fr; }
       .access-grid { grid-template-columns: 1fr; }
-      .footer-body { grid-template-columns: 1fr; gap: var(--sp-5); }
+      .footer-upper { grid-template-columns: 1fr; gap: 2.5rem; }
       .footer-bottom { flex-direction: column; }
       .footer-hash { text-align: left; max-width: 100%; }
-      .nav-brand-doc { display: none; }
-      .nav-brand-sep { display: none; }
+      .nav-doc-id, .nav-divider { display: none; }
       .sec-ghost { display: none; }
+      .cta-box { padding: 2rem; }
     }
-
     @media (max-width: 420px) {
-      .toc-list { grid-template-columns: 1fr; }
+      .toc-grid { grid-template-columns: 1fr; }
+      .nav-tag { display: none; }
       .doc-meta { grid-template-columns: 1fr 1fr; }
-      .nav-status { display: none; }
     }
-
+    @media (prefers-reduced-motion: reduce) {
+      .doc-section { opacity: 1; transform: none; transition: none; }
+      .pillar-card::before { transition: none; }
+    }
     @media print {
-      .site-nav { display: none; }
+      #progress-bar, .site-nav, #back-top, body::before { display: none; }
       .page-wrap { padding-top: 0; }
-      body, .doc-header, .doc-toc, .doc-main, .doc-footer {
-        background: #fff !important;
-        color: #111 !important;
-      }
+      body, .doc-header, .doc-toc, .doc-main, .doc-footer,
+      .doc-section, .pillar-card, .access-card, .cta-box { background: #fff !important; color: #111 !important; }
+      .doc-section { opacity: 1; transform: none; }
+      h2, .doc-title, .pillar-title, .cta-title { color: #000 !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ── NAVIGATION ──────────────────────────────────── -->
+  <div id="progress-bar" role="progressbar" aria-label="Progresso de leitura"></div>
+
+  <!-- ── NAV ──────────────────────────────────────────── -->
   <nav class="site-nav" id="siteNav" role="navigation" aria-label="Principal">
     <a href="https://falxsystem.com" class="nav-brand">
       <span class="nav-brand-mark">FALX</span>
-      <span class="nav-brand-sep" aria-hidden="true"></span>
-      <span class="nav-brand-doc">NEUROSAAS-CPR-2026</span>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <span class="nav-doc-id">NEUROSAAS-CPR-2026</span>
     </a>
     <div class="nav-right">
       <div class="nav-pulse" aria-live="polite">
         <span class="nav-pulse-dot" aria-hidden="true"></span>
         NeuroSaaS Ativo
       </div>
-      <span class="nav-status">Registro Canônico</span>
+      <span class="nav-tag" role="status">Registro Canônico</span>
     </div>
   </nav>
 
   <div class="page-wrap">
 
-    <!-- ── HEADER ────────────────────────────────────── -->
+    <!-- ── HEADER ───────────────────────────────────── -->
     <header class="doc-header" role="banner">
       <div class="inner">
 
         <div class="doc-eyebrow">
-          <span class="eyebrow-status">Registro Canônico</span>
+          <span class="eyebrow-badge">Registro Canônico</span>
           <span class="eyebrow-id">NEUROSAAS-CPR-2026 · v1.0.0</span>
-          <span class="eyebrow-sep" aria-hidden="true"></span>
-          <span class="eyebrow-year">2026</span>
+          <span class="eyebrow-rule" aria-hidden="true"></span>
+          <time class="eyebrow-date" datetime="2026-02-11">2026-02-11</time>
         </div>
 
         <h1 class="doc-title">
@@ -901,9 +898,10 @@
         <p class="doc-subtitle">
           Registro Público Canônico da infraestrutura cognitiva distribuída.
           Definição ontológica, delimitação de escopo e regime de acesso institucional.
+          FALX GLOBAL, 2026.
         </p>
 
-        <div class="doc-meta" role="table" aria-label="Metadados do Documento">
+        <div class="doc-meta" role="table" aria-label="Metadados do documento">
           <div class="meta-cell">
             <span class="meta-lbl">Document ID</span>
             <span class="meta-val">NEUROSAAS-CPR-2026</span>
@@ -917,7 +915,7 @@
             <span class="meta-val"><time datetime="2026-02-11">2026-02-11</time></span>
           </div>
           <div class="meta-cell">
-            <span class="meta-lbl">Titularidade</span>
+            <span class="meta-lbl">Titular</span>
             <span class="meta-val">FALX GLOBAL</span>
           </div>
           <div class="meta-cell">
@@ -929,115 +927,133 @@
       </div>
     </header>
 
-    <!-- ── TABLE OF CONTENTS ─────────────────────────── -->
-    <nav class="doc-toc" aria-labelledby="toc-heading">
+    <!-- ── TABLE OF CONTENTS ────────────────────────── -->
+    <nav class="doc-toc" aria-labelledby="toc-label">
       <div class="inner">
         <div class="toc-header">
-          <span class="toc-heading" id="toc-heading">Índice do Documento</span>
+          <span class="toc-label-text" id="toc-label">Índice do Documento</span>
           <span class="toc-rule" aria-hidden="true"></span>
-          <span class="toc-count">12 Seções</span>
+          <span class="toc-n-sections">14 Seções</span>
         </div>
-        <ol class="toc-list">
-          <li class="toc-item"><a href="#s01"><span class="toc-n">01</span>Título Canônico</a></li>
-          <li class="toc-item"><a href="#s02"><span class="toc-n">02</span>Identidade</a></li>
-          <li class="toc-item"><a href="#s03"><span class="toc-n">03</span>Natureza</a></li>
-          <li class="toc-item"><a href="#s04"><span class="toc-n">04</span>Escopo Público</a></li>
-          <li class="toc-item"><a href="#s05"><span class="toc-n">05</span>Delimitação Negativa</a></li>
-          <li class="toc-item"><a href="#s06"><span class="toc-n">06</span>Regime de Assimetria</a></li>
-          <li class="toc-item"><a href="#s07"><span class="toc-n">07</span>Regime de Acesso</a></li>
-          <li class="toc-item"><a href="#s08"><span class="toc-n">08</span>Propriedade e Proteção</a></li>
-          <li class="toc-item"><a href="#s09"><span class="toc-n">09</span>Uso Permitido</a></li>
-          <li class="toc-item"><a href="#s10"><span class="toc-n">10</span>Uso Não Autorizado</a></li>
-          <li class="toc-item"><a href="#s11"><span class="toc-n">11</span>Forma e Integridade</a></li>
-          <li class="toc-item"><a href="#s12"><span class="toc-n">12</span>Reconhecimento Canônico</a></li>
+        <ol class="toc-grid">
+          <li><a href="#s01" class="toc-link" data-section="s01"><span class="toc-num">01</span>Título Canônico</a></li>
+          <li><a href="#s02" class="toc-link" data-section="s02"><span class="toc-num">02</span>Identidade</a></li>
+          <li><a href="#s03" class="toc-link" data-section="s03"><span class="toc-num">03</span>Natureza</a></li>
+          <li><a href="#s04" class="toc-link" data-section="s04"><span class="toc-num">04</span>Pilares Fundamentais</a></li>
+          <li><a href="#s05" class="toc-link" data-section="s05"><span class="toc-num">05</span>Escopo Público</a></li>
+          <li><a href="#s06" class="toc-link" data-section="s06"><span class="toc-num">06</span>Delimitação Negativa</a></li>
+          <li><a href="#s07" class="toc-link" data-section="s07"><span class="toc-num">07</span>Regime de Assimetria</a></li>
+          <li><a href="#s08" class="toc-link" data-section="s08"><span class="toc-num">08</span>Regime de Acesso</a></li>
+          <li><a href="#s09" class="toc-link" data-section="s09"><span class="toc-num">09</span>Propriedade e Proteção</a></li>
+          <li><a href="#s10" class="toc-link" data-section="s10"><span class="toc-num">10</span>Uso Permitido</a></li>
+          <li><a href="#s11" class="toc-link" data-section="s11"><span class="toc-num">11</span>Uso Não Autorizado</a></li>
+          <li><a href="#s12" class="toc-link" data-section="s12"><span class="toc-num">12</span>Forma e Integridade</a></li>
+          <li><a href="#s13" class="toc-link" data-section="s13"><span class="toc-num">13</span>Reconhecimento Canônico</a></li>
+          <li><a href="#s14" class="toc-link" data-section="s14"><span class="toc-num">14</span>Acesso Institucional</a></li>
         </ol>
       </div>
     </nav>
 
-    <!-- ── MAIN CONTENT ──────────────────────────────── -->
+    <!-- ── MAIN ─────────────────────────────────────── -->
     <main class="doc-main" role="main">
       <div class="inner doc-body">
 
-        <!-- § 01 -->
+        <!-- §01 -->
         <article class="doc-section" id="s01">
           <span class="sec-ghost" aria-hidden="true">01</span>
           <span class="sec-tag">01 · Título Canônico</span>
           <h2>Título Canônico</h2>
           <p><strong>NeuroSaaS<sup>™</sup> — Registro Público Canônico (2026)</strong></p>
-          <div class="legal-block neutral">
-            <span class="legal-label">Identificação Formal</span>
-            <p class="legal-body">
-              Referência: <strong>NEUROSAAS-CPR-2026</strong> · Versão: <strong>1.0.0</strong> · Titular: <strong>FALX GLOBAL</strong><br>
-              Publicado em: <strong>2026-02-11T00:00:00Z</strong> · Jurisdição: Aplicável
-            </p>
+          <div class="legal-block info">
+            <span class="legal-label">Identificação Formal do Documento</span>
+            <div class="legal-body">
+              Referência: <strong>NEUROSAAS-CPR-2026</strong> &nbsp;·&nbsp; Versão: <strong>1.0.0</strong> &nbsp;·&nbsp; Titular: <strong>FALX GLOBAL</strong><br>
+              Publicação: <strong>2026-02-11T00:00:00Z</strong> &nbsp;·&nbsp; Jurisdição: Aplicável &nbsp;·&nbsp; Idioma: Português (Brasil)
+            </div>
           </div>
         </article>
 
-        <!-- § 02 -->
+        <!-- §02 -->
         <article class="doc-section" id="s02">
           <span class="sec-ghost" aria-hidden="true">02</span>
           <span class="sec-tag">02 · Identidade</span>
           <h2>Identidade</h2>
-
           <div class="def-box">
             <span class="def-label">Definição Ontológica</span>
-            <p class="def-body">
-              NeuroSaaS<sup>™</sup> designa uma <span class="hl">infraestrutura cognitiva distribuída</span>,
-              registrada como artefato institucional. Este registro existe para fixar existência e limites —
-              não para descrever implementação.
-            </p>
+            <p class="def-body">NeuroSaaS<sup>™</sup> designa uma <span class="hl">infraestrutura cognitiva distribuída</span>, registrada como artefato institucional. Este registro existe para fixar existência e limites — não para descrever implementação.</p>
           </div>
-
-          <p>NeuroSaaS<sup>™</sup> constitui uma arquitetura projetada para <strong>expandir, em vez de substituir</strong>, as capacidades mentais em ambientes de alta complexidade. Opera como camada estrutural permanente de evolução adaptativa, sustentando coerência decisória e governança estrutural.</p>
-
+          <p>NeuroSaaS<sup>™</sup> constitui uma arquitetura projetada para <strong>expandir, em vez de substituir</strong>, as capacidades mentais em ambientes de alta complexidade. Opera como camada estrutural permanente de evolução adaptativa, sustentando coerência decisória e governança estrutural ao longo do tempo.</p>
           <table class="spec-table" aria-label="Especificações de identidade">
             <tbody>
-              <tr>
-                <td class="spec-key">Categoria</td>
-                <td class="spec-val">Infraestrutura Cognitiva Distribuída</td>
-              </tr>
-              <tr>
-                <td class="spec-key">Paradigma</td>
-                <td class="spec-val">Cognitive Augmentation — expansão, não substituição</td>
-              </tr>
-              <tr>
-                <td class="spec-key">Domínio</td>
-                <td class="spec-val">Ambientes Controlados e Contextos Institucionais Definidos</td>
-              </tr>
+              <tr><td class="k">Categoria</td><td class="v">Infraestrutura Cognitiva Distribuída</td></tr>
+              <tr><td class="k">Paradigma</td><td class="v">Cognitive Augmentation — expansão deliberada, não substituição</td></tr>
+              <tr><td class="k">Domínio</td><td class="v">Ambientes Controlados e Contextos Institucionais Definidos</td></tr>
+              <tr><td class="k">Origem</td><td class="v">FALX GLOBAL — Infraestrutura de Decisão para Organizações Complexas</td></tr>
             </tbody>
           </table>
         </article>
 
-        <!-- § 03 -->
+        <!-- §03 -->
         <article class="doc-section" id="s03">
           <span class="sec-ghost" aria-hidden="true">03</span>
           <span class="sec-tag">03 · Natureza</span>
           <h2>Natureza</h2>
           <p>NeuroSaaS<sup>™</sup> é uma <strong>infraestrutura</strong>. Não constitui produto, serviço de consumo ou plataforma aberta. Sua aplicação ocorre exclusivamente em ambientes controlados, sob contexto institucional definido e verificado.</p>
-          <p>A infraestrutura fundamenta-se em princípios de <em>metacognição</em>, <em>ética inferencial</em> e <em>soberania mental</em>. Opera através de fricções inteligentes que engajam o pensamento deliberado e analítico — em contraposição direta a arquiteturas degenerativas que recompensam reação instintiva e dependência cognitiva.</p>
+          <p>A infraestrutura fundamenta-se em princípios de <em>metacognição</em>, <em>ética inferencial</em> e <em>soberania mental</em>. Opera através de fricções inteligentes que engajam o pensamento deliberado e analítico — em contraposição direta a arquiteturas degenerativas que recompensam reação instintiva e promovem dependência cognitiva.</p>
+          <p>A distinção é estrutural: onde outros sistemas capturam atenção e delegam julgamento, NeuroSaaS<sup>™</sup> <strong>devolve clareza e preserva agência</strong>.</p>
         </article>
 
-        <!-- § 04 -->
+        <!-- §04 — Pilares Fundamentais [NEW] -->
         <article class="doc-section" id="s04">
           <span class="sec-ghost" aria-hidden="true">04</span>
-          <span class="sec-tag">04 · Escopo Público</span>
-          <h2>Escopo Público</h2>
-          <p>O escopo deste registro limita-se a três dimensões: <strong>definição nominal e ontológica</strong>, <strong>delimitação negativa do conceito</strong> e <strong>regime de acesso institucional</strong>.</p>
-          <p>Nenhum componente operacional, especificação técnica ou mecanismo interno é exposto neste documento. As camadas de dados, transparência epistêmica, <em>designed friction</em>, métricas de autonomia e protocolos de implementação pertencem integralmente ao domínio não público e estão sujeitas ao regime de proteção descrito na Seção 08.</p>
+          <span class="sec-tag">04 · Pilares Fundamentais</span>
+          <h2>Pilares Fundamentais</h2>
+          <p>A infraestrutura NeuroSaaS<sup>™</sup> é sustentada por quatro pilares filosóficos e operacionais, que definem sua arquitetura de valor e distinguem sua abordagem de qualquer produto ou plataforma convencional.</p>
+          <div class="pillars-grid" role="list">
+            <div class="pillar-card" role="listitem">
+              <span class="pillar-num">Pilar I</span>
+              <span class="pillar-title">Metacognição</span>
+              <p class="pillar-desc">Sistemas que tornam o pensamento visível para quem pensa. Consciência sobre os próprios processos cognitivos como condição necessária de decisão superior e governança intencional.</p>
+            </div>
+            <div class="pillar-card" role="listitem">
+              <span class="pillar-num">Pilar II</span>
+              <span class="pillar-title">Soberania Mental</span>
+              <p class="pillar-desc">Preservação rigorosa da agência e autonomia cognitiva. Infraestrutura que fortalece o julgamento humano — nunca o captura, enfraquece ou substitui por delegação irrefletida.</p>
+            </div>
+            <div class="pillar-card" role="listitem">
+              <span class="pillar-num">Pilar III</span>
+              <span class="pillar-title">Fricção Inteligente</span>
+              <p class="pillar-desc">Design deliberado de resistência ao impulso cognitivo. Mecanismos que engajam o Sistema 2 analítico em contraposição à recompensa de reações automáticas e atalhos de baixa qualidade.</p>
+            </div>
+            <div class="pillar-card" role="listitem">
+              <span class="pillar-num">Pilar IV</span>
+              <span class="pillar-title">Ética Inferencial</span>
+              <p class="pillar-desc">Transparência sobre as inferências que a infraestrutura realiza. Inferências devolvidas ao usuário como instrumento de empoderamento epistêmico — nunca como vetor de manipulação ou controle.</p>
+            </div>
+          </div>
         </article>
 
-        <!-- § 05 -->
+        <!-- §05 -->
         <article class="doc-section" id="s05">
           <span class="sec-ghost" aria-hidden="true">05</span>
-          <span class="sec-tag">05 · Delimitação Negativa</span>
+          <span class="sec-tag">05 · Escopo Público</span>
+          <h2>Escopo Público</h2>
+          <p>O escopo deste registro limita-se a três dimensões: <strong>definição nominal e ontológica</strong>, <strong>delimitação negativa do conceito</strong> e <strong>regime de acesso institucional</strong>.</p>
+          <p>Nenhum componente operacional, especificação técnica ou mecanismo interno é exposto neste documento. As camadas de dados, transparência epistêmica, <em>designed friction</em>, métricas de autonomia e protocolos de implementação pertencem integralmente ao domínio não público e estão sujeitas ao regime de proteção descrito na Seção 09.</p>
+        </article>
+
+        <!-- §06 -->
+        <article class="doc-section" id="s06">
+          <span class="sec-ghost" aria-hidden="true">06</span>
+          <span class="sec-tag">06 · Delimitação Negativa</span>
           <h2>Delimitação Negativa</h2>
-          <p>Para precisão conceitual e fins de registro, estabelece-se que NeuroSaaS<sup>™</sup> <strong>não constitui</strong> nenhuma das categorias a seguir:</p>
+          <p>Para precisão conceitual e fins de registro público, estabelece-se formalmente que NeuroSaaS<sup>™</sup> <strong>não constitui</strong> nenhuma das categorias a seguir:</p>
           <div class="legal-block">
-            <span class="legal-label">Não É — Delimitação Formal</span>
+            <span class="legal-label">Não É — Delimitação Formal e Definitiva</span>
             <div class="legal-body">
               Um produto de inteligência artificial para uso público ou consumo irrestrito<br>
               Um <em>framework</em> replicável, código aberto ou tecnologia de domínio público<br>
-              Documentação técnica distribuível ou material de referência externo<br>
+              Documentação técnica distribuível ou material de referência para terceiros<br>
               Tecnologia demonstrável ou auditável em ambiente aberto<br>
               Plataforma de consumo, SaaS convencional ou serviço por assinatura genérico<br>
               Ferramenta de automação superficial ou substituto de capacidade humana
@@ -1045,48 +1061,46 @@
           </div>
         </article>
 
-        <!-- § 06 -->
-        <article class="doc-section" id="s06">
-          <span class="sec-ghost" aria-hidden="true">06</span>
-          <span class="sec-tag">06 · Regime de Assimetria</span>
-          <h2>Regime de Assimetria</h2>
-          <p>A infraestrutura opera sob <strong>assimetria intencional e estrutural</strong>. O valor institucional depende do controle rigoroso de contexto, da limitação deliberada da superfície pública e da preservação de camadas não expostas.</p>
-          <p>Esta assimetria não se confunde com assimetria cognitiva de natureza explorativa. NeuroSaaS<sup>™</sup> implementa <em>simetria informacional</em> com seus usuários autorizados — onde inferências sobre estados mentais são devolvidas ao próprio usuário, combatendo ativamente a injustiça epistêmica que caracteriza arquiteturas de captura de atenção.</p>
-        </article>
-
-        <!-- § 07 -->
+        <!-- §07 -->
         <article class="doc-section" id="s07">
           <span class="sec-ghost" aria-hidden="true">07</span>
-          <span class="sec-tag">07 · Regime de Acesso</span>
+          <span class="sec-tag">07 · Regime de Assimetria</span>
+          <h2>Regime de Assimetria</h2>
+          <p>A infraestrutura opera sob <strong>assimetria intencional e estrutural</strong>. O valor institucional depende do controle rigoroso de contexto, da limitação deliberada da superfície pública e da preservação de camadas não expostas.</p>
+          <p>Esta assimetria não se confunde com assimetria cognitiva de natureza explorativa. NeuroSaaS<sup>™</sup> implementa <em>simetria informacional</em> com seus usuários autorizados — onde inferências sobre estados mentais são devolvidas ao próprio usuário como instrumento de empoderamento, combatendo ativamente a injustiça epistêmica característica de arquiteturas de captura de atenção.</p>
+        </article>
+
+        <!-- §08 -->
+        <article class="doc-section" id="s08">
+          <span class="sec-ghost" aria-hidden="true">08</span>
+          <span class="sec-tag">08 · Regime de Acesso</span>
           <h2>Regime de Acesso</h2>
           <p>Acesso a qualquer material além do presente registro ocorre <strong>exclusivamente</strong> sob a confluência das seguintes condições:</p>
-
           <div class="access-grid" role="list">
             <div class="access-card" role="listitem">
               <span class="access-key">Contexto Definido</span>
-              <p class="access-val">Ambiente operacional específico, controlado e previamente delimitado.</p>
+              <p class="access-val">Ambiente operacional específico, controlado e previamente delimitado pela FALX GLOBAL.</p>
             </div>
             <div class="access-card" role="listitem">
               <span class="access-key">Alinhamento Institucional</span>
-              <p class="access-val">Compatibilidade organizacional verificada e validada.</p>
+              <p class="access-val">Compatibilidade organizacional verificada e validada em processo formal.</p>
             </div>
             <div class="access-card" role="listitem">
               <span class="access-key">Acordo Aplicável</span>
-              <p class="access-val">Instrumentos contratuais e vinculativos quando requeridos.</p>
+              <p class="access-val">Instrumentos contratuais vinculativos e de confidencialidade quando requeridos.</p>
             </div>
           </div>
-
           <p>A ausência de acesso público é <strong>característica estrutural</strong> desta infraestrutura — não limitação temporária, não falha de comunicação, não estado transitório.</p>
         </article>
 
-        <!-- § 08 -->
-        <article class="doc-section" id="s08">
-          <span class="sec-ghost" aria-hidden="true">08</span>
-          <span class="sec-tag">08 · Propriedade e Proteção</span>
+        <!-- §09 -->
+        <article class="doc-section" id="s09">
+          <span class="sec-ghost" aria-hidden="true">09</span>
+          <span class="sec-tag">09 · Propriedade e Proteção</span>
           <h2>Propriedade e Proteção</h2>
           <p>NeuroSaaS<sup>™</sup> constitui <strong>ativo intelectual protegido</strong>. Qualquer conteúdo além do presente registro — incluindo mecanismos, processos, lógicas operacionais e derivativos — pertence ao domínio não público e está sujeito a proteção integral por:</p>
           <div class="legal-block">
-            <span class="legal-label">Instrumentos de Proteção</span>
+            <span class="legal-label">Instrumentos de Proteção Aplicáveis</span>
             <div class="legal-body">
               Segredo industrial (<em>trade secret</em>) nos termos da legislação aplicável<br>
               Propriedade intelectual registrada e em processo de registro<br>
@@ -1097,27 +1111,27 @@
           <p>A titularidade integral pertence a <strong>FALX GLOBAL</strong>. Nenhuma transferência de direitos ocorre por qualquer forma de acesso, referência ou citação a este registro.</p>
         </article>
 
-        <!-- § 09 -->
-        <article class="doc-section" id="s09">
-          <span class="sec-ghost" aria-hidden="true">09</span>
-          <span class="sec-tag">09 · Uso Permitido</span>
+        <!-- §10 -->
+        <article class="doc-section" id="s10">
+          <span class="sec-ghost" aria-hidden="true">10</span>
+          <span class="sec-tag">10 · Uso Permitido</span>
           <h2>Uso Permitido</h2>
           <p>Sem necessidade de autorização expressa prévia, é permitido:</p>
-          <div class="legal-block neutral">
-            <span class="legal-label">Usos Autorizados</span>
+          <div class="legal-block info">
+            <span class="legal-label">Usos Autorizados por Este Registro</span>
             <div class="legal-body">
               <strong>(a)</strong> Referenciar NeuroSaaS<sup>™</sup> como infraestrutura em nível conceitual e nominal<br>
               <strong>(b)</strong> Citar este registro como definição pública mínima, sem inferir implementação, método ou arquitetura interna<br>
               <strong>(c)</strong> Incluir o registro em bibliografias acadêmicas ou técnicas com atribuição apropriada a FALX GLOBAL
             </div>
           </div>
-          <p>Qualquer uso além do descrito nesta seção requer autorização expressa e prévia de <strong>FALX GLOBAL</strong>.</p>
+          <p>Qualquer uso além do descrito nesta seção requer autorização expressa e prévia de FALX GLOBAL. Ver Seção 14 para contato institucional.</p>
         </article>
 
-        <!-- § 10 -->
-        <article class="doc-section" id="s10">
-          <span class="sec-ghost" aria-hidden="true">10</span>
-          <span class="sec-tag">10 · Uso Não Autorizado</span>
+        <!-- §11 -->
+        <article class="doc-section" id="s11">
+          <span class="sec-ghost" aria-hidden="true">11</span>
+          <span class="sec-tag">11 · Uso Não Autorizado</span>
           <h2>Uso Não Autorizado</h2>
           <div class="legal-block">
             <span class="legal-label">Usos Expressamente Vedados</span>
@@ -1132,81 +1146,98 @@
           </div>
         </article>
 
-        <!-- § 11 -->
-        <article class="doc-section" id="s11">
-          <span class="sec-ghost" aria-hidden="true">11</span>
-          <span class="sec-tag">11 · Forma e Integridade</span>
-          <h2>Forma e Integridade do Registro</h2>
-          <p>Este documento é um <strong>registro canônico</strong>. Alterações, quando existirem, ocorrem exclusivamente por versão datada, rastreável e publicamente identificável. A estabilidade deliberada do texto é compatível com sua natureza institucional.</p>
-          <p>Versões anteriores permanecem válidas para seu período de vigência. A versão corrente é sempre identificável por metadados de publicação e hash criptográfico verificável. Qualquer circulação de versão sem hash verificável deve ser tratada como não-oficial.</p>
-        </article>
-
-        <!-- § 12 -->
+        <!-- §12 -->
         <article class="doc-section" id="s12">
           <span class="sec-ghost" aria-hidden="true">12</span>
-          <span class="sec-tag">12 · Reconhecimento Canônico</span>
-          <h2>Reconhecimento Canônico</h2>
+          <span class="sec-tag">12 · Forma e Integridade</span>
+          <h2>Forma e Integridade do Registro</h2>
+          <p>Este documento é um <strong>registro canônico</strong>. Alterações, quando existirem, ocorrem exclusivamente por versão datada, rastreável e publicamente identificável. A estabilidade deliberada do texto é compatível com sua natureza institucional.</p>
+          <p>Versões anteriores permanecem válidas para seu período de vigência. A versão corrente é sempre identificável por metadados de publicação e hash criptográfico verificável. Qualquer circulação de versão sem hash verificável deve ser tratada como não-oficial e sem validade institucional.</p>
+        </article>
 
+        <!-- §13 -->
+        <article class="doc-section" id="s13">
+          <span class="sec-ghost" aria-hidden="true">13</span>
+          <span class="sec-tag">13 · Reconhecimento Canônico</span>
+          <h2>Reconhecimento Canônico</h2>
           <div class="def-box">
             <span class="def-label">Fixação de Significado</span>
-            <p class="def-body">
-              Este registro fixa o <span class="hl">significado público mínimo</span> de NeuroSaaS<sup>™</sup>
-              e seus limites precisos. Qualquer conteúdo além deste documento pertence ao domínio não público
-              e opera sob regime de proteção integral.
-            </p>
+            <p class="def-body">Este registro fixa o <span class="hl">significado público mínimo</span> de NeuroSaaS<sup>™</sup> e seus limites precisos. Qualquer conteúdo além deste documento pertence ao domínio não público e opera sob regime de proteção integral de FALX GLOBAL.</p>
           </div>
-
           <p>NeuroSaaS<sup>™</sup> representa a transição de uma arquitetura de assimetria cognitiva explorativa para uma infraestrutura consciente que opera como <em>parceiro epistêmico</em> — reforçando agência humana através de metacognição, transparência inferencial e fricções inteligentes projetadas.</p>
+          <p>O conceito redefine software como <strong>espelho reflexivo da cognição</strong>, não como prótese que substitui o pensamento ou sistema que recompensa a delegação irrefletida de julgamento. Esta é a proposição fundamental e irredutível de NeuroSaaS<sup>™</sup>.</p>
+        </article>
 
-          <p>O conceito redefine software como <strong>espelho reflexivo da cognição</strong>, não como prótese que substitui o pensamento ou sistema que recompensa a delegação irrefletida de julgamento.</p>
+        <!-- §14 — Acesso Institucional [NEW] -->
+        <article class="doc-section" id="s14">
+          <span class="sec-ghost" aria-hidden="true">14</span>
+          <span class="sec-tag">14 · Acesso Institucional</span>
+          <h2>Acesso Institucional</h2>
+          <p>Organizações com interesse em acesso institucional a NeuroSaaS<sup>™</sup> devem iniciar contato formal. O processo envolve avaliação de compatibilidade, definição de contexto operacional e, quando aplicável, formalização de instrumentos contratuais.</p>
+
+          <div class="cta-box">
+            <span class="cta-eyebrow">Contato Institucional · FALX GLOBAL</span>
+            <h3 class="cta-title">Solicitar Acesso Institucional</h3>
+            <p class="cta-desc">O contato deve ser realizado por representante institucional autorizado, com identificação da organização, contexto de aplicação e objetivos pretendidos. Todas as comunicações são tratadas sob confidencialidade.</p>
+            <div class="cta-contacts">
+              <div class="cta-row">
+                <span class="cta-type">Web</span>
+                <a href="https://falxsystem.com" class="cta-val">falxsystem.com</a>
+              </div>
+              <div class="cta-row">
+                <span class="cta-type">Institucional</span>
+                <a href="mailto:institutional@falxsystem.com" class="cta-val">institutional@falxsystem.com</a>
+              </div>
+              <div class="cta-row">
+                <span class="cta-type">Geral</span>
+                <a href="mailto:contato@falx.com.br" class="cta-val">contato@falx.com.br</a>
+              </div>
+            </div>
+          </div>
         </article>
 
       </div>
     </main>
 
-    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <!-- ── FOOTER ────────────────────────────────────── -->
     <footer class="doc-footer" role="contentinfo">
 
-      <div class="footer-body">
-        <div class="footer-brand">
-          <span class="f-mark">FALX</span>
-          <p class="f-desc">Infraestrutura de Decisão para Organizações Complexas. Acesso sob contexto institucional.</p>
+      <div class="footer-upper">
+        <div>
+          <span class="f-brand-mark">FALX</span>
+          <p class="f-brand-desc">Infraestrutura de Decisão para Organizações Complexas. Acesso sob contexto institucional definido.</p>
         </div>
         <div class="footer-col">
-          <span class="col-title">Protocolos</span>
-          <ul class="f-links">
-            <li><a href="#">Leitura Sistêmica</a></li>
-            <li><a href="#">Arquitetura de Dados</a></li>
-            <li><a href="#">IA Proprietária</a></li>
-            <li><a href="#">Casos de Uso</a></li>
-          </ul>
+          <span class="col-label">Protocolos</span>
+          <a href="#">Leitura Sistêmica</a>
+          <a href="#">Arquitetura de Dados</a>
+          <a href="#">IA Proprietária</a>
+          <a href="#">Casos de Uso</a>
         </div>
         <div class="footer-col">
-          <span class="col-title">Contato Institucional</span>
-          <ul class="f-links">
-            <li><a href="https://falxsystem.com">falxsystem.com</a></li>
-            <li><a href="mailto:institutional@falxsystem.com">institutional@falxsystem.com</a></li>
-            <li><a href="mailto:contato@falx.com.br">contato@falx.com.br</a></li>
-            <li><a href="#">Documentação Técnica</a></li>
-          </ul>
+          <span class="col-label">Contato</span>
+          <a href="https://falxsystem.com">falxsystem.com</a>
+          <a href="mailto:institutional@falxsystem.com">institutional@falxsystem.com</a>
+          <a href="mailto:contato@falx.com.br">contato@falx.com.br</a>
+          <a href="#">Documentação Técnica</a>
         </div>
       </div>
 
       <div class="footer-notice">
-        <div class="footer-notice-inner">
+        <div class="footer-notice-box">
           <strong>© 2026 · NeuroSaaS™ — Todos os direitos reservados.</strong><br>
           <strong>© 2026 · FALX GLOBAL — Titular do Registro.</strong><br>
-          NeuroSaaS™ é marca registrada de FALX GLOBAL. Este registro canônico estabelece os limites públicos do
-          conceito. Qualquer uso além do escopo definido na Seção 09 requer autorização expressa e prévia.
+          NeuroSaaS™ é marca registrada de FALX GLOBAL. Este registro canônico estabelece os limites públicos do conceito.
+          Qualquer uso além do escopo definido na Seção 10 requer autorização expressa e prévia.
           Nenhuma transferência de direitos decorre de referência, citação ou acesso a este documento.
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-left">
+        <div class="footer-bottom-meta">
           <span><strong>Versão:</strong> 1.0.0</span>
-          <span><strong>Atualização:</strong> 2026-02-11T00:00:00Z</span>
-          <span><strong>Referência:</strong> NEUROSAAS-CPR-2026</span>
+          <span><strong>Publicação:</strong> 2026-02-11T00:00:00Z</span>
+          <span><strong>Ref:</strong> NEUROSAAS-CPR-2026</span>
         </div>
         <div class="footer-hash">
           <span class="hash-label">SHA-256 · Verificação de Integridade</span>
@@ -1218,19 +1249,76 @@
 
   </div><!-- /page-wrap -->
 
+  <!-- Back to top button -->
+  <button id="back-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
   <script>
     (function () {
+      'use strict';
+
       var nav = document.getElementById('siteNav');
+      var bar = document.getElementById('progress-bar');
+      var btn = document.getElementById('back-top');
       var ticking = false;
-      window.addEventListener('scroll', function () {
+
+      /* Reading progress + nav scroll + back-to-top */
+      function onScroll() {
         if (!ticking) {
-          window.requestAnimationFrame(function () {
-            nav.classList.toggle('scrolled', window.scrollY > 40);
+          requestAnimationFrame(function () {
+            var y = window.scrollY;
+            var doc = document.documentElement;
+            var total = doc.scrollHeight - doc.clientHeight;
+            bar.style.width = (total > 0 ? (y / total) * 100 : 0) + '%';
+            nav.classList.toggle('scrolled', y > 40);
+            btn.classList.toggle('visible', y > 500);
             ticking = false;
           });
           ticking = true;
         }
-      }, { passive: true });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* Back to top */
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      /* Section reveal on scroll */
+      var sections = document.querySelectorAll('.doc-section');
+      if ('IntersectionObserver' in window) {
+        var sObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); sObs.unobserve(e.target); }
+          });
+        }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+        sections.forEach(function (s) { sObs.observe(s); });
+      } else {
+        sections.forEach(function (s) { s.classList.add('visible'); });
+      }
+
+      /* Active TOC highlighting */
+      var tocLinks = document.querySelectorAll('.toc-link');
+      if ('IntersectionObserver' in window && tocLinks.length) {
+        var tObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              var id = e.target.id;
+              tocLinks.forEach(function (l) {
+                l.classList.toggle('active', l.getAttribute('data-section') === id);
+              });
+            }
+          });
+        }, { threshold: 0.35, rootMargin: '-8% 0px -58% 0px' });
+        tocLinks.forEach(function (l) {
+          var el = document.getElementById(l.getAttribute('data-section'));
+          if (el) tObs.observe(el);
+        });
+      }
+
     })();
   </script>
 
